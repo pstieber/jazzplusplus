@@ -1,0 +1,30 @@
+/* XPM */
+static const char *harscale_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"20 19 4 1",
+/* colors */
+"  c #C0C0C0",
+". c #FF0000",
+"X c #0000FF",
+"o c None",
+/* pixels */
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"ooooooooooooooo...oo",
+"ooooooXXooooXXoooooo",
+"ooooooXXooooXX..oooo",
+"ooooooXXooooXXoooooo",
+"ooooooXXooo.XXoooooo",
+"ooooooXXooooXXoooooo",
+"ooooooXXXXXXXXoooooo",
+"ooooooXXooooXXoooooo",
+"ooooooXX..ooXXoooooo",
+"ooooooXXooooXXoooooo",
+"ooooo.XXooooXXoooooo",
+"ooooooXXooooXXoooooo",
+"ooo...oooooooooooooo",
+"oooooooooooooooooooo",
+"oo..oooooooooooooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo"
+};

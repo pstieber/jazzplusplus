@@ -1,0 +1,30 @@
+/* XPM */
+static const char *rrgdown_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"20 19 4 1",
+/* colors */
+"  c #00FF00",
+". c #C0C0C0",
+"X c #0000FF",
+"o c None",
+/* pixels */
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"ooooooooXXXooooooooo",
+"ooooooooXXXooooooooo",
+"ooooooooXXXooooooooo",
+"ooooooooXXXooooooooo",
+"ooooooooXXXooooooooo",
+"ooooooooXXXooooooooo",
+"oooooXXXXXXXXXoooooo",
+"ooooooXXXXXXXooooooo",
+"oooooooXXXXXoooooooo",
+"ooooooooXXXooooooooo",
+"oooooooooXoooooooooo",
+"ooooo          ooooo",
+"ooooo          ooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo"
+};

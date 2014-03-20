@@ -1,0 +1,237 @@
+# Voice names for GS synthesizers
+#
+# Altered by Jonathan Woithe, 26 Jan 1999, to reflect the 224 sounds
+# available in the E-26 GM/GS keyboard.
+
+# .max_voice_names 317
+.max_voice_names 224
+.voicenames
+
+# the first number is the Programchange 0..127, the
+# second is text for the dialogs. For bank > 0 the
+# first number is: bank  number * 256 + program number
+
+0 1 Piano 1
+2048 1-8 Piano 1w
+4096 1-16 Piano 1d
+1 2 Piano 2
+2049 2-8 Piano 2w
+2 3 Piano 3
+2050 3-8 Piano 3w
+3 4 Honky-tonk Piano
+2051 4-8 Honky-tonk w
+4 5 Rhodes Piano
+2052 5-8 Detuned EP 1
+4100 5-16 E Piano 1v
+6148 5-24 60s E Piano
+5 6 E Piano
+2053 6-8 Detuned EP 2
+4101 6-16 E Piano 2v
+6 7 Harpsichord
+2054 7-8 Coupled Hps.
+4102 7-16 Harpsi.w
+6150 7-24 Harpsi.o
+7 8 Clavinet
+8 9 Celesta
+9 10 Glockenspiel
+10 11 Musicbox
+11 12 Vibraphone
+2059 12-16 Vib.w
+12 13 Marimba
+2060 13-16 Marimba.w
+13 14 Xylophone
+14 15 Tubular Bells
+2062 15-8 Church Bell
+2318 15-9 Carillon
+15 16 Santur
+16 17 Organ 1
+2064 17-8 Detuned Or. 1
+4112 17-16 60s Organ 1
+8208 17-32 Organ 4
+17 18 Organ 2
+2065 18-8 Detuned Or. 2
+8209 18-32 Organ 5
+18 19 Organ 3
+19 20 Church Organ
+2067 20-8 Church Org. 2
+4115 20-16 Church Org. 3
+20 21 Reed Organ
+21 22 Accordion Fr
+2069 22-8 Accordion It
+22 23 Harmonica
+23 24 Bandoneon
+24 25 Nylon Guitar
+2072 25-8 Ukulele
+4120 25-16 Nylon Gt.o
+8216 25-32 Nylon Gt.2
+25 26 Steel Guitar
+2073 26-8 12-str. Gt
+4121 26-16 Mandolin
+26 27 Jazz Guitar
+2074 27-8 Hawaiian Gt.
+27 28 Clean Guitar
+2075 28-8 Chorus Gt.
+28 29 Muted Guitar
+2076 29-8 Funk Gt.
+4124 29-16 Funk Gt. 2
+29 30 Overdrive Guitar
+30 31 Distorton Guitar
+2078 31-8 Feedback Gt.
+31 32 Guitar Harmonics
+2079 32-8 Gt. Feedback
+32 33 Acoustic Bass
+33 34 Fingered Bass
+34 35 Picked Bass
+35 36 Fretless Bass
+36 37 Slap Bass1
+37 38 Slap Bass2
+38 39 Synth Bass1
+294 39-1 Synth Bass101
+2086 39-8 Synth Bass3
+39 40 Synth Bass2
+2087 40-8 Synth Bass4
+4135 40-16 Rubber Bass
+40 41 Violin
+2088 41-16 Slow Violin
+41 42 Viola
+42 43 Cello
+43 44 Contrabass
+44 45 Tremolo Strings
+45 46 Pizzicato String
+46 47 Orchestral Harp
+47 48 Timpani
+48 49 Strings
+2096 49-8 Orchestra
+49 50 Slow Strings
+50 51 Synth Strings1
+2098 51-8 Synth Strings3
+51 52 Synth Strings2
+52 53 Choir Aahs
+8244 53-32 Choir Aahs 2
+53 54 Voice Oohs
+54 55 Synth Vox
+55 56 Orchestra Hit
+56 57 Trumpet
+57 58 Trombone
+313 58-1 Trombone 2
+58 59 Tuba
+59 60 Muted Trumpet
+60 61 French Horn
+316 61-1 French Horn 2
+61 62 Brass Section
+2109 62-8 Brass 2
+62 63 Synth Brass1
+2110 63-8 Synth Brass3
+4158 63-16 AnalogBrass1
+63 64 Synth Brass2
+2111 64-8 Synth Brass4
+4159 64-16 AnalogBrass2
+64 65 Soprano Sax
+65 66 Alto Sax
+66 67 Tenor Sax
+67 68 Baritone Sax
+68 69 Oboe
+69 70 English Horn
+70 71 Bassoon
+71 72 Clarinet
+72 73 Piccolo
+73 74 Flute
+74 75 Recorder
+75 76 Pan Flute
+76 77 Bottle Blow
+77 78 Shakuhachi
+78 79 Whistle
+79 80 Ocarina
+80 81 Square Wave
+336 81-1 Square
+2128 81-8 Sine Wave
+81 82 Saw Wave
+337 82-1 Saw
+2129 82-8 Dotor Solo
+82 83 Syn Calliope
+83 84 Chiffer Lead
+84 85 Charang
+85 86 Solo Voice
+86 87 5th Saw Wave
+87 88 Bass & Lead
+88 89 Fantasia
+89 90 Warm Pad
+90 91 PolySynth
+91 92 Space Voice
+92 93 Bowed Glass
+93 94 Metal Pad
+94 95 Halo Pad
+95 96 Sweep Pad
+96 97 Ice Rain
+97 98 Soundtrack
+98 99 Crystal
+354 99-1 Syn Mallet
+99 100 Atmosphere
+100 101 Brightness
+101 102 Goblins
+102 103 Echo Drops
+358 103-1 Echo Bell
+614 103-2 Echo Pan
+103 104 Star Theme
+104 105 Sitar
+360 105-1 Sitar 2
+105 106 Banjo
+106 107 Shamisen
+107 108 Koto
+2155 108-8 Taisho Koto
+108 109 Kalimba
+109 110 Bagpipe
+110 111 Fiddle
+111 112 Shanai
+112 113 Tinkle Bell
+113 114 Agogo Bells
+114 115 Steel Drums
+115 116 Woodblock
+2163 116-8 Castanets
+116 117 Taiko Drum
+2164 117-8 Concert BD
+117 118 Melodic Tom 1
+2165 118-8 Melodic Tom 2
+118 119 Synth Drum
+2166 119-8 808 Tom
+2422 119-9 Elec Perc
+119 120 Reverse Cymbal
+120 121 Guitar Fret Noise
+376 121-1 Guitar Cut Noise
+632 121-2 String Slap
+121 122 Breath Noise
+377 122-1 Flute Key Click
+122 123 Seashore
+378 123-1 Rain
+634 123-2 Thunder
+890 123-3 Wind
+1146 123-4 Stream
+1402 123-5 Bubble
+123 124 Bird Tweet
+379 124-1 Dog
+635 124-2 Horse-Gallop
+891 124-3 Bird 2
+124 125 Telephone Ring
+380 125-1 Telephone Ring 2
+636 125-2 Door Creaking
+892 125-3 Door
+1148 125-4 Scratch
+125 126 Helicopter Blade
+381 126-1 Car Engine
+637 126-2 Car Stop
+893 126-3 Car Pass
+1149 126-4 Car Crash
+1405 126-5 Siren
+1661 126-6 Train
+1917 126-7 Jetplane
+2173 126-8 Starship
+2429 126-9 Burst Noise
+126 127 Applause/Noise
+638 127-2 Screaming
+894 127-3 Punch
+1150 127-4 Heart Beat
+1406 127-5 Footsteps
+127 128 Gunshot
+383 128-1 Machine Gun
+639 128-2 Lasergun
+895 128-3 Explosion

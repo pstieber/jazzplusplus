@@ -1,0 +1,67 @@
+# Snarfed from wxWindows 1.6.8 build for Borland32
+
+!if "$(CFG)" == ""
+CFG=..\makeb32.cfg
+!endif
+
+
+OBJ1 = jazz.obj \
+        eventlst.obj arpeggio.obj genmeldy.obj genmeldp.obj \
+        shuffle.obj synth.obj mapper.obj \
+        hbanalyz.obj toolbar.obj \
+        harmonyp.obj harmony.obj \
+        guitar.obj ctrledit.obj dynarray.obj random.obj \
+        rhythm.obj pianowin.obj player.obj eventwin.obj \
+        trackwin.obj events.obj track.obj \
+        song.obj mstdfile.obj util.obj dialogs.obj \
+        maction.obj filter.obj command.obj \
+        gs_dlg1.obj gs_dlg2.obj \
+        about.obj \
+        sampldlg.obj sig2.obj freqtab.obj \
+        slidrwin.obj \
+        samplcmd.obj samplwin.obj \
+        sample.obj audio.obj \
+        winaudio.obj winplay.obj jazzdll.obj
+
+all: jazz.exe
+
+jazz.exe: $(OBJ1) jazz.res
+        ilink32 @&&!
+/Tpe /L$(WXWIN)\lib c0w32.obj $(OBJ1)
+$@
+
+wx32 cw32 import32
+
+jazz.res
+!
+
+.cpp.obj:
+        bcc32 @$(CFG) -I..\mswin -c $<
+
+winplay.obj: ..\mswin\winplay.cpp
+        bcc32 @$(CFG) -I..\mswin -c $**
+
+jazzdll.obj: ..\mswin\jazzdll.cpp
+        bcc32 @$(CFG) -I..\mswin -c $**
+
+jazz.res: ..\mswin\jazz.rc
+        brcc32 @&&!
+-fojazz.res
+-i..\mswin
+-i$(WXWIN)\include\msw
+-i$(WXWIN)\include\base
+-i$(WXWIN)\contrib\fafa
+-i$(BCCDIR)\include
+-32
+! ..\mswin\jazz.rc
+
+cleanup:
+        del *.il?
+        del *.res
+        del *.tds
+
+clean: cleanup
+        del *.obj
+        del *.exe
+        del *.dll
+        del *.map

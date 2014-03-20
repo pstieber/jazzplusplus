@@ -1,0 +1,31 @@
+/* XPM */
+static const char *redo_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"20 19 5 1",
+/* colors */
+"  c #000000",
+". c #C0C0C0",
+"X c #808080",
+"o c #0000FF",
+"O c None",
+/* pixels */
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOOO OOOOO",
+"OOOOO          OOOOO",
+"OOOO           OOOOO",
+"OOO   OOOOX    OOOOO",
+"OOO  OOOOO     OOOOO",
+"OOO  OOOO      OOOOO",
+"OOO  OOOOOOOOOOOOOOO",
+"OOO  OOOOOOOOOOOOOOO",
+"OOO  OOOOOOOOOOOOOOO",
+"OOO   OOOOOOOOOOOOOO",
+"OOOO   OOOOOOOOOOOOO",
+"OOOOO          oOOOO",
+"OOOOOO         oOOOO",
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOOOOOOOOO"
+};

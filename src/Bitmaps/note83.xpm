@@ -1,0 +1,30 @@
+/* XPM */
+static const char *note83_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"20 19 4 1",
+/* colors */
+"  c #000000",
+". c #C0C0C0",
+"X c #808080",
+"o c None",
+/* pixels */
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"ooooooooooo oooooooo",
+"ooooo  oooo  ooooooo",
+"oooo oo ooo  Xoooooo",
+"ooooooo ooo X oooooo",
+"oooooo oooo o Xooooo",
+"ooooooo ooo oX ooooo",
+"oooo oo ooo oo ooooo",
+"ooooo  oooo oo ooooo",
+"ooooooooooo o oooooo",
+"ooooooooooo oooooooo",
+"oooooooo    oooooooo",
+"ooooooo     oooooooo",
+"ooooooo     oooooooo",
+"oooooooo   ooooooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo"
+};

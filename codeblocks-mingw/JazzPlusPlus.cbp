@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Jazz++" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\Jazz++" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add directory="C:\wx\2.8\lib\gcc_lib\msw" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="C:\wx\2.8\lib\gcc_lib\msw" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="libwxmsw28.a" />
+					<Add library="libwxpng.a" />
+					<Add library="libwxjpeg.a" />
+					<Add library="libwxtiff.a" />
+					<Add library="libwxzlib.a" />
+					<Add library="libwxexpatd.a" />
+					<Add library="..\portmidi\pm_win\Debug MinGW Win32\libportmidi.a" />
+					<Add library="..\portmidi\porttime\Debug MinGW Win32\libporttime.a" />
+					<Add directory="C:\wx\2.8\lib\gcc_lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\Jazz++" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add directory="C:\wx\2.8\lib\gcc_lib\msw" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="C:\wx\2.8\lib\gcc_lib\msw" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libwxmsw28.a" />
+					<Add library="libwxpng.a" />
+					<Add library="libwxjpeg.a" />
+					<Add library="libwxtiff.a" />
+					<Add library="libwxzlib.a" />
+					<Add library="libwxexpat.a" />
+					<Add library="..\portmidi\pm_win\Release MinGW Win32\libportmidi.a" />
+					<Add library="..\portmidi\porttime\Release MinGW Win32\libporttime.a" />
+					<Add directory="C:\wx\2.8\lib\gcc_lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-pipe" />
+			<Add option="-mthreads" />
+			<Add option='[[if (PLATFORM == PLATFORM_MSW &amp;&amp; (GetCompilerFactory().GetCompilerVersionString(_T(&quot;gcc&quot;)) &gt;= _T(&quot;4.0.0&quot;))) print(_T(&quot;-Wno-attributes&quot;));]]' />
+			<Add option="-Winvalid-pch" />
+			<Add option="-include wxWidgets.h" />
+			<Add option="-D__GNUWIN32__" />
+			<Add option="-D__WXMSW__" />
+			<Add directory="C:\wx\2.8\include" />
+			<Add directory="C:\wx\2.8\contrib\include" />
+			<Add directory="..\src" />
+			<Add directory="..\src\mswin" />
+			<Add directory="..\src\DeprecatedWx" />
+			<Add directory="..\src\Dialogs" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="C:\wx\2.8\include" />
+		</ResourceCompiler>
+		<Linker>
+			<Add library="libkernel32.a" />
+			<Add library="libuser32.a" />
+			<Add library="libgdi32.a" />
+			<Add library="libwinspool.a" />
+			<Add library="libcomdlg32.a" />
+			<Add library="libadvapi32.a" />
+			<Add library="libshell32.a" />
+			<Add library="libole32.a" />
+			<Add library="liboleaut32.a" />
+			<Add library="libuuid.a" />
+			<Add library="libcomctl32.a" />
+			<Add library="libwsock32.a" />
+			<Add library="libodbc32.a" />
+			<Add library="libwinmm.a" />
+		</Linker>
+		<Unit filename="..\src\AboutDialog.cpp" />
+		<Unit filename="..\src\AboutDialog.h" />
+		<Unit filename="..\src\AlsaDriver.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="..\src\AlsaDriver.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="..\src\AlsaPlayer.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="..\src\AlsaPlayer.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="..\src\AlsaThru.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="..\src\AlsaThru.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="..\src\AsciiMidiFile.cpp" />
+		<Unit filename="..\src\AsciiMidiFile.h" />
+		<Unit filename="..\src\Audio.cpp" />
+		<Unit filename="..\src\Audio.h" />
+		<Unit filename="..\src\AudioDriver.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="..\src\AudioDriver.h" />
+		<Unit filename="..\src\ClockDialog.cpp" />
+		<Unit filename="..\src\ClockDialog.h" />
+		<Unit filename="..\src\Command.cpp" />
+		<Unit filename="..\src\Command.h" />
+		<Unit filename="..\src\Configuration.cpp" />
+		<Unit filename="..\src\Configuration.h" />
+		<Unit filename="..\src\ControlEdit.cpp" />
+		<Unit filename="..\src\ControlEdit.h" />
+		<Unit filename="..\src\DeprecatedStringUtils.cpp" />
+		<Unit filename="..\src\DeprecatedStringUtils.h" />
+		<Unit filename="..\src\DeprecatedWx\prop.cpp" />
+		<Unit filename="..\src\DeprecatedWx\prop.h" />
+		<Unit filename="..\src\DeprecatedWx\propform.cpp" />
+		<Unit filename="..\src\DeprecatedWx\propform.h" />
+		<Unit filename="..\src\DeprecatedWx\proplist.cpp" />
+		<Unit filename="..\src\DeprecatedWx\proplist.h" />
+		<Unit filename="..\src\DeprecatedWx\setup.h" />
+		<Unit filename="..\src\Dialogs.cpp" />
+		<Unit filename="..\src\Dialogs.h" />
+		<Unit filename="..\src\Dialogs\KeyOnDialog.cpp" />
+		<Unit filename="..\src\Dialogs\KeyOnDialog.h" />
+		<Unit filename="..\src\Dialogs\MetronomeSettingsDialog.cpp" />
+		<Unit filename="..\src\Dialogs\MetronomeSettingsDialog.h" />
+		<Unit filename="..\src\Dialogs\SynthesizerSettingsDialog.cpp" />
+		<Unit filename="..\src\Dialogs\SynthesizerSettingsDialog.h" />
+		<Unit filename="..\src\Dialogs\TrackDialog.cpp" />
+		<Unit filename="..\src\Dialogs\TrackDialog.h" />
+		<Unit filename="..\src\Dialogs\copyDialog.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="..\src\Dialogs\copyDialog.h" />
+		<Unit filename="..\src\Dialogs\copyright.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="..\src\Dialogs\copyright.h" />
+		<Unit filename="..\src\Dialogs\midiDelay.xrc" />
+		<Unit filename="..\src\Dialogs\midiThruDialog.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="..\src\Dialogs\midiThruDialog.h" />
+		<Unit filename="..\src\Dialogs\midiTiming.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="..\src\Dialogs\midiTiming.h" />
+		<Unit filename="..\src\Dialogs\sequenceLength.xrc" />
+		<Unit filename="..\src\Dialogs\songSettings.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="..\src\Dialogs\songSettings.h" />
+		<Unit filename="..\src\Dialogs\velocity.xrc" />
+		<Unit filename="..\src\Dialogs\windowSettings.xrc" />
+		<Unit filename="..\src\DynamicArray.cpp" />
+		<Unit filename="..\src\DynamicArray.h" />
+		<Unit filename="..\src\ErrorMessage.cpp" />
+		<Unit filename="..\src\ErrorMessage.h" />
+		<Unit filename="..\src\EventWindow.cpp" />
+		<Unit filename="..\src\EventWindow.h" />
+		<Unit filename="..\src\Events.cpp" />
+		<Unit filename="..\src\Events.h" />
+		<Unit filename="..\src\FileSelector.cpp" />
+		<Unit filename="..\src\FileSelector.h" />
+		<Unit filename="..\src\Filter.cpp" />
+		<Unit filename="..\src\Filter.h" />
+		<Unit filename="..\src\FindFile.cpp" />
+		<Unit filename="..\src\FindFile.h" />
+		<Unit filename="..\src\FrequencyTable.cpp" />
+		<Unit filename="..\src\FrequencyTable.h" />
+		<Unit filename="..\src\GetOptionIndex.cpp" />
+		<Unit filename="..\src\GetOptionIndex.h" />
+		<Unit filename="..\src\Globals.cpp" />
+		<Unit filename="..\src\Globals.h" />
+		<Unit filename="..\src\GuitarFrame.cpp" />
+		<Unit filename="..\src\GuitarFrame.h" />
+		<Unit filename="..\src\GuitarSettings.cpp" />
+		<Unit filename="..\src\GuitarSettings.h" />
+		<Unit filename="..\src\GuitarSettingsDialog.cpp" />
+		<Unit filename="..\src\GuitarSettingsDialog.h" />
+		<Unit filename="..\src\GuitarWindow.cpp" />
+		<Unit filename="..\src\GuitarWindow.h" />
+		<Unit filename="..\src\Harmony.cpp" />
+		<Unit filename="..\src\Harmony.h" />
+		<Unit filename="..\src\HarmonyBrowserAnalyzer.cpp" />
+		<Unit filename="..\src\HarmonyBrowserAnalyzer.h" />
+		<Unit filename="..\src\HarmonyP.cpp" />
+		<Unit filename="..\src\HarmonyP.h" />
+		<Unit filename="..\src\Help.cpp" />
+		<Unit filename="..\src\Help.h" />
+		<Unit filename="..\src\JazzPlusPlusApplication.cpp" />
+		<Unit filename="..\src\JazzPlusPlusApplication.h" />
+		<Unit filename="..\src\KeyDialog.cpp" />
+		<Unit filename="..\src\KeyDialog.h" />
+		<Unit filename="..\src\KeyStringConverters.cpp" />
+		<Unit filename="..\src\KeyStringConverters.h" />
+		<Unit filename="..\src\Knob.cpp" />
+		<Unit filename="..\src\Knob.h" />
+		<Unit filename="..\src\Mapper.cpp" />
+		<Unit filename="..\src\Mapper.h" />
+		<Unit filename="..\src\MeasureChoice.cpp" />
+		<Unit filename="..\src\MeasureChoice.h" />
+		<Unit filename="..\src\Metronome.cpp" />
+		<Unit filename="..\src\Metronome.h" />
+		<Unit filename="..\src\MidiDeviceDialog.cpp" />
+		<Unit filename="..\src\MidiDeviceDialog.h" />
+		<Unit filename="..\src\MouseAction.cpp" />
+		<Unit filename="..\src\MouseAction.h" />
+		<Unit filename="..\src\NamedChoice.cpp" />
+		<Unit filename="..\src\NamedChoice.h" />
+		<Unit filename="..\src\NamedValue.cpp" />
+		<Unit filename="..\src\NamedValue.h" />
+		<Unit filename="..\src\NamedValueChoice.cpp" />
+		<Unit filename="..\src\NamedValueChoice.h" />
+		<Unit filename="..\src\PianoFrame.cpp" />
+		<Unit filename="..\src\PianoFrame.h" />
+		<Unit filename="..\src\PianoWindow.cpp" />
+		<Unit filename="..\src\PianoWindow.h" />
+		<Unit filename="..\src\Player.cpp" />
+		<Unit filename="..\src\Player.h" />
+		<Unit filename="..\src\PortMidiPlayer.cpp" />
+		<Unit filename="..\src\PortMidiPlayer.h" />
+		<Unit filename="..\src\Project.cpp" />
+		<Unit filename="..\src\Project.h" />
+		<Unit filename="..\src\ProjectManager.cpp" />
+		<Unit filename="..\src\ProjectManager.h" />
+		<Unit filename="..\src\PropertyListDialog.cpp" />
+		<Unit filename="..\src\PropertyListDialog.h" />
+		<Unit filename="..\src\Random.cpp" />
+		<Unit filename="..\src\Random.h" />
+		<Unit filename="..\src\RecordingInfo.cpp" />
+		<Unit filename="..\src\RecordingInfo.h" />
+		<Unit filename="..\src\Rectangle.cpp" />
+		<Unit filename="..\src\Rectangle.h" />
+		<Unit filename="..\src\ResourceDialog.cpp" />
+		<Unit filename="..\src\ResourceDialog.h" />
+		<Unit filename="..\src\Resources.h" />
+		<Unit filename="..\src\Rhythm.cpp" />
+		<Unit filename="..\src\Rhythm.h" />
+		<Unit filename="..\src\Sample.cpp" />
+		<Unit filename="..\src\Sample.h" />
+		<Unit filename="..\src\SampleCommand.cpp" />
+		<Unit filename="..\src\SampleCommand.h" />
+		<Unit filename="..\src\SampleDialog.cpp" />
+		<Unit filename="..\src\SampleDialog.h" />
+		<Unit filename="..\src\SampleWindow.cpp" />
+		<Unit filename="..\src\SampleWindow.h" />
+		<Unit filename="..\src\SelectControllerDialog.cpp" />
+		<Unit filename="..\src\SelectControllerDialog.h" />
+		<Unit filename="..\src\Signal2.cpp" />
+		<Unit filename="..\src\Signal2.h" />
+		<Unit filename="..\src\SignalInterface.h" />
+		<Unit filename="..\src\SliderWindow.cpp" />
+		<Unit filename="..\src\SliderWindow.h" />
+		<Unit filename="..\src\Song.cpp" />
+		<Unit filename="..\src\Song.h" />
+		<Unit filename="..\src\StandardFile.cpp" />
+		<Unit filename="..\src\StandardFile.h" />
+		<Unit filename="..\src\StringReadWrite.cpp" />
+		<Unit filename="..\src\StringReadWrite.h" />
+		<Unit filename="..\src\StringUtilities.cpp" />
+		<Unit filename="..\src\StringUtilities.h" />
+		<Unit filename="..\src\Synth.cpp" />
+		<Unit filename="..\src\Synth.h" />
+		<Unit filename="..\src\ToolBar.cpp" />
+		<Unit filename="..\src\ToolBar.h" />
+		<Unit filename="..\src\Track.cpp" />
+		<Unit filename="..\src\Track.h" />
+		<Unit filename="..\src\TrackFrame.cpp" />
+		<Unit filename="..\src\TrackFrame.h" />
+		<Unit filename="..\src\TrackWindow.cpp" />
+		<Unit filename="..\src\TrackWindow.h" />
+		<Unit filename="..\src\WxWidgets.h">
+			<Option compile="1" />
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="..\src\commands\copyCommand.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="..\src\commands\copyCommand.h" />
+		<Unit filename="..\src\gui\trackwinEnum.h" />
+		<Unit filename="..\src\midinet.h" />
+		<Unit filename="..\src\mswin\WindowsAudioInterface.cpp" />
+		<Unit filename="..\src\mswin\WindowsAudioInterface.h" />
+		<Unit filename="..\src\mswin\WindowsConsole.cpp" />
+		<Unit filename="..\src\mswin\WindowsConsole.h" />
+		<Unit filename="..\src\mswin\WindowsMidiInterface.cpp" />
+		<Unit filename="..\src\mswin\WindowsMidiInterface.h" />
+		<Unit filename="..\src\mswin\WindowsPlayer.cpp" />
+		<Unit filename="..\src\mswin\WindowsPlayer.h" />
+		<Unit filename="..\src\mswin\config.h" />
+		<Unit filename="..\src\mswin\jazz.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

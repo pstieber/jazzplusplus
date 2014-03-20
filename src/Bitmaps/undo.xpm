@@ -1,0 +1,31 @@
+/* XPM */
+static const char *undo_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"20 19 5 1",
+/* colors */
+"  c #000000",
+". c #C0C0C0",
+"X c #808080",
+"o c #0000FF",
+"O c None",
+/* pixels */
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOO OOOOOOOOOOOOOO",
+"OOOOO          OOOOO",
+"OOOOO           OOOO",
+"OOOOO    XOOOO   OOO",
+"OOOOO     OOOOO  OOO",
+"OOOOO      OOOO  OOO",
+"OOOOOOOOOOOOOOO  OOO",
+"OOOOOOOOOOOOOOO  OOO",
+"OOOOOOOOOOOOOOO  OOO",
+"OOOOOOOOOOOOOO   OOO",
+"OOOOOOOOOOOOO   OOOO",
+"OOOOoo         OOOOO",
+"OOOOoo        OOOOOO",
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOOOOOOOOO"
+};

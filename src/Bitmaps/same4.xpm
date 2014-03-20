@@ -1,0 +1,30 @@
+/* XPM */
+static const char *same4_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"20 19 4 1",
+/* colors */
+"  c #000000",
+". c #00FFFF",
+"X c #C0C0C0",
+"o c None",
+/* pixels */
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"ooooooooooo.oooooooo",
+"ooooooooooo..ooooooo",
+"ooooooooooo..  ooooo",
+"ooooooooooo.   ooooo",
+"ooooooooooo .  .oooo",
+"oo..     .. .  ..ooo",
+"oo........ ..  ...oo",
+"oo..     .      .ooo",
+"ooooooooooo..  .oooo",
+"ooooooooooo..  ooooo",
+"ooooooooooo...oooooo",
+"ooooooooooo..ooooooo",
+"ooooooooooo.oooooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo"
+};

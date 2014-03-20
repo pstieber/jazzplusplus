@@ -1,0 +1,5 @@
+.synth_type GS
+.include gsdrmset.jzi
+.include gmdrmnam.jzi
+.include e26voice.jzi
+.include ctrlnam.jzi

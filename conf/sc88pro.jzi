@@ -1,0 +1,5 @@
+.synth_type GS
+.include sc88pdrm.jzi
+.include gmdrmnam.jzi
+.include sc88pvoi.jzi
+.include ctrlnam.jzi

@@ -1,0 +1,31 @@
+/* XPM */
+static const char *metro_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"20 19 5 1",
+/* colors */
+"  c #000000",
+". c #C0C0C0",
+"X c #FF0000",
+"o c #FFFFFF",
+"O c None",
+/* pixels */
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOO  OOOOOOOOO",
+"OOOOOOOO    OOOOXXOO",
+"OOOOOOOO    OOOOXXOO",
+"OOOOOOO  oo  OOXOOOO",
+"OOOOOOO  oo   XOOOOO",
+"OOOOOO   oo XXOOOOOO",
+"OOOOOO   ooX  OOOOOO",
+"OOOOO    oX    OOOOO",
+"OOOOO    Xo    OOOOO",
+"OOOO     oo     OOOO",
+"OOOO            OOOO",
+"OOO              OOO",
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOOOOOOOOO"
+};

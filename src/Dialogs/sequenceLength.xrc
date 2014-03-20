@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<resource>
+  <object class="wxDialog" name="sequenceLength">
+    <title>Window Settings</title>
+    <object class="wxBoxSizer">
+      <orient>wxVERTICAL</orient>
+      <object class="sizeritem">
+        <object class="wxBoxSizer">
+          <orient>wxVERTICAL</orient>
+          <object class="sizeritem">
+            <object class="wxStaticText">
+              <label>Sequence Length</label>
+              <font>
+                <size>12</size>
+                <style>default</style>
+                <weight>bold</weight>
+                <family>normal</family>
+                <underlined>0</underlined>
+              </font>
+            </object>
+          </object>
+          <object class="sizeritem">
+            <object class="wxStaticText">
+              <label>Scale the length of the selected sequence by a
+scaling factor. </label>
+            </object>
+          </object>
+          <object class="sizeritem">
+            <object class="wxBoxSizer">
+              <orient>wxHORIZONTAL</orient>
+              <object class="sizeritem">
+                <object class="wxStaticText" name="">
+                  <label>Scale</label>
+                </object>
+                <flag>wxALIGN_CENTRE_VERTICAL</flag>
+              </object>
+              <object class="sizeritem">
+                <object class="wxSpinCtrl" name="scale">
+                  <value>100</value>
+                  <min>-1000</min>
+                  <max>1000</max>
+                </object>
+              </object>
+            </object>
+            <border>20</border>
+          </object>
+          <object class="sizeritem">
+            <object class="wxBoxSizer">
+              <orient>wxHORIZONTAL</orient>
+              <object class="sizeritem">
+                <object class="wxButton" name="wxID_OK">
+                  <label>OK</label>
+                  <default>1</default>
+                </object>
+                <flag>wxALL</flag>
+                <border>5</border>
+              </object>
+              <object class="sizeritem">
+                <object class="wxButton" name="wxID_CANCEL">
+                  <label>Cancel</label>
+                </object>
+                <flag>wxALL</flag>
+                <border>5</border>
+              </object>
+            </object>
+            <flag>wxTOP</flag>
+            <border>20</border>
+          </object>
+        </object>
+        <flag>wxALL</flag>
+        <border>15</border>
+      </object>
+    </object>
+  </object>
+</resource>

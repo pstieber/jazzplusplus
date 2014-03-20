@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<resource>
+  <object class="wxDialog" name="velocity">
+    <title>Velocity</title>
+    <object class="wxBoxSizer">
+      <orient>wxVERTICAL</orient>
+      <object class="sizeritem">
+        <object class="wxBoxSizer">
+          <orient>wxVERTICAL</orient>
+          <object class="sizeritem">
+            <object class="wxStaticText">
+              <label>Velocity</label>
+              <font>
+                <size>12</size>
+                <style>default</style>
+                <weight>bold</weight>
+                <family>normal</family>
+                <underlined>0</underlined>
+              </font>
+            </object>
+          </object>
+          <object class="sizeritem">
+            <object class="wxStaticText">
+              <label>Changes the velocity of selected Note-On events. 
+
+- If Stop is 0, all Note-On events will get the Start velocity. 
+- If Stop is greater 0, events at the beginning of the selection 
+will get the Start velocity, those at the end will 
+get the Stop velocity (e.g. crescendo). 
+
+The choice Add/Sub/Set determines, how the value is applied.</label>
+            </object>
+          </object>
+          <object class="sizeritem">
+            <object class="wxGridSizer">
+              <cols>2</cols>
+              <rows>3</rows>
+              <object class="sizeritem">
+                <object class="wxStaticText" name="">
+                  <label>Start</label>
+                </object>
+                <flag>wxALIGN_CENTRE_VERTICAL</flag>
+              </object>
+              <object class="sizeritem">
+                <object class="wxSlider" name="start">
+                  <value></value>
+                  <min></min>
+                  <max>100</max>
+                  <size>128,10</size>
+                  <style>wxSL_AUTOTICKS|wxSL_LABELS</style>
+                  <tooltip>How many times the selected events should be repeated</tooltip>
+                </object>
+                <flag>wxLEFT</flag>
+                <border>10</border>
+              </object>
+              <object class="sizeritem">
+                <object class="wxStaticText" name="">
+                  <label>Stop</label>
+                </object>
+                <flag>wxALIGN_CENTRE_VERTICAL</flag>
+              </object>
+              <object class="sizeritem">
+                <object class="wxSlider" name="stop">
+                  <value></value>
+                  <min></min>
+                  <max>100</max>
+                  <tooltip>The velocity scaling factor in percent for each repetition</tooltip>
+                  <size>128,10</size>
+                  <style>wxSL_AUTOTICKS|wxSL_LABELS</style>
+                </object>
+                <flag>wxLEFT</flag>
+                <border>10</border>
+              </object>
+              <object class="sizeritem">
+                <object class="wxStaticText" name="">
+                  <label>Mode</label>
+                </object>
+                <flag>wxALIGN_CENTRE_VERTICAL</flag>
+              </object>
+              <object class="sizeritem">
+                <object class="wxChoice" name="mode">
+                  <content>
+                    <item>Set</item>
+                    <item>Add</item>
+                    <item>Subtract</item>
+                  </content>
+                </object>
+              </object>
+              <vgap>0</vgap>
+              <hgap>0</hgap>
+            </object>
+          </object>
+          <object class="sizeritem">
+            <object class="wxBoxSizer">
+              <orient>wxHORIZONTAL</orient>
+              <object class="sizeritem">
+                <object class="wxButton" name="wxID_OK">
+                  <label>OK</label>
+                  <default>1</default>
+                </object>
+                <flag>wxALL</flag>
+                <border>5</border>
+              </object>
+              <object class="sizeritem">
+                <object class="wxButton" name="wxID_CANCEL">
+                  <label>Cancel</label>
+                </object>
+                <flag>wxALL</flag>
+                <border>5</border>
+              </object>
+            </object>
+            <flag>wxTOP</flag>
+            <border>20</border>
+          </object>
+        </object>
+        <flag>wxALL</flag>
+        <border>15</border>
+      </object>
+    </object>
+  </object>
+</resource>

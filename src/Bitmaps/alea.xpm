@@ -1,0 +1,30 @@
+/* XPM */
+static const char *alea_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"20 19 4 1",
+/* colors */
+"  c #000000",
+". c #C0C0C0",
+"X c #0000FF",
+"o c None",
+/* pixels */
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"oo                oo",
+"oo oooooooooooooo oo",
+"oo oooooooooooooo oo",
+"oo ooXXooooooXXoo oo",
+"oo ooXXooooooXXoo oo",
+"oo oooooooooooooo oo",
+"oo ooooooXXoooooo oo",
+"oo ooooooXXoooooo oo",
+"oo oooooooooooooo oo",
+"oo oooooooooooooo oo",
+"oo ooXXooooooXXoo oo",
+"oo ooXXooooooXXoo oo",
+"oo oooooooooooooo oo",
+"oo oooooooooooooo oo",
+"oo                oo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo"
+};

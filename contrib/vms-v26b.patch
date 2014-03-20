@@ -1,0 +1,893 @@
+# VMS Version found at http://www2.cenaath.cena.dgac.fr/~pmoreau/audio/midigb.html
+
+
+Only in cvs: COPYING
+Only in cvs: CVS
+Only in cvs: Makefile
+Only in vms: aaa_vms.notes
+Only in cvs/bitmaps: CVS
+Only in cvs/bitmaps: Makefile
+Only in vms/bitmaps: analyze.xpm
+Only in vms/bitmaps: cut.xpm
+Only in vms/bitmaps: delchord.xpm
+Only in vms/bitmaps: delete.xpm
+Only in vms/bitmaps: evnts.xpm
+Only in vms/bitmaps: harscale.xpm
+Only in vms/bitmaps: haunsch.xpm
+Only in vms/bitmaps: help.xpm
+Only in vms/bitmaps: ionscale.xpm
+Only in vms/bitmaps: majscale.xpm
+Only in vms/bitmaps: makefile
+Only in vms/bitmaps: mc.com
+Only in vms/bitmaps: melscale.xpm
+Only in vms/bitmaps: mixer.xpm
+Only in vms/bitmaps: new.xpm
+Only in vms/bitmaps: note16.xpm
+Only in vms/bitmaps: note163.xpm
+Only in vms/bitmaps: note8.xpm
+Only in vms/bitmaps: note83.xpm
+Only in vms/bitmaps: open.xpm
+Only in vms/bitmaps: panic.xpm
+Only in vms/bitmaps: piano.xpm
+Only in vms/bitmaps: quantize.xpm
+Only in vms/bitmaps: repl.xpm
+Only in vms/bitmaps: same0.xpm
+Only in vms/bitmaps: same1.xpm
+Only in vms/bitmaps: same2.xpm
+Only in vms/bitmaps: same3.xpm
+Only in vms/bitmaps: same4.xpm
+Only in vms/bitmaps: sameb.xpm
+Only in vms/bitmaps: sameh.xpm
+Only in vms/bitmaps: save.xpm
+Only in vms/bitmaps: shiftl.xpm
+Only in vms/bitmaps: shiftr.xpm
+Only in vms/bitmaps: std251.xpm
+Only in cvs/bitmaps: transpos.bmp
+Only in vms/bitmaps: transpose.bmp
+Only in vms/bitmaps: transpose.xpm
+Only in vms/bitmaps: tritone.xpm
+Only in vms/bitmaps: undo.xpm
+Only in vms: changelog
+Only in vms: copying
+Only in vms: doc
+diff -wru cvs/jazz.cfg vms/jazz.cfg
+--- cvs/jazz.cfg	Mon Sep 30 22:46:33 1996
++++ vms/jazz.cfg	Sun Aug 17 15:49:44 1997
+@@ -34,15 +34,15 @@
+ .parts_tracknames_right 0
+ 
+ # Window positions/sizes
+-.trackwin_xpos 10
+-.trackwin_ypos 10
++.trackwin_xpos 0
++.trackwin_ypos 0
+ .trackwin_width 600
+-.trackwin_height 400
++.trackwin_height 439
+ 
+ .pianowin_xpos 30
+ .pianowin_ypos 30
+ .pianowin_width 600
+-.pianowin_height 400
++.pianowin_height 439
+  
+ # ---------------- Linux configuration -----------------------------
+ 
+@@ -470,3 +470,11 @@
+ 91 Reverb
+ 93 Chorus
+ 
++.partsdialog_xpos 50
++.partsdialog_ypos 50
++.trackdialog_xpos 50
++.trackdialog_ypos 50
++.randomrhythm_xpos 150
++.randomrhythm_ypos 150
++.harmonybrowser_xpos 100
++.harmonybrowser_ypos 100
+Only in cvs/linux: CVS
+Only in cvs/linux: Makefile
+Only in vms/linux: makefile
+Only in vms: makefile
+Only in cvs/midinetd: CVS
+Only in cvs/midinetd: Makefile
+Only in vms/midinetd: makefile
+Only in cvs/mswin: CVS
+Only in cvs/mswin: README
+Only in vms/mswin: readme
+Only in cvs/song: CVS
+Binary files cvs/src/.jazz and vms/src/.jazz differ
+Only in cvs/src: CVS
+Only in cvs/src: Makefile
+Only in cvs/src: Makefile.linux
+Only in cvs/src: Makefile.solaris2
+Only in vms/src: axpobjs.zip
+Only in vms/src: compile_axp.com
+Only in vms/src: compile_debug.com
+Only in vms/src: compile_vax.com
+diff -wru cvs/src/config.h vms/src/config.h
+--- cvs/src/config.h	Thu May 16 00:45:51 1996
++++ vms/src/config.h	Sun Aug 10 14:24:54 1997
+@@ -32,10 +32,10 @@
+ // note that you have to select the driver in your .jazz file too.
+ 
+ // support /dev/sequencer2
+-#define DEV_SEQUENCER2
++/*#define DEV_SEQUENCER2*/
+ 
+ // support jazz's own driver over tcp/ip
+-#define DEV_MPU401
++/*#define DEV_MPU401*/
+ 
+ 
+ // in ms-windows, we have nothing
+Only in vms/src: dbgerr.log
+diff -wru cvs/src/dialogs.cc vms/src/dialogs.cc
+--- cvs/src/dialogs.cc	Thu Sep 26 21:46:08 1996
++++ vms/src/dialogs.cc	Sun Aug 10 14:26:50 1997
+@@ -80,11 +80,13 @@
+ 
+ void tQuantizeDlg::OnHelp()
+ {
++#ifndef VMS
+ 	HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+   	if (EventWin->NextWin)
+ 		HelpInstance->KeywordSearch("Track window");
+ 	else
+ 		HelpInstance->KeywordSearch("Piano window");
++#endif
+ }
+ 
+ void tQuantizeDlg::EditForm(wxPanel *panel)
+@@ -140,8 +142,10 @@
+ 
+ void tCleanupDlg::OnHelp()
+ {
++#ifndef VMS
+ 	HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+ 	HelpInstance->KeywordSearch("Cleanup");
++#endif
+ }
+ 
+ void tCleanupDlg::EditForm(wxPanel *panel)
+@@ -183,8 +187,10 @@
+ 
+ void tSearchReplaceDlg::OnHelp()
+ {
++#ifndef VMS
+   HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+   HelpInstance->KeywordSearch("Search Replace");
++#endif
+ }
+ 
+ void tSearchReplaceDlg::EditForm(wxPanel *panel)
+@@ -227,11 +233,13 @@
+ 
+ void tShiftDlg::OnHelp()
+ {
++#ifndef VMS
+         HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+ 	if (EventWin->NextWin)
+         	HelpInstance->KeywordSearch("Track window");
+ 	else
+         	HelpInstance->KeywordSearch("Piano window");
++#endif
+ }
+ 
+ 
+@@ -299,11 +307,13 @@
+ 
+ void tTransposeDlg::OnHelp()
+ {
++#ifndef VMS
+         HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+ 	if (EventWin->NextWin)
+         	HelpInstance->KeywordSearch("Track window");
+ 	else
+ 		HelpInstance->KeywordSearch("Piano window");
++#endif
+ }
+ 
+ 
+@@ -352,8 +362,10 @@
+ 
+ void tSetChannelDlg::OnHelp()
+ {
++#ifndef VMS
+         HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+         HelpInstance->KeywordSearch("Set MIDI Channel");
++#endif
+ }
+ 
+ 
+@@ -397,8 +409,10 @@
+ 
+ void tVelocityDlg::OnHelp()
+ {
++#ifndef VMS
+         HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+         HelpInstance->KeywordSearch("Velocity");
++#endif
+ }
+ 
+ 
+@@ -452,8 +466,10 @@
+ 
+ void tLengthDlg::OnHelp()
+ {
++#ifndef VMS
+         HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+         HelpInstance->KeywordSearch("Length");
++#endif
+ }
+ 
+ 
+@@ -503,8 +519,10 @@
+ 
+ void tDeleteDlg::OnHelp()
+ {
++#ifndef VMS
+         HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+         HelpInstance->KeywordSearch("Delete");
++#endif
+ }
+ 
+ void tDeleteDlg::EditForm(wxPanel *panel)
+@@ -573,8 +591,10 @@
+ 
+ void tEventDlg::OnHelp()
+ {
++#ifndef VMS
+         HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+         HelpInstance->KeywordSearch("Piano Window");
++#endif
+ }
+ 
+ // --------------------------- ChannelEvent ----------------------------
+Only in vms/src: dialogs.cc_ori
+diff -wru cvs/src/events.cc vms/src/events.cc
+--- cvs/src/events.cc	Sat Aug  3 22:39:33 1996
++++ vms/src/events.cc	Fri Aug 15 20:03:38 1997
+@@ -76,6 +76,7 @@
+     fd = stdout;
+   else
+   {
++#ifndef VMS
+ #ifndef wx_msw
+     FILE *testfd = fopen(fname, "r");
+     if (testfd) {
+@@ -88,6 +89,7 @@
+     	}
+     	delete syscmd;
+     }
++#endif
+ #endif
+     fd = fopen(fname, "wb");
+     if (fd == NULL)
+Only in vms/src: events.cc_ori
+diff -wru cvs/src/events.h vms/src/events.h
+--- cvs/src/events.h	Wed May 15 23:02:45 1996
++++ vms/src/events.h	Sat Aug  9 18:15:52 1997
+@@ -43,9 +43,11 @@
+ #endif
+ 
+ #ifndef wx_msw
++#ifndef VMS
+ #ifndef values_h
+ #include <values.h>
+ #define values_h
++#endif
+ #endif
+ #endif
+ 
+Only in vms/src: events.h_ori
+diff -wru cvs/src/eventwin.cc vms/src/eventwin.cc
+--- cvs/src/eventwin.cc	Thu Sep 26 21:46:08 1996
++++ vms/src/eventwin.cc	Sun Aug 10 14:29:48 1997
+@@ -327,8 +327,10 @@
+ 
+ void tEventWinDlg::OnHelp()
+ {
++#ifndef VMS
+ 	HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+ 	HelpInstance->KeywordSearch("Window");
++#endif
+ }
+ 
+ void tEventWinDlg::EditForm(wxPanel *panel)
+@@ -782,8 +784,10 @@
+ 
+ void tMeterChangeDlg::OnHelp()
+ {
++#ifndef VMS
+         HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+         HelpInstance->KeywordSearch("Meterchange");
++#endif
+ }
+ 
+ 
+Only in vms/src: eventwin.cc_ori
+diff -wru cvs/src/eventwin.h vms/src/eventwin.h
+--- cvs/src/eventwin.h	Fri Jul  5 18:02:14 1996
++++ vms/src/eventwin.h	Sun Aug 10 13:44:32 1997
+@@ -34,6 +34,10 @@
+ #include "wx_bbar.h"
+ #endif
+ 
++#ifdef VMS
++#include "wx_tbar.h"
++#endif
++
+ #ifndef maction_h
+ #include "maction.h"
+ #endif
+Only in vms/src: eventwin.h_ori
+diff -wru cvs/src/filter.cc vms/src/filter.cc
+--- cvs/src/filter.cc	Thu Sep 26 21:46:08 1996
++++ vms/src/filter.cc	Sun Aug 10 14:31:32 1997
+@@ -151,8 +151,10 @@
+ 
+ void tFilterDlg::OnHelp()
+ {
++#ifndef VMS
+ 	HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+         HelpInstance->KeywordSearch("Filter");
++#endif
+ }
+ 
+ 
+Only in vms/src: filter.cc_ori
+diff -wru cvs/src/gs_dlg1.cc vms/src/gs_dlg1.cc
+--- cvs/src/gs_dlg1.cc	Thu Sep 26 21:46:09 1996
++++ vms/src/gs_dlg1.cc	Sun Aug 10 14:35:16 1997
+@@ -39,11 +39,13 @@
+ 
+ void tGsButton::GsOnHelp()
+ {
++#ifndef VMS
+ 	if (dialog->helpKeyword)
+ 	{
+ 		HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+ 		HelpInstance->KeywordSearch(dialog->helpKeyword);
+ 	}
++#endif
+ }
+ 
+ char *helpKeywords[ numSliderDialogs ] =
+Only in vms/src: gs_dlg1.cc_ori
+diff -wru cvs/src/guitar.cc vms/src/guitar.cc
+--- cvs/src/guitar.cc	Thu Sep 26 21:46:09 1996
++++ vms/src/guitar.cc	Sun Aug 10 14:36:24 1997
+@@ -142,8 +142,10 @@
+ 
+ void tGuitarSettingsDlg::OnHelp()
+ {
++#ifndef VMS
+         HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+         HelpInstance->KeywordSearch("Guitar board");
++#endif
+ }
+ 
+ 
+@@ -451,8 +453,10 @@
+ 
+ void tGuitarWin::OnHelp()
+ {
++#ifndef VMS
+         HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+         HelpInstance->KeywordSearch("Guitar board");
++#endif
+ }
+ 
+ void tGuitarWin::OnMenuCommand(int id)
+Only in vms/src: guitar.cc_ori
+diff -wru cvs/src/harmony.cc vms/src/harmony.cc
+--- cvs/src/harmony.cc	Thu Oct 17 14:10:18 1996
++++ vms/src/harmony.cc	Sun Aug 10 15:21:58 1997
+@@ -353,8 +353,10 @@
+ 	tHBPlayerForm() : wxForm( USED_WXFORM_BUTTONS ) {}
+ 	void OnHelp()
+ 	{
++#ifndef VMS
+ 	  HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+        	  HelpInstance->KeywordSearch("Harmony browser");
++#endif
+ 	}
+ };
+ 
+@@ -528,7 +530,10 @@
+ }
+ 
+ 
+-inline ostream & operator << (ostream &os, HBCanvas const &a)
++#ifndef VMS
++inline
++#endif
++ ostream & operator << (ostream &os, HBCanvas const &a)
+ {
+   int i;
+   os << 1 << endl;
+@@ -538,8 +543,10 @@
+   return os;
+ }
+ 
+-
+-inline istream & operator >> (istream &is, HBCanvas &a)
++#ifndef VMS
++inline 
++#endif
++istream & operator >> (istream &is, HBCanvas &a)
+ {
+   int i, version;
+   is >> version;
+@@ -745,8 +752,10 @@
+ 
+ void HBSettingsForm::OnHelp()
+ {
++#ifndef VMS
+   HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+   HelpInstance->KeywordSearch("Harmony browser");
++#endif
+ }
+ 
+ 
+@@ -1444,8 +1453,10 @@
+ 
+ void HBContextDlg::OnHelp()
+ {
++#ifndef VMS
+         HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+         HelpInstance->KeywordSearch("Edit chord");
++#endif
+ }
+ 
+ 
+@@ -1607,8 +1618,10 @@
+   switch(id)
+   {
+     case MEN_HELP:
++#ifndef VMS
+ 	HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+         HelpInstance->KeywordSearch("Harmony browser");
++#endif
+ 	break;
+ 
+     case MEN_MOUSE:
+Only in vms/src: harmony.cc_ori
+diff -wru cvs/src/harmonyp.h vms/src/harmonyp.h
+--- cvs/src/harmonyp.h	Sat Aug 31 23:16:22 1996
++++ vms/src/harmonyp.h	Sun Aug 10 15:01:06 1997
+@@ -177,13 +177,19 @@
+     static const char * const scale_names[2][12];
+ };
+ 
+-inline ostream & operator << (ostream &os, HBChord const &a)
++#ifndef VMS
++inline
++#endif
++ ostream & operator << (ostream &os, HBChord const &a)
+ {
+   os << a.keys << endl;
+   return os;
+ }
+ 
+-inline istream & operator >> (istream &is, HBChord &a)
++#ifndef VMS
++inline
++#endif
++ istream & operator >> (istream &is, HBChord &a)
+ {
+   is >> a.keys;
+   return is;
+Only in vms/src: harmonyp.h_ori
+diff -wru cvs/src/jazz.cc vms/src/jazz.cc
+--- cvs/src/jazz.cc	Thu Sep 26 21:46:09 1996
++++ vms/src/jazz.cc	Sun Aug 17 15:47:28 1997
+@@ -37,6 +37,13 @@
+ #include <assert.h>
+ #include <string.h>
+ 
++#ifdef VMS
++#if __VMS_VER < 70000000
++extern "C" char *strdup(const char *s1);
++extern "C" int   unlink(const char *file);
++#endif
++#endif
++
+ #include "version.h"
+ 
+ #ifdef wx_msw
+@@ -70,8 +77,10 @@
+ int RhythmGeo[2];
+ 
+ char *StartUpSong;
++#ifndef VMS
+ wxHelpInstance *HelpInstance = NULL;
+ wxPathList HelpPathList;
++#endif
+ 
+ static void InitConfig(void)
+ {
+@@ -253,7 +262,11 @@
+ #ifdef wx_msw
+   const char *fname = "jazz.cfg";
+ #else
++#ifndef VMS
+   const char *fname = ".jazz";
++#else
++  const char *fname = "jazz.cfg";
++#endif
+ #endif
+ 
+   if (wxFileExists((char *)fname))
+@@ -262,14 +275,22 @@
+   char *home;
+   if ((home = getenv("HOME")) != 0)
+   {
++#ifndef VMS
+     sprintf(buf, "%s/%s", home, fname);
++#else
++    sprintf(buf, "%s%s", home, fname);
++#endif
+     if (wxFileExists(buf))
+       return buf;
+   }
+ 
+   // look where the executable was started
+   home = wxPathOnly((char *)wxTheApp->argv[0]);
++#ifndef VMS
+   sprintf(buf, "%s/%s", home, fname);
++#else
++  sprintf(buf, "%s%s", home, fname);
++#endif
+   if (wxFileExists(buf))
+     return buf;
+ 
+@@ -396,12 +417,15 @@
+     fclose(fd);
+   }
+ 
++#ifndef VMS
+   HelpPathList.AddEnvList("WXHELPFILES");
+   HelpPathList.AddEnvList("PATH");
+   HelpInstance = new wxHelpInstance(TRUE);
+   HelpInstance->Initialize("jazz");
++#endif
+ 
+   tSong *Song = new tSong;
++  wxFrame *frame = new wxFrame; 
+   Midi = new tNullPlayer(Song);
+ 
+ #ifndef wx_msw
+@@ -461,7 +485,9 @@
+   StartUpSong = new char[ strlen( path ) + 1 + strlen( file ) + 1 ];
+   StartUpSong[0] = '\0';
+   strcat( StartUpSong, path );
++#ifndef VMS
+   strcat( StartUpSong, "/" );
++#endif
+   strcat( StartUpSong, file );
+ 
+   FILE *fd = fopen(StartUpSong, "r");
+@@ -473,7 +499,8 @@
+     if (strcmp(file, "jazz.mid"))
+       lasts = StartUpSong;
+   }
+-  TrackWin = new tTrackWin(0, "Jazz!", Song, geo[0], geo[1], geo[2], geo[3] );
++//  TrackWin = new tTrackWin(0, "Jazz!", Song, geo[0], geo[1], geo[2], geo[3] );
++  TrackWin = new tTrackWin(frame, "Jazz!", Song, geo[0], geo[1], geo[2], geo[3] );
+   TrackWin->Create();
+   TrackWin->Show(TRUE);
+   if (fd)
+Only in vms/src: jazz.cc_ori
+Only in vms/src: jazz.cfg
+Only in vms/src: jazz.exe
+Only in vms/src: jazz.exe_vax
+diff -wru cvs/src/jazz.h vms/src/jazz.h
+--- cvs/src/jazz.h	Thu Sep 26 21:46:10 1996
++++ vms/src/jazz.h	Sun Aug 10 14:25:56 1997
+@@ -54,8 +54,10 @@
+ extern tNamedValue *DrumNames;
+ extern tNamedValue *VoiceNames;
+ extern tNamedValue *ControlNames;
++#ifndef VMS
+ extern wxHelpInstance *HelpInstance;
+ extern wxPathList HelpPathList;
++#endif
+ 
+ Bool GetConfig(const char *entry, char *value);
+ Bool PutConfig(const char *entry, const char *value);
+Only in vms/src: jazz.h_ori
+Only in vms/src: link_axp.com
+Only in vms/src: link_debug.com
+Only in vms/src: link_vax.com
+Only in vms/src: makefile
+Only in vms/src: makefile.linux
+Only in vms/src: makefile.solaris2
+diff -wru cvs/src/mascfile.cc vms/src/mascfile.cc
+--- cvs/src/mascfile.cc	Mon Mar 11 21:36:10 1996
++++ vms/src/mascfile.cc	Sun Aug 10 16:21:14 1997
+@@ -37,7 +37,12 @@
+   return nTracks;
+ }
+ 
+-void tAsciiWrite::Write(tEvent *e, uchar *s, int len)
++#ifndef VMS
++void
++#else
++int
++#endif
++ tAsciiWrite::Write(tEvent *e, uchar *s, int len)
+ {
+   tChannelEvent *ce;
+ 
+@@ -75,7 +80,14 @@
+   if (fscanf(fd, "%6lu %02x %2d %d ", &clk, &sta, &cha, &len) != 4)
+     return 0;
+ 
++#ifndef VMS
+   uchar buf[len];
++#else
++  uchar buf[250000];
++  if (len > 250000) len = 250000;
++#endif
++
++
+   for (int i = 0; i < len; i++)
+   {
+     int d;
+Only in vms/src: mascfile.cc_ori
+diff -wru cvs/src/mascfile.h vms/src/mascfile.h
+--- cvs/src/mascfile.h	Mon Mar 11 21:36:11 1996
++++ vms/src/mascfile.h	Sun Aug 10 15:36:44 1997
+@@ -32,7 +32,11 @@
+ class tAsciiWrite : public tWriteBase
+ {
+   public:
++#ifndef VMS
+     virtual void Write(tEvent *e, uchar *dat, int len);
++#else
++    virtual int Write(tEvent *e, uchar *dat, int len);
++#endif
+     virtual void NextTrack();
+     virtual int  Open(char *fname, int nTracks, int TicksPerQuarter);
+ };
+Only in vms/src: mascfile.h_ori
+diff -wru cvs/src/midinet.c vms/src/midinet.c
+--- cvs/src/midinet.c	Thu May  2 22:49:36 1996
++++ vms/src/midinet.c	Sun Aug 10 15:47:10 1997
+@@ -33,7 +33,9 @@
+ #include <netinet/in.h>
+ #include <netinet/tcp.h>
+ #include <netdb.h>
++#ifndef VMS
+ #include <rpc/rpc.h>
++#endif
+ #if defined(sun) && defined(__svr4__)
+ #include <rpc/clnt_soc.h>
+ #endif
+Only in vms/src: midinet.c_ori
+diff -wru cvs/src/pianowin.cc vms/src/pianowin.cc
+--- cvs/src/pianowin.cc	Thu Sep 26 21:46:10 1996
++++ vms/src/pianowin.cc	Sun Aug 10 14:40:30 1997
+@@ -465,8 +465,10 @@
+       break;
+ 
+     case MEN_HELP_PWIN:
++#ifndef VMS
+       HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+       HelpInstance->KeywordSearch("Piano Window");
++#endif
+       break;
+ 
+     case MEN_ERASE:
+@@ -647,8 +649,10 @@
+ 
+ void tVisibleDlg::OnHelp()
+ {
++#ifndef VMS
+         HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+         HelpInstance->KeywordSearch("Piano window");
++#endif
+ }
+ 
+ 
+Only in vms/src: pianowin.cc_ori
+diff -wru cvs/src/random.cc vms/src/random.cc
+--- cvs/src/random.cc	Sat Aug  3 22:39:44 1996
++++ vms/src/random.cc	Sun Aug 10 15:53:32 1997
+@@ -32,7 +32,16 @@
+ }
+ tRandomGenerator rnd;
+ #else
++#ifndef VMS
+ ACG rnd(0, 55);
++#else
++#include <stdlib.h>
++double tRandomGenerator::asDouble()
++{
++  return double(rand()) / double(RAND_MAX);
++}
++tRandomGenerator rnd;
++#endif
+ #endif
+ 
+ 
+Only in vms/src: random.cc_ori
+diff -wru cvs/src/random.h vms/src/random.h
+--- cvs/src/random.h	Mon Mar 11 21:36:16 1996
++++ vms/src/random.h	Sat Aug  9 18:21:14 1997
+@@ -46,8 +46,18 @@
+ 
+ #else
+ 
++#ifndef VMS
+ #include <ACG.h>	// random generator from libg++
+ extern ACG rnd;
++#else
++class tRandomGenerator
++{
++  public:
++    double asDouble();
++};
++extern tRandomGenerator rnd;
++
++#endif /* VMS */
+ #endif
+ 
+ 
+Only in vms/src: random.h_ori
+diff -wru cvs/src/rhythm.cc vms/src/rhythm.cc
+--- cvs/src/rhythm.cc	Thu Oct 17 14:10:18 1996
++++ vms/src/rhythm.cc	Sun Aug 10 14:41:12 1997
+@@ -514,8 +514,10 @@
+ 
+ void tRhythmWin::Help()
+ {
++#ifndef VMS
+   HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+   HelpInstance->KeywordSearch("Random rhythm generator");
++#endif
+ }
+ 
+ 
+Only in vms/src: rhythm.cc_ori
+diff -wru cvs/src/toolbar.h vms/src/toolbar.h
+--- cvs/src/toolbar.h	Fri Jul  5 18:22:30 1996
++++ vms/src/toolbar.h	Sun Aug 10 13:47:40 1997
+@@ -34,6 +34,10 @@
+ #include "wx_bbar.h"
+ #endif
+ 
++#ifdef VMS
++#include "wx_tbar.h"
++#endif
++
+ struct tToolDef
+ {
+   int  id;
+Only in vms/src: toolbar.h_ori
+diff -wru cvs/src/track.cc vms/src/track.cc
+--- cvs/src/track.cc	Thu Sep 26 21:46:10 1996
++++ vms/src/track.cc	Sun Aug 10 15:59:08 1997
+@@ -966,8 +966,10 @@
+ 
+ void tTrackDlg::OnHelp()
+ {
++#ifndef VMS
+         HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+         HelpInstance->KeywordSearch("Trackname, midi channel etc");
++#endif
+ }
+ 
+ 
+@@ -1254,7 +1256,7 @@
+ {
+   iUndo = (iUndo + 1) % MaxUndo;
+   UndoBuffers[iUndo].Clear();
+-};
++}
+ 
+ 
+ void tTrack::Clear()
+Only in vms/src: track.cc_ori
+diff -wru cvs/src/trackwin.cc vms/src/trackwin.cc
+--- cvs/src/trackwin.cc	Thu Sep 26 21:46:11 1996
++++ vms/src/trackwin.cc	Sat Aug 16 20:41:38 1997
+@@ -44,6 +44,14 @@
+ #include <ctype.h>
+ #include <string.h>
+ 
++#ifdef VMS
++#if __DECCXX_VER < 50200000
++#include <signal.h>
++#else
++#include <unistd.h>
++#endif
++#endif
++
+ #ifdef wx_xt
+ #define wxbMessageBox wxMessageBox
+ #endif
+@@ -838,12 +846,16 @@
+ 	"  right: open and position pianowin\n", "Help", wxOK);
+       break;
+     case MEN_HELP_JAZZ:
++#ifndef VMS
+       HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+       HelpInstance->DisplayContents();
++#endif
+       break;
+     case MEN_HELP_TWIN:
++#ifndef VMS
+       HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+       HelpInstance->KeywordSearch("Track Window");
++#endif
+       break;
+   }
+ }
+@@ -1634,8 +1646,10 @@
+ 
+ void tCopyDlg::OnHelp()
+ {
++#ifndef VMS
+ 	HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+ 	HelpInstance->KeywordSearch("Replicate");
++#endif
+ }
+ 
+ 
+@@ -1775,8 +1789,10 @@
+ 
+ void tSongSettingsDlg::OnHelp()
+ {
++#ifndef VMS
+ 	HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+ 	HelpInstance->KeywordSearch("Song");
++#endif
+ }
+ 
+ 
+@@ -2112,8 +2128,10 @@
+ 
+ void tTimingDlg::OnHelp()
+ {
++#ifndef VMS
+ 	HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+ 	HelpInstance->KeywordSearch("Timing");
++#endif
+ }
+ 
+ 
+@@ -2231,8 +2249,10 @@
+ 
+ void tMidiThruDlg::OnHelp()
+ {
++#ifndef VMS
+ 	HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+ 	HelpInstance->KeywordSearch("Track Window");
++#endif
+ }
+ 
+ 
+@@ -2389,8 +2409,10 @@
+ 
+ void tCopyrightDlg::OnHelp()
+ {
++#ifndef VMS
+ 	HelpInstance->LoadFile( HelpPathList.FindValidPath("jazz") );
+ 	HelpInstance->KeywordSearch("Music copyright");
++#endif
+ }
+ 
+ 
+Only in vms/src: trackwin.cc_ori
+Only in vms/src: vaxobjs.zip
+Only in vms/src: vms-strdup.c
+Only in vms/src: vms-unlink.c
+Only in vms/src: vms_axp.opt
+Only in vms/src: vms_axp_12.opt
+Only in vms/src: vms_vax.opt
+Only in vms/src: vms_vax_12.opt
+Only in vms: todo
+Only in cvs/win95: CVS

@@ -1,0 +1,40 @@
+The instructions in this file are obsolete.
+
+
+
+How To Work on Dialogs
+
+Feel free to add to this file as you learn things while porting dialogs.
+
+1.  Find an existing dialog that hasn't been ported.  This is pretty easy to do,
+    since most of the dialogs have not yet been ported.  Any dialogs based on
+    wxForm or wxPropertyList should be ported to the new XML system.
+
+2.  Create an .xrc file that has the appropriate widgets.  The IDs of the
+    widgets will later be used to attach Jazz++ code.  The following widgets
+    have special IDs:
+        OK Button:     wxID_OK
+        Cancel Button: wxID_CANCEL
+        Apply Button:  wxID_APPLY
+
+    Place your .xrc file in the dialogs subdirectory.
+
+    Dialogs can be edited with tools such as xrced (that comes with the
+    wxWidgets contrib tree), or wxGlade.  xrced is available in the
+    libwxgtk2.4-python debian package.  wxGlade is available from the
+    wxglade.sourceforge.net site.
+
+3.  Replace the existing dialog C++ with tResourceDialog based code.  In some
+    cases, tResourceDialog will need to be extended to support additional
+    widget and data types.  Note that there's currently no support for
+    non-modal dialogs.  If non-modal dialogs are needed, let Patrick know and
+    he can fix up the resource dialog code to support them.
+
+    You will also need to add a line to jazz.cpp that loads your new dialog.
+    Search for "LoadResource" in that file.
+
+There are a few things that could be done to ease the creation of dialogs.  I
+could provide a list of dialogs that have not yet been ported.  The code could
+be moved to the dialogs subdir.  Proper Doxygen documentation could be added
+for the tResourceDialog class.
+

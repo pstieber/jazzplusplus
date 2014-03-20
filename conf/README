@@ -1,0 +1,13 @@
+Synth configurations for some special synths (other than plain GM, GS and XG).
+------------------------------------------------------------------------------
+JV-1000: 
+Copy the file "jv1000.jzi" to "other.jzi".
+Then choose synth-type "Other" from the Settings menu and restart jazz.
+
+SC-88Pro:
+Copy the file "sc88pro.jzi" to "gs.jzi".
+Then choose synth-type "GS" from the Settings menu and restart jazz.
+
+E-26:
+Copy the file "e26.jzi" to "gs.jzi".
+Then choose synth-type "GS" from the Settings menu and restart jazz.

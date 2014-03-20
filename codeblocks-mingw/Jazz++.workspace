@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Jazz++">
+		<Project filename="JazzPlusPlus-mingw.cbp" active="1" />
+		<Project filename="..\portmidi\pm_win\portmidi-mingw.cbp" />
+		<Project filename="..\portmidi\porttime\porttime-mingw.cbp" />
+		<Project filename="..\..\cb_wx_test\cb_wx_test.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

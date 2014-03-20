@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\src\AsciiMidiFile.cpp" />
+    <ClCompile Include="..\src\Audio.cpp" />
+    <ClCompile Include="..\src\ClockDialog.cpp" />
+    <ClCompile Include="..\src\Command.cpp" />
+    <ClCompile Include="..\src\Configuration.cpp" />
+    <ClCompile Include="..\src\ControlEdit.cpp" />
+    <ClCompile Include="..\src\Dialogs.cpp" />
+    <ClCompile Include="..\src\DrumUtilities.cpp" />
+    <ClCompile Include="..\src\ErrorMessage.cpp" />
+    <ClCompile Include="..\src\EventFrame.cpp" />
+    <ClCompile Include="..\src\Events.cpp" />
+    <ClCompile Include="..\src\EventWindow.cpp" />
+    <ClCompile Include="..\src\FileSelector.cpp" />
+    <ClCompile Include="..\src\Filter.cpp" />
+    <ClCompile Include="..\src\FindFile.cpp" />
+    <ClCompile Include="..\src\FrequencyTable.cpp" />
+    <ClCompile Include="..\src\GetOptionIndex.cpp" />
+    <ClCompile Include="..\src\Globals.cpp" />
+    <ClCompile Include="..\src\GuitarFrame.cpp" />
+    <ClCompile Include="..\src\GuitarSettings.cpp" />
+    <ClCompile Include="..\src\GuitarSettingsDialog.cpp" />
+    <ClCompile Include="..\src\GuitarWindow.cpp" />
+    <ClCompile Include="..\src\Harmony.cpp" />
+    <ClCompile Include="..\src\HarmonyBrowserAnalyzer.cpp" />
+    <ClCompile Include="..\src\HarmonyP.cpp" />
+    <ClCompile Include="..\src\Help.cpp" />
+    <ClCompile Include="..\src\JazzPlusPlusApplication.cpp" />
+    <ClCompile Include="..\src\KeyStringConverters.cpp" />
+    <ClCompile Include="..\src\Knob.cpp" />
+    <ClCompile Include="..\src\Mapper.cpp" />
+    <ClCompile Include="..\src\MeasureChoice.cpp" />
+    <ClCompile Include="..\src\Metronome.cpp" />
+    <ClCompile Include="..\src\MidiDeviceDialog.cpp" />
+    <ClCompile Include="..\src\MouseAction.cpp" />
+    <ClCompile Include="..\src\NamedChoice.cpp" />
+    <ClCompile Include="..\src\NamedValue.cpp" />
+    <ClCompile Include="..\src\NamedValueChoice.cpp" />
+    <ClCompile Include="..\src\PianoFrame.cpp" />
+    <ClCompile Include="..\src\PianoWindow.cpp" />
+    <ClCompile Include="..\src\Player.cpp" />
+    <ClCompile Include="..\src\PortMidiPlayer.cpp" />
+    <ClCompile Include="..\src\Project.cpp" />
+    <ClCompile Include="..\src\ProjectManager.cpp" />
+    <ClCompile Include="..\src\DeprecatedWx\prop.cpp" />
+    <ClCompile Include="..\src\PropertyListDialog.cpp" />
+    <ClCompile Include="..\src\DeprecatedWx\propform.cpp" />
+    <ClCompile Include="..\src\DeprecatedWx\proplist.cpp" />
+    <ClCompile Include="..\src\Random.cpp" />
+    <ClCompile Include="..\src\RecordingInfo.cpp" />
+    <ClCompile Include="..\src\Rectangle.cpp" />
+    <ClCompile Include="..\src\Rhythm.cpp" />
+    <ClCompile Include="..\src\Sample.cpp" />
+    <ClCompile Include="..\src\SampleCommand.cpp" />
+    <ClCompile Include="..\src\SampleDialog.cpp" />
+    <ClCompile Include="..\src\SampleFrame.cpp" />
+    <ClCompile Include="..\src\SampleWindow.cpp" />
+    <ClCompile Include="..\src\SelectControllerDialog.cpp" />
+    <ClCompile Include="..\src\Signal2.cpp" />
+    <ClCompile Include="..\src\SliderWindow.cpp" />
+    <ClCompile Include="..\src\Song.cpp" />
+    <ClCompile Include="..\src\StandardFile.cpp" />
+    <ClCompile Include="..\src\StringReadWrite.cpp" />
+    <ClCompile Include="..\src\StringUtilities.cpp" />
+    <ClCompile Include="..\src\Synth.cpp" />
+    <ClCompile Include="..\src\SysexChannel.cpp" />
+    <ClCompile Include="..\src\ToolBar.cpp" />
+    <ClCompile Include="..\src\Track.cpp" />
+    <ClCompile Include="..\src\TrackFrame.cpp" />
+    <ClCompile Include="..\src\TrackWindow.cpp" />
+    <ClCompile Include="..\src\mswin\WindowsAudioInterface.cpp" />
+    <ClCompile Include="..\src\mswin\WindowsConsole.cpp" />
+    <ClCompile Include="..\src\mswin\WindowsMidiInterface.cpp" />
+    <ClCompile Include="..\src\mswin\WindowsPlayer.cpp" />
+    <ClCompile Include="..\src\AboutDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\AudioSettingsDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\CleanupDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\ControllerDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\DeleteDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\EndOfTrackDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\FilterDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\IntegerEdit.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\KeyOnDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\LengthDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\MeterChangeDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\MidiChannelDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\MetronomeSettingsDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\PitchWheelDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\ProgramChangeDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\VelocityDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\TransposeDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\TrackDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\TextDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\SysexDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\SynthesizerSettingsDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\SnapDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\ShiftDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\SetTempoDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\SearchAndReplaceDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\SamplesDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dialogs\QuantizeDialog.cpp">
+      <Filter>Dialog Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ArrayControl.cpp" />
+    <ClCompile Include="..\src\RhythmArrayControl.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\AsciiMidiFile.h" />
+    <ClInclude Include="..\src\Audio.h" />
+    <ClInclude Include="..\src\Command.h" />
+    <ClInclude Include="..\src\Configuration.h" />
+    <ClInclude Include="..\src\ControlEdit.h" />
+    <ClInclude Include="..\src\Dialogs.h" />
+    <ClInclude Include="..\src\DynamicArray.h" />
+    <ClInclude Include="..\src\ErrorMessage.h" />
+    <ClInclude Include="..\src\EventFrame.h" />
+    <ClInclude Include="..\src\Events.h" />
+    <ClInclude Include="..\src\EventWindow.h" />
+    <ClInclude Include="..\src\FileSelector.h" />
+    <ClInclude Include="..\src\Filter.h" />
+    <ClInclude Include="..\src\FindFile.h" />
+    <ClInclude Include="..\src\FrequencyTable.h" />
+    <ClInclude Include="..\src\GetOptionIndex.h" />
+    <ClInclude Include="..\src\Globals.h" />
+    <ClInclude Include="..\src\GuitarFrame.h" />
+    <ClInclude Include="..\src\GuitarSettings.h" />
+    <ClInclude Include="..\src\GuitarSettingsDialog.h" />
+    <ClInclude Include="..\src\GuitarWindow.h" />
+    <ClInclude Include="..\src\Harmony.h" />
+    <ClInclude Include="..\src\HarmonyBrowserAnalyzer.h" />
+    <ClInclude Include="..\src\HarmonyP.h" />
+    <ClInclude Include="..\src\Help.h" />
+    <ClInclude Include="..\src\JazzPlusPlusApplication.h" />
+    <ClInclude Include="..\src\KeyStringConverters.h" />
+    <ClInclude Include="..\src\Knob.h" />
+    <ClInclude Include="..\src\Mapper.h" />
+    <ClInclude Include="..\src\MeasureChoice.h" />
+    <ClInclude Include="..\src\Metronome.h" />
+    <ClInclude Include="..\src\MidiDeviceDialog.h" />
+    <ClInclude Include="..\src\MouseAction.h" />
+    <ClInclude Include="..\src\NamedChoice.h" />
+    <ClInclude Include="..\src\NamedValue.h" />
+    <ClInclude Include="..\src\NamedValueChoice.h" />
+    <ClInclude Include="..\src\PianoFrame.h" />
+    <ClInclude Include="..\src\PianoWindow.h" />
+    <ClInclude Include="..\src\Player.h" />
+    <ClInclude Include="..\src\PortMidiPlayer.h" />
+    <ClInclude Include="..\src\Project.h" />
+    <ClInclude Include="..\src\ProjectManager.h" />
+    <ClInclude Include="..\src\DeprecatedWx\prop.h" />
+    <ClInclude Include="..\src\PropertyListDialog.h" />
+    <ClInclude Include="..\src\DeprecatedWx\propform.h" />
+    <ClInclude Include="..\src\DeprecatedWx\proplist.h" />
+    <ClInclude Include="..\src\Random.h" />
+    <ClInclude Include="..\src\RecordingInfo.h" />
+    <ClInclude Include="..\src\Rectangle.h" />
+    <ClInclude Include="..\src\Resources.h" />
+    <ClInclude Include="..\src\Rhythm.h" />
+    <ClInclude Include="..\src\Sample.h" />
+    <ClInclude Include="..\src\SampleCommand.h" />
+    <ClInclude Include="..\src\SampleDialog.h" />
+    <ClInclude Include="..\src\SampleFrame.h" />
+    <ClInclude Include="..\src\SampleWindow.h" />
+    <ClInclude Include="..\src\SelectControllerDialog.h" />
+    <ClInclude Include="..\src\DeprecatedWx\setup.h" />
+    <ClInclude Include="..\src\Signal2.h" />
+    <ClInclude Include="..\src\SliderWindow.h" />
+    <ClInclude Include="..\src\Song.h" />
+    <ClInclude Include="..\src\StandardFile.h" />
+    <ClInclude Include="..\src\StringReadWrite.h" />
+    <ClInclude Include="..\src\StringUtilities.h" />
+    <ClInclude Include="..\src\Synth.h" />
+    <ClInclude Include="..\src\SynthesizerTypeEnums.h" />
+    <ClInclude Include="..\src\SysexChannel.h" />
+    <ClInclude Include="..\src\ToolBar.h" />
+    <ClInclude Include="..\src\Track.h" />
+    <ClInclude Include="..\src\TrackFrame.h" />
+    <ClInclude Include="..\src\TrackWindow.h" />
+    <ClInclude Include="..\src\mswin\WindowsAudioInterface.h" />
+    <ClInclude Include="..\src\mswin\WindowsConsole.h" />
+    <ClInclude Include="..\src\mswin\WindowsMidiInterface.h" />
+    <ClInclude Include="..\src\mswin\WindowsPlayer.h" />
+    <ClInclude Include="..\src\AboutDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\AudioSettingsDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\CleanupDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\ControllerDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\DeleteDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\EndOfTrackDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\FilterDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\IntegerEdit.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\KeyOnDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\LengthDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\MeterChangeDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\MidiChannelDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\MetronomeSettingsDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\PitchWheelDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\ProgramChangeDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\VelocityDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\TransposeDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\TrackDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\TextDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\SysexDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\SynthesizerSettingsDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\SnapDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\ShiftDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\SetTempoDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\SearchAndReplaceDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\SamplesDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Dialogs\QuantizeDialog.h">
+      <Filter>Dialog Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DrumUtilities.h" />
+    <ClInclude Include="..\src\DrumEnums.h" />
+    <ClInclude Include="..\src\ArrayControl.h" />
+    <ClInclude Include="..\src\RhythmArrayControl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\Makefile.am" />
+    <None Include="..\src\HelpFiles\tex2rtf.ini">
+      <Filter>Help Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Help Files">
+      <UniqueIdentifier>{f0ad4f24-880f-4290-b84e-6c0af53b7b5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialog Source Files">
+      <UniqueIdentifier>{7e14185d-521d-47ac-b425-dda76e9a5000}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\src\HelpFiles\jazz.tex">
+      <Filter>Help Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

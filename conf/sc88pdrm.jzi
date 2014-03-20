@@ -1,0 +1,31 @@
+# Drumsets for SC-88Pro synthesizers
+
+# names for the program change events that select different drumsets on
+# a drum track
+.drumsets
+
+0 1 Standard 1
+1 2 Standard 2
+2 3 Standard 3
+8 9 Room
+9 10 Hip Hop
+10 11 Jungle
+11 12 Techno
+16 17 Power
+24 25 Electronic
+25 26 TR-808
+26 27 Dance
+27 28 CR-78
+28 29 TR-606
+29 30 TR-707
+30 31 TR-909
+32 33 Jazz
+40 41 Brush
+48 49 Orchestra
+49 50 Ethnic
+50 51 Kick & Snare
+52 53 Asia
+53 54 Cymbals & Klaps
+56 57 SFX
+57 58 Rhythm FX
+58 59 Rhythm FX 2

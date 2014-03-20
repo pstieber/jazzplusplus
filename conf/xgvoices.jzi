@@ -1,0 +1,493 @@
+# Voice names for XG synthesizers
+
+
+#####################################################################
+
+.max_voice_names 480
+.voicenames
+
+# the first number is the Programchange 0..127, the
+# second is text for the dialogs. For bank > 0 the
+# first number is: bank  number * 256 + program number
+# Bank-number indexes into bank-table defined in file xg.jzi
+
+0 1 Grand Piano
+256 1-1 Grand Piano Key
+4608 1-18 Mellow Grand Piano
+10240 1-40 Piano Strings
+10496 1-41 Dream
+1 2 Bright Piano
+257 2-1 Bright Piano Key
+2 3 Electric Grand Piano
+258 3-1 Electric Grand Piano Key
+8194 3-32 Detuned CP80
+10242 3-40 Electric Grand Piano 1
+10498 3-41 Electric Grand Piano 2
+3 4 Honky Tonk
+259 4-1 Honky Tonk Key
+4 5 Electric Piano 1
+260 5-1 Electric Piano 1 Key
+4612 5-18 Mellow EP 1
+8196 5-32 Choir EP 1
+10244 5-40 Hard Electric Piano
+11524 5-45 Vox Electric Piano 1
+16388 5-64 60큦 Electric Piano
+5 6 Electric Piano 2
+261 6-1 Electric Piano 2 Key
+8197 6-32 Choir EP 2
+8453 6-33 DX Hard
+8709 6-34 DX Legend
+10245 6-40 DX Phase
+10501 6-41 DX Analog
+10757 6-42 DX Koto EP
+11525 6-45 Vox Electric Piano 2
+6 7 Harpsichord
+262 7-1 Harpsichord Key
+6406 7-25 Harpsichord 2
+8966 7-35 Harpsichord 3
+7 8 Clavinet
+263 8-1 Clavinet Key
+6919 8-27 Clavi Wah
+16391 8-64 Pulse Clavi
+16647 8-65 Pierce Clavi
+8 9 Celesta
+9 10 Glocken
+10 11 Music Box
+16394 11-64 Orgel
+11 12 Vibes
+267 12-1 Vibes Key
+11531 12-45 Hard Vibe
+12 13 Marimba
+268 13-1 Marimba Key
+16396 13-64 Sine Marimba
+24844 13-97 Balafon 2
+25100 13-98 Log Drum
+13 14 Xylophone
+14 15 Tubular Bells
+24590 15-96 Church Bell
+24846 15-97 Carillon
+15 16 Dulcimer
+8975 16-35 Dulcimer 2 
+24591 16-96 Cimbalom
+24847 16-97 Santur
+16 17 Draw Organ
+8208 17-32 Detuned Draw Organ
+8464 17-33 60큦 Draw Organ 1
+8720 17-34 60큦 Draw Organ 2
+8976 17-35 70큦 Draw Organ 1
+9232 17-36 70큦 Draw Organ 2
+9488 17-37 60큦 Draw Organ 3
+9744 17-38 Even Bar 
+10256 17-40 "16+2""2/3"
+16400 17-64 Organ Bar
+16656 17-65 70큦 Draw Organ 3
+16912 17-66 Cheezy Organ
+17168 17-67 Draw Organ 3
+17 18 Percussive Organ
+6161 18-24 70큦 Perc Organ 1
+8209 18-32 Detuned Perc Organ
+8465 18-33 Lite Organ
+9489 18-37 Percussive Organ 2
+18 19 Rock Organ
+16402 19-64 Rotary Organ
+16658 19-65 Slow Rotar
+16914 19-66 Fast Rotar
+19 20 Church Organ
+8211 20-32 Church Organ 3
+8979 20-35 Church Organ 2
+10259 20-40 Notre Dam
+16403 20-64 Organ Flute
+16659 20-65 Tremolo Organ Flute
+20 21 Reed Organ
+10260 21-40 Puff Organ
+21 22 Accordion
+8213 22-32 Accord It
+22 23 Harmonica
+8214 23-32 Harmonica 2 
+23 24 Tango Accordion
+16407 24-64 Tango Accordion 2
+24 25 Nylon Guitar
+4120 25-16 Nylon Guitar 2
+6424 25-25 Nylon Guitar 3
+11032 25-43 Velocity Guitar Harmony
+24600 25-96 Ukulele
+25 26 Steel Guitar
+4121 26-16 Steel Guitar 2
+8985 26-35 12 String Guitar
+10265 26-40 Nylon & Steel
+10521 26-41 Steel & Body
+24601 26-96 Mandolin
+26 27 Jazz Guitar
+4634 27-18 Mellow Guitar
+8218 27-32 JazzAmp
+27 28 Clean Guitar
+8219 28-32 Chorus Guitar
+28 29 Mute Guitar
+10268 29-40 Funk Guitar 1
+10524 29-41 Muted Steel Guitar
+11036 29-43 Funk Guitar 2
+11548 29-45 Jazz Man
+29 30 Overdrive Guitar
+11037 30-43 Guitar Pinch
+30 31 Distorted Guitar
+10270 31-40 Feedback Guitar 1
+10526 31-41 Feedback Guitar 2
+31 32 Guitar Harmony
+16671 32-65 Guitar Feedback
+16927 32-66 Guitar Harmony 2
+32 33 Acoustic Bass
+10272 33-40 Jazz Rhythm
+11552 33-45 Vox Upright
+33 34 Finger Bass
+4641 34-18 Finger Bass Dark
+6945 34-27 Flange Bass
+10273 34-40 Bass & Distorted Guitar
+11041 34-43 Finger Slap
+11553 34-45 Finger Bass 2
+16673 34-65 ModAlem
+34 35 Pick Bass
+7202 35-28 Muted Pick Bass
+35 36 Fretless
+8227 36-32 Fretless 2
+8483 36-33 Fretless 3
+8739 36-34 Fretless 4
+24611 36-96 Synth Fretless
+24867 36-97 Smooth
+36 37 Slap Bass 1
+6948 37-27 Reso Slap
+8228 37-32 Punch Thump
+37 38 Slap Bass 2
+11045 38-43 Velo Slap Bass
+38 39 Synth Bass 1
+4646 39-18 Synth Bass 1 Dark
+5158 39-20 Fast Res Bass
+6182 39-24 Acid Bass
+8998 39-35 Clavi Bass
+10278 39-40 Tekno Bass
+16422 39-64 Oscar
+16678 39-65 Square Bass
+16934 39-66 Rubber Bass
+24614 39-96 Hammer
+39 40 Synth Bass 2
+1575 40-6 Mellow Bass 1
+3111 40-12 Seq Bass
+4647 40-18 Click Synth Bass
+4903 40-19 Synth Bass 2 Dark
+8231 40-32 Smooth Bass 2
+10279 40-40 Modular Bass
+10535 40-41 DX Bass
+16423 40-64 Wire Bass
+40 41 Violin
+2088 41-8 Slow Violin
+41 42 Viola
+42 43 Cello
+43 44 Contrabass
+44 45 Tremolo Strings
+2092 45-8 Slow Tremolo Strings
+10284 45-40 Suspended Strings
+45 46 Pizzicato Strings
+46 47 Harp
+10286 47-40 Yang Chin
+47 48 Timpani
+48 49 Strings 1
+816 49-3 Strings
+2096 49-8 Slow Strings
+6192 49-24 Arco Strings
+9008 49-35 60큦 Strings
+10288 49-40 Orchestra
+10544 49-41 Orchestra 2 
+10800 49-42 Tremolo Orchestra
+11568 49-45 Velo Strings
+49 50 Strings 2
+817 50-3 S.Slow Strings
+2097 50-8 Legato Strings
+10289 50-40 Warm Strings
+10545 50-41 Kingdom
+16433 50-64 70큦 Strings
+16689 50-65 String Ensemble 3
+50 51 Synth Strings 1
+6962 51-27 Reso Strings
+16434 51-64 Synth Strings 4
+16690 51-65 SS Strings
+51 52 Synth Strings 2
+52 53 Choir Aah
+820 53-3 S.Choir
+4148 53-16 Choir Aahs 2
+8244 53-32 Mellow Choir
+10292 53-40 Choir Strings
+53 54 Voice Ooh
+54 55 Synth Voice
+10294 55-40 Synth Vox 2
+10550 55-41 Choral
+16438 55-64 AnaVoice
+55 56 Orchestra Hit
+9015 56-35 Orchestra Hit 2
+16439 56-64 Impact  
+56 57 Trumpet
+4152 57-16 Trumpet 2
+4408 57-17 Brite Trumpet
+8248 57-32 Warm Trumpet
+57 58 Trombone
+4665 58-18 Trombone 2
+58 59 Tuba
+4154 59-16 Tuba 2
+59 60 Mute Trumpet
+60 61 French Horn
+1596 61-6 French Horn Solo
+8252 61-32 French Horn 2
+9532 61-37 Horn Orchestra
+61 62 Brass Section
+9021 62-35 Trumpet &  Section
+10301 62-40 Brass Section 2
+10557 62-41 High Brass
+10813 62-42 Mellow Brass
+62 63 Synth Brass 1
+3134 63-12 Quack Brass
+5182 63-20 Rezo Synth Brass
+6206 63-24 Poly Brass
+6974 63-27 Synth Brass 3
+8254 63-32 Jump Brass
+11582 63-45 Analog Velocity Brass
+16446 63-64 Analog Brass 1
+63 64 Synth Brass 2
+4671 64-18 Soft Brass
+10303 64-40 Synth Brass 4
+10559 64-41 Choir Brass
+11583 64-45 Velocity Brass 2
+16447 64-64 Analog Brass 2
+64 65 Soprano Sax
+65 66 Alto Sax
+10305 66-40 Sax Section
+11073 66-43 Hyper Alto Sax
+66 67 Tenor Sax
+10306 67-40 Brite Tenor Sax
+10562 67-41 Soft Tenor Sax
+16450 67-64 Tenor Sax  2
+67 68 Baritone Sax
+68 69 Oboe
+69 70 English Horn
+70 71 Bassoon
+71 72 Clarinet
+72 73 Piccolo
+73 74 Flute
+74 75 Recorder
+75 76 Pan Flute
+76 77 Bottle Blow
+77 78 Shakuhachi
+78 79 Whistle
+79 80 Ocarina
+80 81 Square Lead
+1616 81-6 Square Lead 2
+2128 81-8 LM Square
+4688 81-18 Hollow
+4944 81-19 Shmoog  
+16464 81-64 Mellow
+16720 81-65 Solo Sine
+16976 81-66 Sine Lead
+81 82 Saw Lead
+1617 82-6 Saw 2   
+2129 82-8 Thick Saw
+4689 82-18 Dynamic Saw
+4945 82-19 Digital Saw
+5201 82-20 Big Lead
+6225 82-24 Heavy Synth
+6481 82-25 Waspy Synth
+10321 82-40 Pulse Saw
+10577 82-41 Dr. Lead
+11601 82-45 Velocity Lead
+24657 82-96 Seq Analog
+5215 96-20 Shwimmer
+7007 96-27 Converge
+16479 96-64 Polar Pad
+16991 96-66 Celestial
+96 97 Rain
+11616 97-45 Clavi Pad
+16480 97-64 Harmony Rain
+16736 97-65 African Wind
+16992 97-66 Caribean
+97 98 Sound Track
+7009 98-27 Prologue
+16481 98-64 Ancestrl
+98 99 Crystal
+3170 99-12 Synth Drum
+3682 99-14 Popcorn
+4706 99-18 Tiny Bell
+9058 99-35 Round Glock
+10338 99-40 Glock China
+10594 99-41 Clear Bell
+10850 99-42 Choir Bell
+16482 99-64 Synth Malet
+16738 99-65 Soft Crystal
+16994 99-66 Loud Glock
+17250 99-67 Xmas Bell
+17506 99-68 Vibe Bell
+17762 99-69 Digi Bell
+18018 99-70 Air Bells
+18274 99-71 Bell Harp
+18530 99-72 Gamel Marimba
+99 100 Atmosphrere
+4707 100-18 Warm Atmosphere
+4963 100-19 Hollow Rls
+10339 100-40 Nylon EP
+16483 100-64 Nylon Harp
+16739 100-65 Harp Vox
+16995 100-66 Atmos Pad
+17251 100-67 Planet
+100 101 Brightness
+16484 101-64 Fantasy Bell
+24676 101-96 Smokey
+101 102 Goblins
+16485 102-64 Gob Synth
+82 83 Calliope Lead
+16722 83-65 Pure Pad
+83 84 Chiff Lead
+16467 84-64 Rubby
+84 85 Charang Lead
+16468 85-64 Distorted Lead
+16724 85-65 Wire Lead
+85 86 Voice Lead
+6229 86-24 Synth Aah
+16469 86-64 Vox Lead
+86 87 Fifth Lead
+9046 87-35 Big Five
+87 88 Bass & Lead
+4183 88-16 Big & Low 
+16471 88-64 Fat & Parky
+16727 88-65 Soft Wurl
+88 89 New Age Pad
+16472 89-64 Fantasy Pad 2
+89 90 Warm Pad
+4185 90-16 Thick Pad
+4441 90-17 Soft Pad
+4697 90-18 Sine Pad
+16473 90-64 Horn Pad
+16729 90-65 Rotar Strings
+90 91 Poly Syth Pad
+16474 91-64 Poly Pad 80
+16730 91-65 Click Pad
+16986 91-66 Analog Pad
+17242 91-67 Square Pad
+91 92 Choir Pad
+16475 92-64 Heavenly Pad 2 
+16987 92-66 Itopia
+17243 92-67 CC Pad
+92 93 Bowed Pad
+16476 93-64 Glacier
+16732 93-65 Glass Pad
+93 94 Metallic Pad
+16477 94-64 Tine Pad
+16733 94-65 Pan Pad
+94 95 Halo Pad
+95 96 Sweep Pad
+5215 96-20 Shwimmer
+7007 96-27 Converge
+16479 96-64 Polar Pad
+16991 96-66 Celestial
+96 97 Rain
+11616 97-45 Clavi Pad
+16480 97-64 Harmony Rain
+16736 97-65 African Wind
+16992 97-66 Caribean
+97 98 Sound Track
+7009 98-27 Prologue
+16481 98-64 Ancestrl
+98 99 Crystal
+3170 99-12 Synth Drum
+3682 99-14 Popcorn
+4706 99-18 Tiny Bell
+9058 99-35 Round Glock
+10338 99-40 Glock China
+10594 99-41 Clear Bell
+10850 99-42 Choir Bell
+16482 99-64 Synth Malet
+16738 99-65 Soft Crystal
+16994 99-66 Loud Glock
+17250 99-67 Xmas Bell
+17506 99-68 Vibe Bell
+17762 99-69 Digi Bell
+18018 99-70 Air Bells
+18274 99-71 Bell Harp
+18530 99-72 Gamel Marimba
+99 100 Atmosphrere
+4707 100-18 Warm Atmosphere
+4963 100-19 Hollow Rls
+10339 100-40 Nylon EP
+16483 100-64 Nylon Harp
+16739 100-65 Harp Vox
+16995 100-66 Atmos Pad
+17251 100-67 Planet
+100 101 Brightness
+16484 101-64 Fantasy Bell
+24676 101-96 Smokey
+101 102 Goblins
+16485 102-64 Gob Synth
+16741 102-65 50큦 SciFi
+16997 102-66 Ring Pad
+17253 102-67 Ritual
+17509 102-68 To Heaven
+18021 102-70 Night
+18277 102-71 Glisten
+24677 102-96 Bell Choir
+102 103 Echoes
+2150 103-8 Echo Pad 2
+3686 103-14 Echo Pan
+16486 103-64 Echo Bell
+16742 103-65 Big Pan
+16998 103-66 Synth Piano
+17254 103-67 Creation
+17510 103-68 Stardust
+17766 103-69 Reso Pan
+103 104 Sci-Fi
+16487 104-64 Starz
+104 105 Sitar
+8296 105-32 Detuned Sitar
+9064 105-35 Sitar 2 
+24680 105-96 Tambra
+24936 105-97 Tamboura
+105 106 Banjo
+7273 106-28 Muted Banjo
+24681 106-96 Rabab
+24937 106-97 Gopichnt
+25193 106-98 Oud
+106 107 Shamisen
+107 108 Koto
+24683 108-96 T. Koto
+24939 108-97 Canoon
+108 109 Kalimba
+109 110 Bagpipe
+110 111 Fiddle
+111 112 Shanai
+16495 112-64 Shanai 2
+24687 112-96 Pungi
+24943 112-97 Hichriki
+112 113 Tinkle Bell
+24688 113-96 Bonang
+24944 113-97 Gender
+25200 113-98 Gamelan
+25456 113-99 S.Gamlan
+25712 113-100 Rama Cym
+25968 113-101 Asian Bell
+113 114 Agogo
+114 115 Steel Drum
+24946 115-97 Glas Percussion
+25202 115-98 Thai Bell
+115 116 Wood Block
+24691 116-96 Castanet
+116 117 Taiko Drum
+24692 117-96 Gr.Cassa
+117 118 Melodic Tom
+16501 118-64 Melodic Tom 2
+16757 118-65 Real Tom
+17013 118-66 Rock Tom
+118 119 Synth Drum
+16502 119-64 Analog Tom
+16758 119-65 Electric Percussion
+119 120 Reversed Cymbal
+120 121 Guitar Fret Noise
+121 122 Breath Noise
+122 123 Seashore
+123 124 Bird Tweet
+124 125 Telephone Ring
+125 126 Helicopter
+126 127 Applause
+127 128 Gunshot

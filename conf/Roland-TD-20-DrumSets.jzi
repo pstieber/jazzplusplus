@@ -1,0 +1,106 @@
+# Drumsets for a Roland TD-20 synthesizer
+
+# Names for the program change events that select different drumsets on
+# a drum track.
+.drumsets
+
+0 1 TDW-20
+1 2 50s King
+2 3 ControlRoom
+3 4 MetalCore
+4 5 FunkGroove
+5 6 40s BeBop
+6 7 >processed>
+7 8 Cajon
+8 9 Melodious
+9 10 Premium
+10 11 SwingJazz
+11 12 BluesRock
+12 13 Dry Studio
+13 14 2HH House
+14 15 TechFusion
+15 16 LetItBeat
+16 17 neotype
+17 18 JazzBop
+18 19 RawBeat
+19 20 VintageRock
+20 21 DNB
+21 22 GarageRock
+22 23 80s Funk
+23 24 Cashmirror
+24 25 BREAKs
+25 26 90s Rock
+26 27 JazzClub
+27 28 Jive
+28 29 AmbientRock
+29 30 Cosmic
+30 31 Crossover
+31 32 VintageJazz
+32 33 Coolth
+33 34 BulletBlue
+34 35 FunkyJungle
+35 36 Natural
+36 37 LA BeBop
+37 38 MBs House
+38 39 Bronze Dry
+39 40 DarkComposer
+40 41 DRUMS vs DJ
+41 42 Gated
+42 43 RotoFxCity
+43 44 PopDelay
+44 45 1985
+45 46 Spaced Out
+46 47 BrazilPrec
+47 48 LatinDrums
+48 49 InVasian
+49 50 FLA<n<GER
+50 51 VPro
+51 52 Slamin'
+52 53 METAL
+53 54 JazzCombo
+54 55 OverDrive
+55 56 Titanium
+56 57 RotoKit
+57 58 UNIVERSE
+58 59 Skanky
+59 60 Brushes
+60 61 Spark!
+61 62 >>GT>>
+62 63 Antique
+63 64 =BreakBeats
+64 65 Studio Kit
+65 66 Groover
+66 67 Mallet
+67 68 Drumline
+68 69 JazzGig
+69 70 Airtime
+70 71 Sploink!
+71 72 Boogaloo
+72 73 Zeppy
+73 74 Arena
+74 75 Maple
+75 76 Shallow
+76 77 Ballad
+77 78 Raspy
+78 79 PopReggae
+79 80 BrassBiggie
+80 81 WetBooth
+81 82 70s Record
+82 83 Lite
+83 84 Mellow
+84 85 Stadium
+85 86 TiteOctas
+86 87 90s Power
+87 88 FxJungle
+88 89 Tekno
+89 90 TR-808 Set
+90 91 TR-909 Set
+91 92 Hex<>Drum
+92 93 Cosmosis
+93 94 Technology
+94 95 Orchestra Percussion
+95 96 Survivor
+96 97 Latin Toys
+97 98 African Percussion
+98 99 Tabla/Sitar
+99 100 Rock Band

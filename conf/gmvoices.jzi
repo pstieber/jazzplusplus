@@ -1,0 +1,137 @@
+# Voice names for GM synthesizers
+
+.max_voice_names 128
+.voicenames
+
+# the first number is the Programchange 0..127, the
+# second is text for the dialogs. For bank > 0 the
+# first number is: bank  number * 256 + program number
+
+0 1 Piano 1
+1 2 Piano 2
+2 3 Piano 3
+3 4 Honky-tonk Piano
+4 5 Rhodes Piano
+5 6 E Piano
+6 7 Harpsichord
+7 8 Clavinet
+8 9 Celesta
+9 10 Glockenspiel
+10 11 Musicbox
+11 12 Vibraphone
+12 13 Marimba
+13 14 Xylophone
+14 15 Tubular Bells
+15 16 Santur
+16 17 Organ 1
+17 18 Organ 2
+18 19 Organ 3
+19 20 Church Organ
+20 21 Reed Organ
+21 22 Accordion
+22 23 Harmonica
+23 24 Bandoneon
+24 25 Nylon Guitar
+25 26 Steel Guitar
+26 27 Jazz Guitar
+27 28 Clean Guitar
+28 29 Muted Guitar
+29 30 Overdrive Guitar
+30 31 Distorton Guitar
+31 32 Guitar Harmonics
+32 33 Acoustic Bass
+33 34 Fingered Bass
+34 35 Picked Bass
+35 36 Fretless Bass
+36 37 Slap Bass1
+37 38 Slap Bass2
+38 39 Synth Bass1
+39 40 Synth Bass2
+40 41 Violin
+41 42 Viola
+42 43 Cello
+43 44 Contrabass
+44 45 Tremolo Strings
+45 46 Pizzicato String
+46 47 Orchestral Harp
+47 48 Timpani
+48 49 Strings
+49 50 Slow Strings
+50 51 Synth Strings1
+51 52 Synth Strings2
+52 53 Choir Aahs
+53 54 Voice Oohs
+54 55 Synth Vox
+55 56 Orchestra Hit
+56 57 Trumpet
+57 58 Trombone
+58 59 Tuba
+59 60 Muted Trumpet
+60 61 French Horn
+61 62 Brass Section
+62 63 Synth Brass1
+63 64 Synth Brass2
+64 65 Soprano Sax
+65 66 Alto Sax
+66 67 Tenor Sax
+67 68 Baritone Sax
+68 69 Oboe
+69 70 English Horn
+70 71 Bassoon
+71 72 Clarinet
+72 73 Piccolo
+73 74 Flute
+74 75 Recorder
+75 76 Pan Flute
+76 77 Bottle Blow
+77 78 Shakuhachi
+78 79 Whistle
+79 80 Ocarina
+80 81 Square Wave
+81 82 Saw Wave
+82 83 Syn Calliope
+83 84 Chiffer Lead
+84 85 Charang
+85 86 Solo Voice
+86 87 5th Saw Wave
+87 88 Bass & Lead
+88 89 Fantasia
+89 90 Warm Pad
+90 91 PolySynth
+91 92 Space Voice
+92 93 Bowed Glass
+93 94 Metal Pad
+94 95 Halo Pad
+95 96 Sweep Pad
+96 97 Ice Rain
+97 98 Soundtrack
+98 99 Crystal
+99 100 Atmosphere
+100 101 Brightness
+101 102 Goblins
+102 103 Echo Drops
+103 104 Star Theme
+104 105 Sitar
+105 106 Banjo
+106 107 Shamisen
+107 108 Koto
+108 109 Kalimba
+109 110 Bagpipe
+110 111 Fiddle
+111 112 Shanai
+112 113 Tinkle Bell
+113 114 Agogo Bells
+114 115 Steel Drums
+115 116 Woodblock
+116 117 Taiko Drum
+117 118 Melodic Tom 1
+118 119 Synth Drum
+119 120 Reverse Cymbal
+120 121 Guitar Fret Noise
+121 122 Breath Noise
+122 123 Seashore
+123 124 Bird Tweet
+124 125 Telephone Ring
+125 126 Helicopter Blade
+126 127 Applause/Noise
+127 128 Gunshot

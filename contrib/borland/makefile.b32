@@ -1,0 +1,36 @@
+# Snarfed from wxWindows 1.6.8 build for Borland32
+
+!include wxmsw.env
+!include makeb32.env
+
+!if "$(TARGET)" == ""
+TARGET = all
+!endif
+
+CFG = makeb32.cfg
+DIRS = src
+
+all: $(DIRS)
+
+$(DIRS): $(CFG)
+        cd $@
+        make -f makefile.b32 CFG=..\$(CFG) $(TARGET)
+        cd ..
+
+$(CFG): makefile.b32 wxmsw.env makeb32.env
+	copy &&!
+$(CODEGEN) $(FLOATPT) $(BCCOUT) $(BCCSRC) $(DEBUGFLG) $(PRECHDR)
+$(BCCCPU) $(CALLFMT) $(BCCASM) $(CPPCOMPAT) $(VIRTTAB) $(TEMPL)
+$(EXCPT) $(WARNFLG) $(WARNMSG)
+-Dwx_msw -DWIN95=1
+-I$(WXINC);$(BCCDIR)\include
+-L$(WXLIB);$(BCCDIR)\lib
+! $(CFG)
+
+
+clean:
+    -make -f makefile.b32 TARGET=clean
+    del makeb32.cfg
+
+.precious: $(DIRS) clean
+

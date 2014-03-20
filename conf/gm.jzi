@@ -1,0 +1,5 @@
+.synth_type GM
+.include gmdrmset.jzi
+.include gmdrmnam.jzi
+.include gmvoices.jzi
+.include ctrlnam.jzi

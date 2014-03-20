@@ -1,0 +1,12 @@
+# Drumsets for GM synthesizers
+
+# names for the program change events that select different drumsets on
+# a drum track
+.drumsets
+
+0 1 Standard Drums
+16 17 Power Set
+24 25 Electronic Set
+25 26 TR-808 Set
+40 41 Brush Set
+48 49 Orchestra Set

@@ -1,0 +1,84 @@
+# Drum names for XG synthesizers
+
+# names for the drumkeys
+.drumnames
+
+13 Surdo Mute
+14 Surdo Open
+15 Hi Q
+16 Whip Slap
+17 Scratch Push
+18 Scratch Pull
+19 Finger Snap
+20 Click Noise
+21 Metronome Click
+22 Metronome Bell
+23 Seq Click L
+24 Seq Click H
+25 Brush Tap
+26 Brush Swirl L
+27 Brush Slap
+28 Brush Swirl H
+29 Snare Roll
+30 Castanet
+31 Snare L
+32 Sticks
+33 Bass Drum L
+34 Open Rim Shot
+35 Bass Drum M
+36 Bass Drum H
+37 Side Stick
+38 Snare M
+39 Hand Clap
+40 Snare H
+41 Floor Tom L
+42 Hi-Hat Closed
+43 Floor Tom H
+44 Hi-Hat Pedal
+45 Low Tom
+46 Hi-Hat Open
+47 Mid Tom L
+48 Mid Tom H
+49 Crash Cymbal 1
+50 High Tom
+51 Ride Cymbal 1
+52 Chinese Cymbal
+53 Ride Cymbal Cup
+54 Tambourine
+55 Splash Cymbal
+56 Cowbell
+57 Crash Cymbal 2
+58 Vibraslap
+59 Ride Cymbal 2
+60 Bongo H
+61 Bongo L
+62 Conga H Mute
+63 Conga H Open
+64 Conga L
+65 Timbale H
+66 Timbale L
+67 Agogo H
+68 Agogo L
+69 Cabasa
+70 Maracas
+71 Samba Whistle H
+72 Samba Whistle L
+73 Guiro Short
+74 Guiro Long
+75 Claves
+76 Wood Block H
+77 Wood Block L
+78 Cuica Mute
+79 Cuica Open
+80 Triangle Mute
+81 Triangle Open
+82 Shaker
+83 Jingle Bell
+84 Bell Tree
+85 [No sound]
+86 [No sound]
+87 [No sound]
+88 [No sound]
+89 [No sound]
+90 [No sound]
+91 [No sound]

@@ -1,0 +1,31 @@
+/* XPM */
+static const char *cutpaste_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"20 19 5 1",
+/* colors */
+"  c #000000",
+". c #C0C0C0",
+"X c #FFFFFF",
+"o c #0000FF",
+"O c None",
+/* pixels */
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOXXXOOOOOOOOOOOO",
+"OOOOXoo OOOOOOOOOOOO",
+"OOOXXoo XOOOXXXXXOOO",
+"OOXoooooo OXooooo OO",
+"OOXoooooo OXooooo OO",
+"OOO  oo  OOO     OOO",
+"OOOOXoo OO OOOOOOOOO",
+"OOOOO   OO OOOOOOOOO",
+"OOOOOOOOOO OOOOOOOOO",
+"OOOOOOOOOO OOOOOOOOO",
+"OOOOOOOOOO OOOOOOOOO",
+"OOOOOOO    OOOOOOOOO",
+"OOOOOO     OOOOOOOOO",
+"OOOOOO     OOOOOOOOO",
+"OOOOOOO   OOOOOOOOOO",
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOOOOOOOOO"
+};

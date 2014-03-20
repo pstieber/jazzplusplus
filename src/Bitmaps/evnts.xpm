@@ -1,0 +1,30 @@
+/* XPM */
+static const char *evnts_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"20 19 4 1",
+/* colors */
+"  c #000000",
+". c #C0C0C0",
+"X c #0000FF",
+"o c None",
+/* pixels */
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"ooooooXXXXXXXXXXXooo",
+"ooooooXXXXXXXXXXXooo",
+"oooooooooooooooooooo",
+"oooo   oo        ooo",
+"oooo   oo        ooo",
+"oooooooooooooooooooo",
+"ooooooooXXXXXXXXXooo",
+"ooooooooXXXXXXXXXooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"ooo           oooooo",
+"ooo           oooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo"
+};

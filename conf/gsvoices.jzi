@@ -1,0 +1,326 @@
+# Voice names for GS synthesizers
+
+.max_voice_names 317
+.voicenames
+
+# the first number is the Programchange 0..127, the
+# second is text for the dialogs. For bank > 0 the
+# first number is: bank  number * 256 + program number
+
+0 1 Piano 1
+1 2 Piano 2
+2 3 Piano 3
+3 4 Honky-tonk Piano
+4 5 Rhodes Piano
+2052 5-8 Detuned EP 1
+5 6 E Piano
+2053 6-8 Detuned EP 2
+6 7 Harpsichord
+2054 7-8 Coupled Hps.
+7 8 Clavinet
+8 9 Celesta
+9 10 Glockenspiel
+10 11 Musicbox
+11 12 Vibraphone
+12 13 Marimba
+13 14 Xylophone
+14 15 Tubular Bells
+2062 15-8 Church Bell
+15 16 Santur
+16 17 Organ 1
+2064 17-8 Detuned Or. 1
+17 18 Organ 2
+2065 18-8 Detuned Or. 2
+18 19 Organ 3
+19 20 Church Organ
+2067 20-8 Church Org. 2
+20 21 Reed Organ
+21 22 Accordion
+2069 22-8 Accordion It
+22 23 Harmonica
+23 24 Bandoneon
+24 25 Nylon Guitar
+2072 25-8 Ukulele
+25 26 Steel Guitar
+2073 26-8 12-str. Gt
+4121 26-16 Mandolin
+26 27 Jazz Guitar
+2074 27-8 Hawaiian Gt.
+27 28 Clean Guitar
+2075 28-8 Chorus Gt.
+28 29 Muted Guitar
+2076 29-8 Funk Gt.
+29 30 Overdrive Guitar
+30 31 Distorton Guitar
+2078 31-8 Feedback Gt.
+31 32 Guitar Harmonics
+2079 32-8 Gt. Feedback
+32 33 Acoustic Bass
+33 34 Fingered Bass
+34 35 Picked Bass
+35 36 Fretless Bass
+36 37 Slap Bass1
+37 38 Slap Bass2
+38 39 Synth Bass1
+2086 39-8 Synth Bass3
+39 40 Synth Bass2
+2087 40-8 Synth Bass4
+40 41 Violin
+41 42 Viola
+42 43 Cello
+43 44 Contrabass
+44 45 Tremolo Strings
+45 46 Pizzicato String
+46 47 Orchestral Harp
+47 48 Timpani
+48 49 Strings
+2096 49-8 Orchestra
+49 50 Slow Strings
+50 51 Synth Strings1
+2098 51-8 Synth Strings3
+51 52 Synth Strings2
+52 53 Choir Aahs
+53 54 Voice Oohs
+54 55 Synth Vox
+55 56 Orchestra Hit
+56 57 Trumpet
+57 58 Trombone
+58 59 Tuba
+59 60 Muted Trumpet
+60 61 French Horn
+61 62 Brass Section
+2109 62-8 Brass2
+62 63 Synth Brass1
+2110 63-8 Synth Brass3
+63 64 Synth Brass2
+2111 64-8 Synth Brass4
+64 65 Soprano Sax
+65 66 Alto Sax
+66 67 Tenor Sax
+67 68 Baritone Sax
+68 69 Oboe
+69 70 English Horn
+70 71 Bassoon
+71 72 Clarinet
+72 73 Piccolo
+73 74 Flute
+74 75 Recorder
+75 76 Pan Flute
+76 77 Bottle Blow
+77 78 Shakuhachi
+78 79 Whistle
+79 80 Ocarina
+80 81 Square Wave
+2128 81-8 Sine Wave
+81 82 Saw Wave
+82 83 Syn Calliope
+83 84 Chiffer Lead
+84 85 Charang
+85 86 Solo Voice
+86 87 5th Saw Wave
+87 88 Bass & Lead
+88 89 Fantasia
+89 90 Warm Pad
+90 91 PolySynth
+91 92 Space Voice
+92 93 Bowed Glass
+93 94 Metal Pad
+94 95 Halo Pad
+95 96 Sweep Pad
+96 97 Ice Rain
+97 98 Soundtrack
+98 99 Crystal
+99 100 Atmosphere
+100 101 Brightness
+101 102 Goblins
+102 103 Echo Drops
+103 104 Star Theme
+104 105 Sitar
+105 106 Banjo
+106 107 Shamisen
+107 108 Koto
+2155 108-8 Taisho Koto
+108 109 Kalimba
+109 110 Bagpipe
+110 111 Fiddle
+111 112 Shanai
+112 113 Tinkle Bell
+113 114 Agogo Bells
+114 115 Steel Drums
+115 116 Woodblock
+2163 116-8 Castanets
+116 117 Taiko Drum
+2164 117-8 Concert BD
+117 118 Melodic Tom 1
+2165 118-8 Melodic Tom 2
+118 119 Synth Drum
+2166 119-8 808 Tom
+119 120 Reverse Cymbal
+120 121 Guitar Fret Noise
+376 121-1 Guitar Cut Noise
+632 121-2 String Slap
+121 122 Breath Noise
+377 122-1 Flute Key Click
+122 123 Seashore
+378 123-1 Rain
+634 123-2 Thunder
+890 123-3 Wind
+1146 123-4 Stream
+1402 123-5 Bubble
+123 124 Bird Tweet
+379 124-1 Dog
+635 124-2 Horse-Gallop
+124 125 Telephone Ring
+380 125-1 Telephone Ring 2
+636 125-2 Door Creaking
+892 125-3 Door
+1148 125-4 Scratch
+1404 125-4 Windchime
+125 126 Helicopter Blade
+381 126-1 Car Engine
+637 126-2 Car Stop
+893 126-3 Car Pass
+1149 126-4 Car Crash
+1405 126-5 Siren
+1661 126-6 Train
+1917 126-7 Jetplane
+2173 126-8 Starship
+2429 126-9 Burst Noise
+126 127 Applause/Noise
+382 127-1 Laughing
+638 127-2 Screaming
+894 127-3 Punch
+1150 127-4 Heart Beat
+1406 127-5 Footsteps
+127 128 Gunshot
+383 128-1 Machine Gun
+639 128-2 Lasergun
+895 128-3 Explosion
+32512 1-127 Acou Piano 1
+32513 2-127 Acou Piano 2
+32514 3-127 Acou Piano 3
+32515 4-127 Elec Piano 1
+32516 5-127 Elec Piano 2
+32517 6-127 Elec Piano 3
+32518 7-127 Elec Piano 4
+32519 8-127 Honkytonk
+32520 9-127 Elec Org 1
+32521 10-127 Elec Org 2
+32522 11-127 Elec Org 3
+32523 12-127 Elec Org 4
+32524 13-127 Pipe Org 1
+32525 14-127 Pipe Org 2
+32526 15-127 Pipe Org 3
+32527 16-127 Accordion
+32528 17-127 Harpsi 1
+32529 18-127 Harpsi 2
+32530 19-127 Harpsi 3
+32531 20-127 Clavi 1
+32532 21-127 Clavi 2
+32533 22-127 Clavi 3
+32534 23-127 Celesta 1
+32535 24-127 Celesta 2
+32536 25-127 Syn Brass 1
+32537 26-127 Syn Brass 2
+32538 27-127 Syn Brass 3
+32539 28-127 Syn Brass 4
+32540 29-127 Syn Bass 1
+32541 30-127 Syn Bass 2
+32542 31-127 Syn Bass 3
+32543 32-127 Syn Bass 4
+32544 33-127 Fantasy
+32545 34-127 Harmp Pan
+32546 35-127 Chorale
+32547 36-127 Glasses
+32548 37-127 Soundtrack
+32549 38-127 Atmosphere
+32550 39-127 Warm Bell
+32551 40-127 Funny Vox
+32552 41-127 Echo Bell
+32553 42-127 Ice Rain
+32554 43-127 Oboe 2001
+32555 44-127 Echo Pan
+32556 45-127 Doctor Solo
+32557 46-127 School Daze
+32558 47-127 Bellsinger
+32559 48-127 Square Wave
+32560 49-127 Str Sect 1
+32561 50-127 Str Sect 2
+32562 51-127 Str Sect 3
+32563 52-127 Pizzicato
+32564 53-127 Violin 1
+32565 54-127 Violin 2
+32566 55-127 Cello 1
+32567 56-127 Cello 2
+32568 57-127 Contrabass
+32569 58-127 Harp 1
+32570 59-127 Harp 2
+32571 60-127 Guitar 1
+32572 61-127 Guitar 2
+32573 62-127 Elec Gtr 1
+32574 63-127 Elec Gtr 2
+32575 64-127 Sitar
+32576 65-127 Acou Bass 1
+32577 66-127 Acou Bass 2
+32578 67-127 Elec Bass 1
+32579 68-127 Elec Bass 2
+32580 69-127 Slap Bass 1
+32581 70-127 Slap Bass 2
+32582 71-127 Fretless 1
+32583 72-127 Fretless 2
+32584 73-127 Flute 1
+32585 74-127 Flute 2
+32586 75-127 Piccolo 1
+32587 76-127 Piccolo 2
+32588 77-127 Recorder
+32589 78-127 Pan Pipes
+32590 79-127 Sax 1
+32591 80-127 Sax 2
+32592 81-127 Sax 3
+32593 82-127 Sax 4
+32594 83-127 Clarinet 1
+32595 84-127 Clarinet 2
+32596 85-127 Oboe
+32597 86-127 Engl Horn
+32598 87-127 Bassoon
+32599 88-127 Harmonica
+32600 89-127 Trumpet 1
+32601 90-127 Trumpet 2
+32602 91-127 Trombone 1
+32603 92-127 Trombone 2
+32604 93-127 Fr Horn 1
+32605 94-127 Fr Horn 2
+32606 95-127 Tuba
+32607 96-127 Brs Sect 1
+32608 97-127 Brs Sect 2
+32609 98-127 Vibe 1
+32610 99-127 Vibe 2
+32611 100-127 Syn Mallet
+32612 101-127 Windbell
+32613 102-127 Glock
+32614 103-127 Tube Bell
+32615 104-127 Xylophone
+32616 105-127 Marimba
+32617 106-127 Koto
+32618 107-127 Sho
+32619 108-127 Shakuhashi
+32620 109-127 Whistle 1
+32621 110-127 Whistle 2
+32622 111-127 Bottleblow
+32623 112-127 Breathpipe
+32624 113-127 Timpani
+32625 114-127 Melodic Tom
+32626 115-127 Deep Snare
+32627 116-127 Elec Perc 1
+32628 117-127 Elec Perc 2
+32629 118-127 Taiko
+32630 119-127 Taiko Rim
+32631 120-127 Cymbal
+32632 121-127 Castanets
+32633 122-127 Triangle
+32634 123-127 Orche Hit
+32635 124-127 Telephone
+32636 125-127 Bird Tweet
+32637 126-127 One Note Jam
+32638 127-127 Water Bell
+32639 128-127 Jungle Tune

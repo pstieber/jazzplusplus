@@ -1,0 +1,267 @@
+.\ -- new files (attached):
+makefile.b32
+makeb32.env
+wxmsw.env
+
+
+
+bitmaps\ -- no differences
+
+
+
+contrib\ -- not investigated
+
+
+
+doc\ -- not investigated
+
+
+
+linux\ -- not investigated
+
+
+
+midinetd\ -- not investigated
+
+
+
+mswin\ -- amended files:
+winplay.cpp:
+Amended line 35 to read as follows, to suppress "enable" and "disable":
+#if defined(MSVC) || defined(__BORLANDC__)
+
+
+
+scripts\ -- not investigated
+
+
+
+song\ -- not investigated
+
+
+
+src\ -- new files (attached):
+makefile.b32
+
+
+src\ -- amended files:
+
+-- error correction:
+
+
+Comparing files C:\src\jazz-src-4.1.3\src\random.cpp and random.cpp
+****** C:\src\jazz-src-4.1.3\src\random.cpp
+
+#ifdef FOR_MSW
+double tRndArray::operator[](double f)
+****** random.cpp
+
+#if defined(FOR_MSW) || defined(__BORLANDC__)
+double tRndArray::operator[](double f)
+******
+
+
+Comparing files C:\src\jazz-src-4.1.3\src\random.h and random.h
+****** C:\src\jazz-src-4.1.3\src\random.h
+// gcc > 2.7.2 does not have ACG anymore?
+#define USE_ACG 1
+
+****** random.h
+// gcc > 2.7.2 does not have ACG anymore?
+#if !defined(__BORLANDC__)
+#define USE_ACG 1
+#endif
+
+******
+
+****** C:\src\jazz-src-4.1.3\src\random.h
+    int  operator[] (int i) const       { return array[i]; }
+#ifdef FOR_MSW
+    double operator[](double f);
+****** random.h
+    int  operator[] (int i) const       { return array[i]; }
+#if defined(FOR_MSW) || defined(__BORLANDC__)
+    double operator[](double f);
+******
+
+
+Comparing files C:\src\jazz-src-4.1.3\src\sig2.h and sig2.h
+****** C:\src\jazz-src-4.1.3\src\sig2.h
+
+    virtual long GetLength() {
+****** sig2.h
+
+#if defined(__BORLANDC__)
+#if !defined(_MAX)
+#define _MAX(a,b) (a>b?a:b)
+#endif
+#endif
+
+    virtual long GetLength() {
+******
+
+
+Comparing files C:\src\jazz-src-4.1.3\src\winaudio.h and winaudio.h
+****** C:\src\jazz-src-4.1.3\src\winaudio.h
+    HWAVEOUT hout;
+    HWAVEOUT hinp;
+    void WriteBuffers();   // send samples.full_buffers to driver
+****** winaudio.h
+    HWAVEOUT hout;
+    HWAVEIN  hinp;
+    void WriteBuffers();   // send samples.full_buffers to driver
+******
+
+
+
+-- warning suppression:
+
+
+Comparing files C:\src\jazz-src-4.1.3\src\command.cpp and command.cpp
+****** C:\src\jazz-src-4.1.3\src\command.cpp
+    sc.Init(s);
+    long err = 0;
+    for (i = 0; i < 12; i++)
+****** command.cpp
+    sc.Init(s);
+    unsigned long err = 0;
+    for (i = 0; i < 12; i++)
+******
+
+
+Comparing files C:\src\jazz-src-4.1.3\src\ctrledit.cpp and ctrledit.cpp
+****** C:\src\jazz-src-4.1.3\src\ctrledit.cpp
+  if (i >= i_max-1)
+#ifdef FOR_MSW
+    return array[(int)(i_max-1)];
+****** ctrledit.cpp
+  if (i >= i_max-1)
+#if defined(FOR_MSW) || defined(__BORLANDC__)
+    return array[(int)(i_max-1)];
+******
+
+
+Comparing files C:\src\jazz-src-4.1.3\src\eventlst.cpp and eventlst.cpp
+****** C:\src\jazz-src-4.1.3\src\eventlst.cpp
+    strcat(buf, "\t");
+    return buf;
+  }
+****** eventlst.cpp
+    strcat(buf, "\t");
+    return (string) buf;
+  }
+******
+
+****** C:\src\jazz-src-4.1.3\src\eventlst.cpp
+class string_tokenizer {
+  int beg, end;
+  string str;
+****** eventlst.cpp
+class string_tokenizer {
+  unsigned int beg, end;
+  string str;
+******
+
+
+Comparing files C:\src\jazz-src-4.1.3\src\mstdfile.cpp and mstdfile.cpp
+****** C:\src\jazz-src-4.1.3\src\mstdfile.cpp
+  tFileHeader h;
+  long hSize;
+  int i;
+****** mstdfile.cpp
+  tFileHeader h;
+  unsigned long hSize;
+  int i;
+******
+
+
+Comparing files C:\src\jazz-src-4.1.3\src\sig2.cpp and sig2.cpp
+****** C:\src\jazz-src-4.1.3\src\sig2.cpp
+{
+  for (int i = 0; i < generators.size(); i++)
+    delete generators[i];
+****** sig2.cpp
+{
+  for (unsigned int i = 0; i < generators.size(); i++)
+    delete generators[i];
+******
+
+
+Comparing files C:\src\jazz-src-4.1.3\src\sig2.h and sig2.h
+****** C:\src\jazz-src-4.1.3\src\sig2.h
+      long lmax = 0;
+      for (int i = 0; i < inputs.size(); i++)
+        lmax = _MAX(lmax, inputs[i]->GetLength());
+****** sig2.h
+      long lmax = 0;
+      for (unsigned int i = 0; i < inputs.size(); i++)
+        lmax = _MAX(lmax, inputs[i]->GetLength());
+******
+
+****** C:\src\jazz-src-4.1.3\src\sig2.h
+      tSigInput::Init();
+      int i;
+
+****** sig2.h
+      tSigInput::Init();
+      unsigned int i;
+
+******
+
+****** C:\src\jazz-src-4.1.3\src\sig2.h
+      val = nul;
+      int nctls = controls.size();
+      for (int i = 0; i < inputs.size(); i++) {
+        tSigValue v;
+****** sig2.h
+      val = nul;
+      unsigned int nctls = controls.size();
+      for (unsigned int i = 0; i < inputs.size(); i++) {
+        tSigValue v;
+******
+
+
+Comparing files C:\src\jazz-src-4.1.3\src\synth.cpp and synth.cpp
+****** C:\src\jazz-src-4.1.3\src\synth.cpp
+       }
+       break;
+
+****** synth.cpp
+       }
+//       break;
+
+******
+
+****** C:\src\jazz-src-4.1.3\src\synth.cpp
+       }
+       break;
+
+****** synth.cpp
+       }
+//       break;
+
+******
+
+****** C:\src\jazz-src-4.1.3\src\synth.cpp
+
+       break; // end Roland
+
+****** synth.cpp
+
+//       break; // end Roland
+
+******
+
+****** C:\src\jazz-src-4.1.3\src\synth.cpp
+
+       break; // end Yamaha
+
+****** synth.cpp
+
+//       break; // end Yamaha
+
+******
+
+
+
+vc5\ -- not investigated

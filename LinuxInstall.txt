@@ -1,0 +1,46 @@
+Quick and dirty installation instructions.
+
+Linux
+=====
+
+wxWidgets
+---------
+
+wxWidgets 2.8.7 or greater is required for Jazz++.  Use the following configure
+options when building wxWidgets...
+
+--disable-no_exceptions
+--disable-no_rtti
+--disable-shared
+--disable-compat26
+--disable-unicode
+--with-regex=builtin
+--enable-std_iostreams
+--enable-std_string
+--enable-stl
+--with-gtk
+
+Jazz++
+------
+
+Run the following from this directory.
+
+$ ./bootstrap
+
+Create a build directory outside the source tree and change directory to the
+build directory.  In the following command, path_to_generated_configure is
+the directory that contains bootstrap script.
+
+$ path_to_generated_configure/configure --prefix=path_to_install_directory \
+ --enable-alsa --enable-sequencer2
+
+Now run make.  The following command records the output from make in a file
+called BuildLog.
+
+$ make 2>&1 | tee BuildLog
+
+Now to install the code use.
+
+$ make install
+
+You may have to be root to run the install command.

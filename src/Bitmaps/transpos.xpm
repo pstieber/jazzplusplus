@@ -1,0 +1,31 @@
+/* XPM */
+static const char *transpos_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"20 19 5 1",
+/* colors */
+"  c #000000",
+". c #C0C0C0",
+"X c #FF0000",
+"o c #FFFFFF",
+"O c None",
+/* pixels */
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOXOOO OOO",
+"OOOOOOOOOOOOXXOO OOO",
+"OOOOOOOXXXXXXXXO OOO",
+"OOOOOOOXXXXXXXXO OOO",
+"OOOOOOOOOOOOXXOO OOO",
+"OOOOOOOOOOOOXOOO OOO",
+"OOOOOOOOOOOOOOOO OOO",
+"OOO        OO    OOO",
+"OOO oooooo O     OOO",
+"OOO oooooo O     OOO",
+"OOO oooooo OO   OOOO",
+"OOO oooooo OOOOOOOOO",
+"OOO        OOOOOOOOO",
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOOOOOOOOO",
+"OOOOOOOOOOOOOOOOOOOO"
+};

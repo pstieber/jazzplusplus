@@ -1,0 +1,18 @@
+# Drumsets for XG synthesizers
+
+# names for the program change events that select different drumsets on
+# a drum track
+# Bank-number indexes into bank-table defined in file xg.jzi
+.drumsets
+
+33280 1-127 Standard Kit
+33281 2-127 Standard2 Kit
+33288 9-127 Room Kit
+33296 17-127 Rock Kit
+33304 25-127 Electro Kit
+33305 26-127 Analog Kit
+33312 33-127 Jazz Kit
+33320 41-127 Brush Kit
+33328 49-127 Classic Kit
+33024 1-126 SFX1 Kit
+33025 2-126 SFX2 Kit

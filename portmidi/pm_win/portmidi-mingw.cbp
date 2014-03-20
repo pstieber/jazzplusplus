@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="portmidi" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_gcc" />
+		<Build>
+			<Target title="Debug MinGW Win32">
+				<Option output=".\Debug MinGW Win32\libportmidi" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output=".\Debug MinGW Win32\obj" />
+				<Option type="2" />
+				<Option compiler="gnu_gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add directory="..\pm_common" />
+					<Add directory="..\porttime" />
+					<Add directory="..\pm_win" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="..\pm_common" />
+					<Add directory="..\porttime" />
+					<Add directory="..\pm_win" />
+				</ResourceCompiler>
+			</Target>
+			<Target title="Release MinGW Win32">
+				<Option output=".\Release MinGW Win32\libportmidi" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output=".\Release MinGW Win32\obj" />
+				<Option type="2" />
+				<Option compiler="gnu_gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-W" />
+					<Add option="-Wall" />
+					<Add option="-DWIN32" />
+					<Add directory="..\pm_common" />
+					<Add directory="..\porttime" />
+					<Add directory="..\pm_win" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="..\pm_common" />
+					<Add directory="..\porttime" />
+					<Add directory="..\pm_win" />
+				</ResourceCompiler>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="#All" targets="Debug MinGW Win32;Release MinGW Win32;" />
+		</VirtualTargets>
+		<Unit filename="..\pm_common\pminternal.h" />
+		<Unit filename="..\pm_common\pmutil.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\pm_common\pmutil.h" />
+		<Unit filename="..\pm_common\portmidi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\pm_common\portmidi.h" />
+		<Unit filename="pmwin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="pmwinmm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="pmwinmm.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,49 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "A JazzPlusPlus Application", "JazzPlusPlus-VC12.vcxproj", "{B8D2D543-F2F7-4ED4-84B8-6C2794229495}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8B609D00-8595-4B7B-85C1-F89FEFDE6537} = {8B609D00-8595-4B7B-85C1-F89FEFDE6537}
+		{B460DC87-8C9C-4C33-BEF1-CD6734C676F1} = {B460DC87-8C9C-4C33-BEF1-CD6734C676F1}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "portmidi", "..\portmidi\pm_win\portmidi-VC12.vcxproj", "{B460DC87-8C9C-4C33-BEF1-CD6734C676F1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "porttime", "..\portmidi\porttime\porttime-VC12.vcxproj", "{8B609D00-8595-4B7B-85C1-F89FEFDE6537}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug VC12|Win32 = Debug VC12|Win32
+		Debug VC12|x64 = Debug VC12|x64
+		Release VC12|Win32 = Release VC12|Win32
+		Release VC12|x64 = Release VC12|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B460DC87-8C9C-4C33-BEF1-CD6734C676F1}.Debug VC12|Win32.ActiveCfg = Debug VC12|Win32
+		{B460DC87-8C9C-4C33-BEF1-CD6734C676F1}.Debug VC12|Win32.Build.0 = Debug VC12|Win32
+		{B460DC87-8C9C-4C33-BEF1-CD6734C676F1}.Debug VC12|x64.ActiveCfg = Debug VC12|x64
+		{B460DC87-8C9C-4C33-BEF1-CD6734C676F1}.Debug VC12|x64.Build.0 = Debug VC12|x64
+		{B460DC87-8C9C-4C33-BEF1-CD6734C676F1}.Release VC12|Win32.ActiveCfg = Release VC12|Win32
+		{B460DC87-8C9C-4C33-BEF1-CD6734C676F1}.Release VC12|Win32.Build.0 = Release VC12|Win32
+		{B460DC87-8C9C-4C33-BEF1-CD6734C676F1}.Release VC12|x64.ActiveCfg = Release VC12|x64
+		{B460DC87-8C9C-4C33-BEF1-CD6734C676F1}.Release VC12|x64.Build.0 = Release VC12|x64
+		{8B609D00-8595-4B7B-85C1-F89FEFDE6537}.Debug VC12|Win32.ActiveCfg = Debug VC12|Win32
+		{8B609D00-8595-4B7B-85C1-F89FEFDE6537}.Debug VC12|Win32.Build.0 = Debug VC12|Win32
+		{8B609D00-8595-4B7B-85C1-F89FEFDE6537}.Debug VC12|x64.ActiveCfg = Debug VC12|x64
+		{8B609D00-8595-4B7B-85C1-F89FEFDE6537}.Debug VC12|x64.Build.0 = Debug VC12|x64
+		{8B609D00-8595-4B7B-85C1-F89FEFDE6537}.Release VC12|Win32.ActiveCfg = Release VC12|Win32
+		{8B609D00-8595-4B7B-85C1-F89FEFDE6537}.Release VC12|Win32.Build.0 = Release VC12|Win32
+		{8B609D00-8595-4B7B-85C1-F89FEFDE6537}.Release VC12|x64.ActiveCfg = Release VC12|x64
+		{8B609D00-8595-4B7B-85C1-F89FEFDE6537}.Release VC12|x64.Build.0 = Release VC12|x64
+		{B8D2D543-F2F7-4ED4-84B8-6C2794229495}.Debug VC12|Win32.ActiveCfg = Debug VC12|Win32
+		{B8D2D543-F2F7-4ED4-84B8-6C2794229495}.Debug VC12|Win32.Build.0 = Debug VC12|Win32
+		{B8D2D543-F2F7-4ED4-84B8-6C2794229495}.Debug VC12|x64.ActiveCfg = Debug VC12|x64
+		{B8D2D543-F2F7-4ED4-84B8-6C2794229495}.Debug VC12|x64.Build.0 = Debug VC12|x64
+		{B8D2D543-F2F7-4ED4-84B8-6C2794229495}.Release VC12|Win32.ActiveCfg = Release VC12|Win32
+		{B8D2D543-F2F7-4ED4-84B8-6C2794229495}.Release VC12|Win32.Build.0 = Release VC12|Win32
+		{B8D2D543-F2F7-4ED4-84B8-6C2794229495}.Release VC12|x64.ActiveCfg = Release VC12|x64
+		{B8D2D543-F2F7-4ED4-84B8-6C2794229495}.Release VC12|x64.Build.0 = Release VC12|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

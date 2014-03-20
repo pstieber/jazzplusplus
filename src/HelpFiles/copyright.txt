@@ -1,0 +1,32 @@
+Copyright (C) 1994-1998 Andreas Voss and Per Sigmond, all rights reserved.
+
+This agreement prescribes the terms and regulations on which you may use 
+the executable software programs and associated documentation and files 
+accompanying this agreement (hereafter collectively called "JAZZ"). The 
+copyright holders reserves all rights not expressly granted by this 
+agreement.
+
+License is granted to copy and distribute JAZZ in its unmodified form 
+for any purpose.
+
+License is granted to use JAZZ for an evaluation period of 30 days.
+
+Provided that you obtain a personal license key (hereafter called 
+"KEY") from the copyright holders, license is granted for you to personally
+use JAZZ with KEY for any purpose. You agree to keep confidential and 
+use your best efforts to prevent and protect the contents of the KEY from
+unauthorized disclosure or use.
+
+The copyright holders grant no other licenses expressed or implied and 
+the licensee acknowleges that the copyright holders have no liability for 
+licensee's use.
+
+THE COPYRIGHT HOLDERS DISCLAIM AND LICENSEE AGREES THAT ALL WARRANTIES, 
+EXPRESSED OR IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED WARRANTIES 
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. NOTWITHSTANDING 
+ANY OTHER PROVISION CONTAINED HEREIN, ANY LIABILITY FOR DAMAGES RESULTING 
+FROM THE SOFTWARE OR ITS USE IS EXPRESSLY DISCLAIMED, INCLUDING 
+CONSEQUENTIAL OR ANY OTHER INDIRECT DAMAGES, WHETHER ARISING IN CONTRACT, 
+TORT (INCLUDING NEGLIGENCE) OR STRICT LIABILITY, EVEN IF THE COPYRIGHT 
+HOLDERS ARE ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+

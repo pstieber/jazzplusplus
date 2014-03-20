@@ -1,0 +1,123 @@
+<?xml version="1.0" ?>
+<resource>
+  <object class="wxDialog" name="midiDelay">
+    <title>Midi Delay</title>
+    <object class="wxBoxSizer">
+      <orient>wxVERTICAL</orient>
+      <object class="sizeritem">
+        <object class="wxBoxSizer">
+          <orient>wxVERTICAL</orient>
+          <object class="sizeritem">
+            <object class="wxStaticText">
+              <label>MIDI Delay</label>
+              <font>
+                <size>12</size>
+                <style>default</style>
+                <weight>bold</weight>
+                <family>normal</family>
+                <underlined>0</underlined>
+              </font>
+            </object>
+          </object>
+          <object class="sizeritem">
+            <object class="wxStaticText">
+              <label>The Midi Delay allows you to simulate an echo
+by copying a set of events repeatedly and 
+scale the velocity for each repeat.
+
+The delay can also be used unorthodoxly to just
+generate a number of copies(with scale=100),
+and to generate weird effects
+(with negative clock values, or scale &gt; 100)
+</label>
+            </object>
+          </object>
+          <object class="sizeritem">
+            <object class="wxFlexGridSizer">
+              <cols>2</cols>
+              <rows>3</rows>
+              <object class="sizeritem">
+                <object class="wxStaticText" name="">
+                  <label>Repeats</label>
+                </object>
+                <flag>wxALIGN_CENTRE_VERTICAL</flag>
+              </object>
+              <object class="sizeritem">
+                <object class="wxSlider" name="repeat">
+                  <value></value>
+                  <min></min>
+                  <max>100</max>
+                  <size>100,10</size>
+                  <style>wxSL_AUTOTICKS|wxSL_LABELS</style>
+                  <tooltip>How many times the selected events should be repeated</tooltip>
+                </object>
+                <flag>wxLEFT</flag>
+                <border>10</border>
+              </object>
+              <object class="sizeritem">
+                <object class="wxStaticText" name="">
+                  <label>Scale</label>
+                </object>
+                <flag>wxALIGN_CENTRE_VERTICAL</flag>
+              </object>
+              <object class="sizeritem">
+                <object class="wxSlider" name="scale">
+                  <value></value>
+                  <min></min>
+                  <max>100</max>
+                  <tooltip>The velocity scaling factor in percent for each repetition</tooltip>
+                  <size>100,10</size>
+                  <style>wxSL_AUTOTICKS|wxSL_LABELS</style>
+                </object>
+                <flag>wxLEFT</flag>
+                <border>10</border>
+              </object>
+              <object class="sizeritem">
+                <object class="wxStaticText" name="">
+                  <label>Delay in Clocks</label>
+                </object>
+                <flag>wxALIGN_CENTRE_VERTICAL</flag>
+              </object>
+              <object class="sizeritem">
+                <object class="wxSlider" name="clockDelay">
+                  <value></value>
+                  <min></min>
+                  <max>100</max>
+                  <size>100,10</size>
+                  <tooltip>How many clock ticks each new repetition should be moved</tooltip>
+                  <style>wxSL_AUTOTICKS|wxSL_LABELS</style>
+                </object>
+                <flag>wxLEFT</flag>
+                <border>10</border>
+              </object>
+            </object>
+          </object>
+          <object class="sizeritem">
+            <object class="wxBoxSizer">
+              <orient>wxHORIZONTAL</orient>
+              <object class="sizeritem">
+                <object class="wxButton" name="wxID_OK">
+                  <label>OK</label>
+                  <default>1</default>
+                </object>
+                <flag>wxALL</flag>
+                <border>5</border>
+              </object>
+              <object class="sizeritem">
+                <object class="wxButton" name="wxID_CANCEL">
+                  <label>Cancel</label>
+                </object>
+                <flag>wxALL</flag>
+                <border>5</border>
+              </object>
+            </object>
+            <flag>wxTOP</flag>
+            <border>20</border>
+          </object>
+        </object>
+        <flag>wxALL</flag>
+        <border>15</border>
+      </object>
+    </object>
+  </object>
+</resource>

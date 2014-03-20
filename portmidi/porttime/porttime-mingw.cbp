@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="porttime" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_gcc" />
+		<Build>
+			<Target title="Release MinGW Win32">
+				<Option output=".\Release MinGW Win32\libporttime" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="Release MinGW Win32\obj" />
+				<Option type="2" />
+				<Option compiler="gnu_gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-W" />
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+				</Compiler>
+			</Target>
+			<Target title="Debug MinGW Win32">
+				<Option output=".\Debug MinGW Win32\libporttime" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="Debug MinGW Win32\obj" />
+				<Option type="2" />
+				<Option compiler="gnu_gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-DWIN32" />
+					<Add option="-DDEBUG" />
+				</Compiler>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="#All" targets="Release MinGW Win32;Debug MinGW Win32;" />
+		</VirtualTargets>
+		<Unit filename="porttime.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="porttime.h" />
+		<Unit filename="ptwinmm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

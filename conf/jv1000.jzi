@@ -1,0 +1,581 @@
+# jazz config-file for Roland JV-1000, uses multibank extension
+#
+# How to configure for JV-1000:
+#  Copy this file to "other.jzi". Then choose synth-type "Other" from the
+#  Settings menu and restart jazz.
+# 
+
+# Set synth-type and reset type
+.synth_type Other
+
+# Bank Table here
+# .bank_2nd_control_number defaults to 32
+# .max_bank_table_entries defaults to 256
+.use_two_command_bank_select 1
+.bank_2nd_control_number 32
+.max_bank_table_entries 20
+.bank_table
+80 0 	# Bank 0
+81 0 	# Bank 1
+81 1 	# Bank 2
+81 2 	# Bank 3
+82 0 	# Bank 4
+83 0 	# Bank 5
+84 0 	# Bank 6
+84 1 	# Bank 7
+
+#####################################################################
+
+# Values are numbered here 0..127, but jazz shows 1..128 in dialogs etc.
+
+# names for the drumkeys
+.drumnames
+36 Bright Kick
+37 Cross Stick 1
+38 90's Snare
+39 808 Claps
+40 90's Snare
+41 Power Tom Lo
+42 Closed Hat 1
+43 Power Tom Lo
+44 Closed Hat 2
+45 Power Tom Hi
+46 Open Hat 1
+47 Power Tom Hi
+48 Power Tom Hi
+49 Crash 1
+50 Power Tom Hi
+51 Ride 1
+52 Tin Wave
+53 Ride Bell 1
+54 Tambourine
+55 Spectrum 1
+56 Cowbell 1
+57 Crash 1
+58 Crash 1
+59 Piccolo SN
+60 CGA Mute Hi
+61 CGA Mute Lo
+62 CGA Slap
+63 Conga Hi
+64 Conga Lo
+65 Timbale
+66 Timbale
+67 Power Tom Lo
+68 LA Snare
+69 Cabase Up
+70 Maracas
+71 Cabase Down
+72 Cabase Cut
+73 Whack Snare
+74 Verb Kick
+75 Rim Shot
+76 Round Kick
+77 808 Kick
+78 Cabase Down
+79 REV Steel DR
+80 Tin Wave
+81 REV SN 1
+82 REV SN 2
+83 REV SN 3
+84 Wind Chimes
+85 REV Kick
+86 Anklungs
+87 Rattles
+88 REV Cow Bell
+89 REV Tamb
+90 REV Conga
+91 REV Maracas
+92 REV Crash 1
+93 Steel Drums
+94 Wind Agogo
+95 Wind Agogo
+96 808 SNR 1
+
+.max_voice_names 500
+.voicenames
+# Bank 2 (Preset A)
+512 A11 A. Piano 1
+513 A12 A. Piano 2
+514 A13 A. Piano 3
+515 A14 A. Piano 4
+516 A15 A. Piano 1Tx4
+517 A16 Rock Grand
+518 A17 MIDIed Grand
+519 A18 Pop Piano 1
+520 A21 Country Bar
+521 A22 Stack Major
+522 A23 Pop Piano 2
+523 A24 RD Rhodes 1
+524 A25 Dig Rhodes 1
+525 A26 Dig Rhodes 2
+526 A27 Stiky Rhodes
+527 A28 Guitr Rhodes
+528 A31 Pop Piano 3
+529 A32 FM Piano
+530 A33 Hi-Cut Ep
+531 A34 MIDI EPiano
+532 A35 Clav 1
+533 A36 Pulse Klav
+534 A37 Wire Klav
+535 A38 Flange Clav
+536 A41 Warm Vibe
+537 A42 Vibe
+538 A43 Marimba
+539 A44 Lumber Jacow
+540 A45 Toy Box
+541 A46 Steel Drum
+542 A47 Islands
+543 A48 Africa Metals
+544 A51 Tria Bells
+545 A52 Wave Bells
+546 A53 Vibrobell
+547 A54 Chime Inn
+548 A55 E. Organ
+549 A56 Jazz Organ 1
+550 A57 Jazz Organ 2
+551 A58 Rock Organ
+552 A61 Jazz Rattler
+553 A62 Fine Organ
+554 A63 Metal Organ
+555 A64 Organarimba
+556 A65 Pipe Organ 1
+557 A66 Pipe Organ 2
+558 A67 Church Organ
+559 A68 Wedding Time
+560 A71 Nylon Gtr 1
+561 A72 Nylon Gtr 2
+562 A73 Flanged Nylon
+563 A74 Steel Gtr 1
+564 A75 Steel Gtr 2
+565 A76 Velo Harmonix
+566 A77 12 strings
+567 A78 Fake 12 strings
+568 A81 JC Strat
+569 A82 Clean Strat
+570 A83 Strata
+571 A84 Stratus
+572 A85 Switch on Mute
+573 A86 Syn Strat
+574 A87 Syn Gtr
+575 A88 Overdrive
+# Bank 2 (Preset B)
+576 B11 Wood Bass 1
+577 B12 Wood Bass 2
+578 B13 Hip Bass
+579 B14 Rock Bass
+580 B15 Pick Bass
+581 B16 Thumping Bass
+582 B17 Fretless 1
+583 B18 Fretless 2
+584 B21 Analog Bass
+585 B22 House Bass
+586 B23 Wonder Bass
+587 B24 Yowza Bass
+588 B25 Rubber Bass 1
+589 B26 Rubber Bass 2
+590 B27 Acid Bass
+591 B28 Doom Bass
+592 B31 St Strings
+593 B32 Warm Strings
+594 B33 Slow Strings
+595 B34 Soarin Str
+596 B35 Marcato
+597 B36 Big Stringer
+598 B37 Score String
+599 B38 Tremolo Str
+600 B41 JP Strings 1
+601 B42 JP Strings 2
+602 B43 Syn Stringer
+603 B44 String Synth
+604 B45 Pizzicato
+605 B46 Real Pizz
+606 B47 Pick it
+607 B48 Harp
+608 B51 Brass Sect 1
+609 B52 Brass Sect 2
+610 B53 Brass Combo
+611 B54 Fake Brass
+612 B55 Stab Brass
+613 B56 Brass Swell
+614 B57 Sax Section
+615 B58 Horn Brass
+616 B61 Trumpet 1
+617 B62 Trumpet 2
+618 B63 Trombone
+619 B64 Harmon Mute 1
+620 B65 Harmon Mute 2
+621 B66 French Horn
+622 B67 Alto Sax 1
+623 B68 Alto Sax 2
+624 B71 Tenor Sax 1
+625 B72 Tenor Sax 2
+626 B73 Flut mod
+627 B74 Piccolo
+628 B75 Air Lead
+629 B76 Pan Pipe 1
+630 B77 Pan Pipe 2
+631 B78 Overblown Pan
+632 B81 Ocarina
+633 B82 Blow Square
+634 B83 Saku Pipe
+635 B84 Whistle 1
+636 B85 Whistle 2
+637 B86 Orch Stab 1
+638 B87 Brite Stab
+639 B88 Orch Stab 2
+# Bank 3 (Preset C)
+768 C11 Saw Lead
+769 C12 Syn Sax Lead
+770 C13 Soft Lead 1
+771 C14 Soft Lead 2
+772 C15 Harmo Lead
+773 C16 Reso Lead
+774 C17 Pulse Lead
+775 C18 MMM Lead
+776 C21 Clav Lead
+777 C22 Square
+778 C23 OB Lead
+779 C24 High Lyle
+780 C25 Vox Lead 1
+781 C26 Vox Lead 2
+782 C27 Whistlin Atom
+783 C28 Russiastan
+784 C31 Touch Lead
+785 C32 Digirez Lead
+786 C33 Another Lead
+787 C34 A.T DCO Lead
+788 C35 Feed Lead
+789 C36 Real Pulse
+790 C37 Box Lead
+791 C38 Chu Ning
+792 C41 Lorise
+793 C42 Old Man
+794 C43 Duo Saw
+795 C44 Wa-Saw Phase
+796 C45 Big Saw
+797 C46 Old Saw
+798 C47 Pollyanna
+799 C48 Poly Portame
+800 C51 Poly Mg
+801 C52 Dist Line
+802 C53 Julia Pad
+803 C54 Analog Horn
+804 C55 Warm Brass
+805 C56 Brass Pad
+806 C57 Soulful Brass
+807 C58 Ana Brass
+808 C61 Pizza Hutt
+809 C62 JV Pizzottle
+810 C63 Blo East
+811 C64 Spook Metal
+812 C65 Journey East
+813 C66 Lite Delay
+814 C67 Velocifex
+815 C68 Rezitan
+816 C71 Like Dee
+817 C72 Huff n Stuff
+818 C73 Bit World
+819 C74 Meta Compa
+820 C75 Stratosphere
+821 C76 Les Rhythmo
+822 C77 Heavens Door
+823 C78 World Peace
+824 C81 Loveley World
+825 C82 Williamsong
+826 C83 Son of Atmos
+827 C84 Autumn Breeze
+828 C85 On the Wire
+829 C86 Easternal
+830 C87 Snake Up
+831 C88 Brassy Vox
+# Bank 3 (Preset D)
+832 D11 Beauty Vox
+833 D12 New Age Vox
+834 D13 Vento Voxx
+835 D14 Pvox Oohz
+836 D15 Vocal Oohz2
+837 D16 JV Vox
+838 D17 Arasian Morn
+839 D18 Love Trans
+840 D21 Cosmo Vox 2
+841 D22 Aurora
+842 D23 Press Cooker
+843 D24 Yasuragi
+844 D25 Space Ahh
+845 D26 Pick a Doodl
+846 D27 Doo Wah Diddy
+847 D28 Pop Voice
+848 D31 Analog Pad 1
+849 D32 JP-8 Pad
+850 D33 Analog Pad 2
+851 D34 Analog Str
+852 D35 Analog Orch
+853 D36 Spaceous Sweep
+854 D37 Story Pad
+855 D38 The Pad
+856 D41 Wire Strings
+857 D42 Rimms
+858 D43 Slo Ep
+859 D44 Glass Waves 1
+860 D45 Glass Waves 2
+861 D46 Glass 1T
+862 D47 Glass Pad
+863 D48 Hardy Winery
+864 D51 Ebb Tide Pad
+865 D52 Tangerine
+866 D53 Millennium JV
+867 D54 Fantacy Vox
+868 D55 Wisp Rush
+869 D56 Neurise
+870 D57 Mouse Pad
+871 D58 Nature Pad
+872 D61 Slo Slagg
+873 D62 Star Search
+874 D63 Atlantis
+875 D64 Vortex Cafe
+876 D65 4th Dimension
+877 D66 Hy Entropy
+878 D67 Mellowtron
+879 D68 Power Saw
+880 D71 Big n Beefy
+881 D72 Canal Zone
+882 D73 Hie Cue
+883 D74 Talking Pad
+884 D75 MMM Pad
+885 D76 Low Wind
+886 D77 Suspend Trump
+887 D78 Andromeda
+888 D81 The Scope
+889 D82 Hammer Bell
+890 D83 Flue Taloo
+891 D84 Beezle Breath
+892 D85 Distance Call
+893 D86 Analog Seq
+894 D87 Reverse Mad
+895 D88 Rev Cym Bend
+# Bank 1 (JV-80 a)
+256 a11 A. Piano 1
+257 a12 A. Piano 2
+258 a13 Mellow Piano
+259 a14 Pop Piano 1
+260 a15 Pop Piano 2
+261 a16 Pop Piano 3
+262 a17 MIDIed Grand
+263 a18 Country Bar
+264 a21 Glist El Pno
+265 a22 MIDI EPiano
+266 a23 SA Rhodes
+267 a24 Dig Rhodes 1
+268 a25 Dig Rhodes 2
+269 a26 Stiky Rhodes
+270 a27 Guitr Rhodes
+271 a28 Nylon Rhodes
+272 a31 Clav 1
+273 a32 Clav 2
+274 a33 Marimba
+275 a34 Marimba SW
+276 a35 Warm Vibe
+277 a36 Vibe
+278 a37 Wave Bells
+279 a38 Vibrobell
+280 a41 Pipe Organ 1
+281 a42 Pipe Organ 2
+282 a43 Pipe Organ 3
+283 a44 E. Organ 1
+284 a45 E. Organ 2
+285 a46 Jazz Organ 1
+286 a47 Jazz Organ 2
+287 a48 Metal Organ
+288 a51 Nylon Gtr 1
+289 a52 Flanged Nyln
+290 a53 Steel Gtr
+291 a54 Picked Gtr
+292 a55 12 strings
+293 a56 Velo Harmonix
+294 a57 Nylon+Steel
+295 a58 Switch on Mute
+296 a61 JC Strat
+297 a62 Stratus
+298 a63 Syn Strat
+299 a64 Pop Strat
+300 a65 Clean Strat
+301 a66 Funk Gtr
+302 a67 Syn Guitr
+303 a68 Overdrive
+304 a71 Fretless
+305 a72 St Fretless
+306 a73 Wood Bass 1
+307 a74 Wood Bass 2
+308 a75 Analog Bs 1
+309 a76 House Bass
+310 a77 Hip Bass
+311 a78 Rock Out Bass
+312 a81 Slap Bass
+313 a82 Thumpin Bass
+314 a83 Pick Bass
+315 a84 Wonder Bass
+316 a85 Yowza Bass
+317 a86 Rubber Bass 1
+318 a87 Rubber Bass 2
+319 a88 Stereoww Bass
+# Bank 1 (JV-80 b)
+320 b11 Pizzicato
+321 b12 Real Pizz
+322 b13 Harp
+323 b14 Soaring String
+324 b15 Warm Strings
+325 b16 Marcato
+326 b17 St Strings
+327 b18 Orch Strings
+328 b21 Slow Strings
+329 b22 Velo Strings
+330 b23 Bright Strings
+331 b24 Tremolo String
+332 b25 Orch Stab 1
+333 b26 Brite Stab
+334 b27 JP-8 Strings
+335 b28 String Synth
+336 b31 Wire Strings
+337 b32 New Age Vox
+338 b33 Arasian Morn
+339 b34 Beauty Vox
+340 b35 Vento Voxx
+341 b36 Pvox Oohze
+342 b37 Glass Voices
+343 b38 Space Ahh
+344 b41 Trumpet
+345 b42 Trombone
+346 b43 Harmon Mute 1
+347 b44 Harmon Mute 2
+348 b45 TeaJay Brass
+349 b46 Brass Sect 1
+350 b47 Brass Sect 2
+351 b48 Brass Swell
+352 b51 Brass Combo
+353 b52 Stab Brass
+354 b53 Soft Brass
+355 b54 Horn Brass
+356 b55 French Horn
+357 b56 Alto Lead Sax
+358 b57 Alto Sax
+359 b58 Tenor Sax 1
+360 b61 Tenor Sax 2
+361 b62 Sax Section
+362 b63 Sax Tp Tb
+363 b64 Flute Piccolo
+364 b65 Flute mod
+365 b66 Ocarina
+366 b67 Overblown Pan
+367 b68 air Lead
+368 b71 Steel Drum
+369 b72 Log Drum
+370 b73 Box Lead
+371 b74 Soft Lead
+372 b75 Whistle
+373 b76 Square Lead
+374 b77 Touch Lead
+375 b78 Night Shade
+376 b81 Pizza Hut
+377 b82 EP+Exp Pad
+378 b83 JP-8 Pad
+379 b84 Puff
+380 b85 Spacious Sweep
+381 b86 Big n Beefy
+382 b87 Rev Cym Bend
+383 b88 Analog Seq
+# Bank 0 (User)
+0 U11 Crystal Vox
+1 U12 MIDI Ripper
+2 U13 Soundtrack
+3 U14 Poly Brass
+4 U15 Nice Piano
+5 U16 Blow Lead
+6 U17 Ultima Bass
+7 U18 Amazon Moon
+8 U21 Von Greece
+9 U22 Bright Gtr
+10 U23 Octava Str
+11 U24 Brass Sect
+12 U25 Blissful
+13 U26 Square Lead
+14 U27 Rubber Bs 3
+15 U28 X/Y/Z
+16 U31 Pulsynswell
+17 U32 Nylon Chorus
+18 U33 Orch Power
+19 U34 Mistress Brs
+20 U35 Stackoid
+21 U36 Swateeth
+22 U37 Slap
+23 U38 Kolor
+24 U41 Shakusphere
+25 U42 Rhythmatic
+26 U43 Vocal Oohz
+27 U44 Hybrid Bones
+28 U45 Fantasia JV
+29 U46 Doo Lead
+30 U47 Super JX Bs
+31 U48 Echo Riser
+32 U51 Sea Shore
+33 U52 Clean Strat
+34 U53 Mighty Pad
+35 U54 Reso Brass
+36 U55 Jimmee Dee
+37 U56 Sax Lead
+38 U57 Untamed Bass
+39 U58 Morning
+40 U61 JV Heaven
+41 U62 Gtr Strings
+42 U63 Wavox
+43 U64 Afro Horn
+44 U65 Wets Coast
+45 U66 Doctor Bob
+46 U67 5-Str Bass
+47 U68 House Hunter
+48 U71 Utakata
+49 U72 Classical Gtr
+50 U73 Chu Chu Vox
+51 U74 Brass Attack
+52 U75 Mr. Mellow
+53 U76 Belly Lead
+54 U77 Mondo Bass
+55 U78 Ice Hall
+56 U81 Ebb Tide
+57 U82 Gtr Fantasia
+58 U83 Reso Swell
+59 U84 Jam Brass
+60 U85 JV Rhodes
+61 U86 Key Power
+62 U87 Radio Bass
+63 U88 Arctic Winds
+
+
+.ctrlnames
+
+0	Bank Select MSB
+32	Bank Select LSB
+1  	Modulation
+5  	Portamento time
+7  	Volume
+10 	Pan
+11 	Expression
+#16 	CC1
+#17 	CC2
+64 	Hold 1
+65 	Portamento
+#66 	Sostenuto
+#67 	Soft
+91 	Reverb
+93 	Chorus
+101 	RPN MSB
+100 	RPN LSB
+6	Data Entry MSB
+38	Data Entry LSB
+121	Reset all controllers
+123	Local Control
+124	Omni Off
+125	Omni On
+126	Mono
+127	Poly
+

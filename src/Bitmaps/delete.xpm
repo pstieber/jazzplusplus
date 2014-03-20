@@ -1,0 +1,30 @@
+/* XPM */
+static const char *delete_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"20 19 4 1",
+/* colors */
+"  c #000000",
+". c #C0C0C0",
+"X c #FF0000",
+"o c None",
+/* pixels */
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"oooooooooooo oXooooo",
+"ooooXXoooooo XXooooo",
+"oooooXXoooooXXoooooo",
+"ooooooXXoooXXooooooo",
+"oooooooXXoXX ooooooo",
+"ooooooooXXXo ooooooo",
+"ooooooooXXXo ooooooo",
+"oooooooXXoXX ooooooo",
+"ooooooXX   XXooooooo",
+"oooooXX     XXoooooo",
+"ooooXXo      XXooooo",
+"ooooooo      oXXoooo",
+"oooooooo    oooXoooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo"
+};

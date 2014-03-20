@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<resource>
+  <object class="wxDialog" name="windowSettings">
+    <title>Window Settings</title>
+    <object class="wxBoxSizer">
+      <orient>wxVERTICAL</orient>
+      <object class="sizeritem">
+        <object class="wxBoxSizer">
+          <orient>wxVERTICAL</orient>
+          <object class="sizeritem">
+            <object class="wxBoxSizer">
+              <orient>wxHORIZONTAL</orient>
+              <object class="sizeritem">
+                <object class="wxStaticText" name="">
+                  <label>Font Size</label>
+                </object>
+                <flag>wxALIGN_CENTRE_VERTICAL</flag>
+              </object>
+              <object class="sizeritem">
+                <object class="wxChoice" name="font_size">
+                  <content>
+                    <item>Tiny</item>
+                    <item>Small</item>
+                    <item>Medium</item>
+                    <item>Large</item>
+                    <item>Huge</item>
+                  </content>
+                </object>
+                <flag>wxLEFT</flag>
+                <border>10</border>
+              </object>
+            </object>
+          </object>
+          <object class="sizeritem">
+            <object class="wxCheckBox" name="use_colours">
+              <label>Use Colours</label>
+            </object>
+            <flag>wxTOP</flag>
+            <border>10</border>
+          </object>
+          <object class="sizeritem">
+            <object class="wxBoxSizer">
+              <orient>wxHORIZONTAL</orient>
+              <object class="sizeritem">
+                <object class="wxButton" name="wxID_OK">
+                  <label>OK</label>
+                  <default>1</default>
+                </object>
+                <flag>wxALL</flag>
+                <border>5</border>
+              </object>
+              <object class="sizeritem">
+                <object class="wxButton" name="wxID_CANCEL">
+                  <label>Cancel</label>
+                </object>
+                <flag>wxALL</flag>
+                <border>5</border>
+              </object>
+            </object>
+            <flag>wxTOP</flag>
+            <border>20</border>
+          </object>
+        </object>
+        <flag>wxALL</flag>
+        <border>15</border>
+      </object>
+    </object>
+  </object>
+</resource>

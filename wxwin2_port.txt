@@ -1,0 +1,298 @@
+Note from Patrick (March 23, 2004):  Most of the issues within this file have
+been dealt with, but I left it here for informational purposes.
+
+
+*Porting jazz++ to wxwin2
+
+**Overview
+
+This document is an analysis and implementation guideline for porting jazz++ 4.1.7 to
+wxwin 2.2. Jazz++ currently uses wxwin 1.68, which is very different from wxwin 2.2.
+
+
+**Problem areas
+
+**wxForm
+One of the main obstacles is that the class wForm was removed from wxwin 2. Jazz++ relies heavily
+on this class. 
+
+There are two proposed strategies so far:
+
+-make an implementation of wxForm in wxwin 2
+pros: if this succeeds porting will be fairly easy
+cons: making a truly compatible wxform implementation will be difficult
+
+we suggest using this strategy where the cost/benefit tradeoffs are
+beneficial, that is, make a sufficiently good implementation of wxForm to
+port, say, 80% of the dialogs. The other 20% will have to be solved some other way.
+
+-re-implement the difficult dialogs with wxwin2 native constructs
+
+pros: many jazz dialogs are based on common base classes, so one implementation
+could in the best case yield many ported dialogs.
+When the port is done it is easier to proceed to add new features inherent
+in the wxwin 2 framework, for instance better controls, and so on.
+
+cons:difficult, you have to understand both wxwin 1.68, and wxwin 2
+
+We suggest this strategy is used in the 20% case.
+
+
+**Event handling
+
+Event handling has changed much between the two wxwin releases.
+in wxwin 1.68 a event-loop strategy was used, that is similar to the one used
+in windows 3.11(or palm-pilot). In wxwin 2, events are bound to methods by
+macro constructs. This new construct is fairly simple, it is very similar to the one
+employed in MFC(microsoft foundation classes).
+
+In wxwin 1.68, you catched some events by overriding methods in your inherited class.
+This is apparently also replaced with the new macro scheme.
+
+strategy:
+
+it is currently not known how this impacts jazz. perhaps the old eventloop mechanism still
+works in some cases, perhaps it just compiles but doesn't work.
+
+we suggest getting jazz to compile as quickly as possible, then noting which old code that
+doesnt work(for instance because the eventloop is never called, or the old method
+overrides are never called, or the method overrides doesn't call baseclass functionality as appropriate)
+and then re-implementing that code with event-method binding macros.
+
+
+
+***Syntax changes in the wx2 API.
+
+There are lots of minor changes in the wx2 API functions, classes and
+methods, which will requiere quite a lot of minor changes in the
+sources. Many of them are listed in the wx2 docummentation, in the
+section "Porting from wxWindows 1.xx". Many more can be found when we
+try to compile...
+
+
+strategy:
+
+We suggest fixing these problems by hand in the first stages, keeping
+a detailed record of changes (preferably keept in CVS), until we get a
+working core. This would provide us some experience, and we might then
+be able to automate some of these changes for the rest of jazz
+code. It would also be a good idea to write detailed instructions
+about how to make other needed changes, so more people can help ( Hi,
+Josh!  [:)] .
+
+
+***Semantic changes from wx1 to wx2.
+
+Some classes or functions might be syntactically almost identical in
+both versions of the library, but might behave in slightly different
+ways, thus introducing run time errors in the ported code. An example
+of this seems to be be the behaviour of the wxDC objects. Another
+trivial example might be application class instantiation. These
+problems would not be detected at compile time, and would be hard to
+find later.
+
+strategy:
+
+Carefully read the porting docummentation, and make list of needed
+changes. Then, use the same approach as for syntax changes to fix
+them. Pray. Try to find and fix run time problems such as segfaults
+and misbehaviours as soon as possible, before more code is added. Test
+as much as possible each new component added.
+
+
+**TASK LIST (Add your name to any task you start working on).
+
+***Get the application minimal core compilable under wx2.
+
+***(core) Decide how the event mechanism should be ported.
+
+***(core) Make menu events work.
+
+***(core) Make mouse and kbd events on the trackwindow work.
+
+***(core) Update de Device Context mechanism.
+
+***(core) Make the drawing code work.
+
+***Finish the wxForm wrapper, and add it to the repository.
+   Almost 100% now. wx1 form.cpp example already ported.
+   [Enrique,]
+
+***Get at least a working Form/Dialog with event handling and data
+   transfer and storage.
+
+***Define more TO DO tasks ( EventWin, PianoWin, etc)
+
+
+
+*Unstructured items to be merged above FIXME
+
+--------We should also decide what to do with the windows specific code. Shall we
+
+1. build both, linux and windows version?
+
+2. remove windows related GUI code?
+
+I vote for 2. The windows related #ifdefs in the GUI code will not work
+after wx2 port anyway. But we should keep the driver code, so only the GUI
+has to be ported back to windows once we want a windows version again -
+which should not be too hard because of wxwin's nature.
+
+
+------CString problems, who own strings, what differences betwen wxwin releases?
+
+**problem with includes
+
+i found that standard wx includes from wxGTK-devel does not work on my system for whatever reason.
+the ones in the wxgtkk tarball works.
+
+***Bool is no longer defined, was defined as  typedef int Bool; in wx_defs.h if wx_motif is defined
+
+***wxHelpInstance is gone; found on google:
+
+
+- wxHelpInstance now separated into wxHelpControllerBase (base
+  for all implementations), wxWinHelpController (uses standard
+  WinHelp), wxXLPHelPController (talks to wxHelp by DDE or
+  TCP/IP). There will be others eventually, such as
+  wxHTMLHelpController for Microsoft (and Netscape?) HTML Help.
+
+
+***wxDialogBox is gone
+
+wx_bbar.h
+wx_form.h
+wxCanvas
+
+
+------wxform wrapper
+ http://www.ieeesb.etsit.upm.es/~era/jazz/formwrapper_demo.tgz 
+
+---wxwin2port.h
+started a small.h file for wxwin compatibility stuff,
+made a Bool define
+
+
+
+NOTES FROM PATRICK
+
+    * Note that I was using gcc 3.2.2 20030109 to do the compiling.
+    * Note that any changes I made are either noted here or have "PAT" written
+      beside them in a comment.
+    * Configure with the --enable-audio option to avoid a problem for now.
+      I also used --enable-alsa to include the alsa libraries to avoid
+      unresolved symbols.
+    * I had to upgrade my compiler under Debian to avoid getting a million and
+      a half unresolved symbols when linking.
+    * Due to the compiler upgrade, #include <iostream.h> was considered
+      deprecated.  Changing it as follows was needed:
+          #include <iostream>
+          using namespace std;
+      This also applies to other C++ headers.  The C++ standards indicates that
+      the use of the non-.h headers is the way to go.  Note that there were
+      other changes required by the upgrade to gcc.  The changes were similar
+      to what was needed by the #ifdef'd wx_msw sections of code.  You can see
+      in the code that a number of those #ifdefs were commented out.  They are
+      no longer quite correct.
+    * Somebody might want to sanity check my changes around line 50 of
+      eventlst.cpp.  Same applies to my changes to sig2.h.
+
+wxForm Constraints Used:
+  wxMakeConstraintStrings(wxList) [String]
+  wxMakeConstraintStrings(item1, item2, item3, ..., 0) [twice seen]
+  wxMakeConstraintRange(lower, upper) [Short, Double, Long]
+
+wxForm Types Used:
+  wxMakeFormBool("name", &var)
+  wxMakeFormNewLine()
+  wxMakeFormString()
+  wxMakeFormShort() --> Some sort of set of 4 ints after wxFORM_DEFAULT
+  wxMakeFormMessage()
+  wxMakeFormDouble()
+  wxMakeFormLong()
+
+      //Add(wxMakeFormString("SysEx (hex):", &str, wxFORM_DEFAULT, NULL, NULL, wxVERTICAL, 300 ));
+
+Interesting constants:
+  wxFORM_CHOICE (For list of items)
+  wxFORM_SINGLE_LIST
+  wxFORM_DEFAULT
+
+  wxHORIZONTAL (For list of items)
+  wxVERTICAL
+
+
+Requirements:
+  -Validation
+  -Modal or non-modal
+  -Setting of variables.  We only set the variables when the user OKs the
+   dialog box.
+  -OK, Cancel, Help buttons?  Could use a help 'string' and empty string if
+   no help available.  See button mask on wxForm constructor.
+
+
+http://pluto.iis.nsk.su/wxWindows/wx752.html#wxform
+
+
+
+wxFormItemConstraint * wxMakeConstraintStrings(char *first, ...)
+  Makes a constraint specifying that the value must be one of the strings
+  given in the variable-length argument list, terminated with a zero.
+wxFormItemConstraint * wxMakeConstraintRange(double lo, double hi)
+  Makes a range constraint; can be used for integer and floating point form
+  items.
+wxFormItemConstraint * wxMakeConstraintStrings(wxList *list)
+  Makes a constraint specifying that the value must be one of the strings
+  given in the list.
+
+
+wxFormItem * wxMakeFormMessage(char *label)
+  Makes a message.
+
+wxFormItem * wxMakeFormNewLine(void)
+  Adds a newline.
+
+wxFormItem * wxMakeFormLong(char *label, long *var,
+int item_type = wxFORM_DEFAULT, wxList *constraints = NULL,
+char *help_string = NULL, int style = 0, int width = -1,
+int height = -1)
+  Makes a long integer form item, given a label, a pointer to the variable
+  holding the value, an item type, and a list of constraints (see below).
+  style may be wxHORIZONTAL or wxVERTICAL (for label orientation). help_string
+  is currently not used.
+
+wxFormItem * wxMakeFormShort(char *label, int *var,
+int item_type = wxFORM_DEFAULT, wxList *constraints = NULL,
+char *help_string = NULL, int style = 0, int width = -1,
+int height = -1)
+  Makes an integer form item, given a label, a pointer to the variable holding
+  the value, an item type, and a list of constraints (see below). style may be
+  wxHORIZONTAL or wxVERTICAL (for label orientation). help_string is currently
+  not used.
+
+wxFormItem * wxMakeFormFloat(char *label, float *var,
+int item_type = wxFORM_DEFAULT, wxList *constraints = NULL,
+char *help_string = NULL, int style = 0, int width = -1,
+int height = -1)
+  Makes a floating-point form item, given a label, a pointer to the variable
+  holding the value, an item type, and a list of constraints (see below).
+  style may be wxHORIZONTAL or wxVERTICAL (for label orientation). help_string
+  is currently not used.
+
+wxFormItem * wxMakeFormBool(char *label, Bool *var,
+int item_type = wxFORM_DEFAULT, wxList *constraints = NULL,
+char *help_string = NULL, int style = 0, int width = -1,
+int height = -1)
+  Makes a boolean form item, given a label, a pointer to the variable holding
+  the value, an item type, and a list of constraints (see below). style may be
+  wxHORIZONTAL or wxVERTICAL (for label orientation). help_string is currently
+  not used.
+
+wxFormItem * wxMakeFormString(char *label, char **var,
+int item_type = wxFORM_DEFAULT, wxList *constraints = NULL,
+char *help_string = NULL, int style = NULL, int width = -1,
+int height = -1)
+  Makes a string form item, given a label, a pointer to the variable holding
+  the value, an item type, and a list of constraints (see below). style may be
+  wxHORIZONTAL or wxVERTICAL (for label orientation). help_string is currently
+  not used.

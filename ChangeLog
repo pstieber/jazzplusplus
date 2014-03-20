@@ -1,0 +1,46 @@
+ChangeLog for Development Version
+
+03-23-04
+-Added the XRC library and make a Makefile.am for it.
+-Removed the configure and Makefile.in entries from the CVS.  They keep
+ changing, and it's annoying to keep them current in the CVS.
+
+03-21-04 Patrick Earl
+-I forget to make log entries, so this is one huge entry to describe the
+ changes I've made over time.  I'm no doubt missing many smaller changes.
+-Separated most of tPianoWin from tEventWin.  There are still minor pieces that
+ aren't finished, but at least tEventWin is no longer tPianoWin's superclass.
+-Fixed a number of issues with coordinate translation in the piano window.
+-Fixed some of the redraw stuff and the tMouseCounter update thing.
+-Created a new dialog system based on XRC.  The code for that is in resdlg.c
+ and resdlg.h.
+-Removed the AUDIO #ifdef.  I didn't see much of a reason to complicate the
+ code and leave the ability to remove the audio component.  If the audio
+ portion of Jazz is broken, it should be either fixed or removed.  If it's
+ working, I see no reason to not make it available for use all the time.
+ Adding the additional compile time switch just adds complexity to the code.
+ If no audio device is available, that condition can be detected and dealt
+ with at run-time.
+-Fixed the bitmap "make" script.  Also fixed a number of the bitmaps to
+ properly handle transparency.
+-Integrated patch to support midi devices other than 0.
+-Removed all the misused #pragma hdrstop directives.
+-Created new XRC Window Settings dialog for the piano and track windows.
+-Removed the wxwin2port.h file and properly dealt with any issues that caused.
+
+03-15-04 Patrick Earl
+-Rewrote toolbar.cpp and toolbar.h
+-Updated all references to toolbar system and removed the crazy tb_ stuff.
+-Rewrote the note colourization in the piano window.  Now allocates on stack.
+
+
+ChangeLog for Old Stuff
+
+4.1.3: 
+  - diff for easier compiling of wxwin 168e and updated COMPILE document
+  - applied patch for scan_clients problem (slow startup)
+  - jazz/wxwin now compile with gnu 2.95.2
+
+4.1.1: 
+  - Upgrade the ALSA driver to support version 0.57 and up. 
+    Thanks very much to Takashi Iwai <iwai@ww.uni-erlangen.de>

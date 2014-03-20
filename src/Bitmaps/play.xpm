@@ -1,0 +1,30 @@
+/* XPM */
+static const char *play_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"20 19 4 1",
+/* colors */
+"  c #000000",
+". c #C0C0C0",
+"X c #FFFFFF",
+"o c None",
+/* pixels */
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"ooooooXXoooooooooooo",
+"ooooooX Xooooooooooo",
+"ooooooX  Xoooooooooo",
+"ooooooX   Xooooooooo",
+"ooooooX    Xoooooooo",
+"ooooooX     oooooooo",
+"ooooooX    ooooooooo",
+"ooooooX   oooooooooo",
+"ooooooX  ooooooooooo",
+"ooooooX oooooooooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo"
+};

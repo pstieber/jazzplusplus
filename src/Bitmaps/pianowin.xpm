@@ -1,0 +1,30 @@
+/* XPM */
+static const char *pianowin_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"20 19 4 1",
+/* colors */
+"  c #000000",
+". c #C0C0C0",
+"X c #FFFFFF",
+"o c None",
+/* pixels */
+"oooooooooooooooooooo",
+"oooooooooooooooooooo",
+"ooXXXXXXX oooooooooo",
+"oo     XX oooooooooo",
+"ooXXXXXXX oooooooooo",
+"oo     XX oooooooooo",
+"oo     XX oooooooooo",
+"ooXXXXXXX oooooooooo",
+"oo     XX oooooooooo",
+"oo     XX oooooooooo",
+"ooXXXXXXX oo    oooo",
+"ooXXXXXXX oo    oooo",
+"ooXXXXXXX oooooooooo",
+"oo     XX oooooooooo",
+"oo     XX oooooooooo",
+"ooXXXXXXX oooooooooo",
+"ooXXXXXXX oooooooooo",
+"oooooooooooooooooooo",
+"oooooooooooooooooooo"
+};
