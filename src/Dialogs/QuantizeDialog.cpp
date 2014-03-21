@@ -78,13 +78,9 @@ JZQuantizeDialog::JZQuantizeDialog(
 {
   mpStepSizeComboBox = new wxComboBox(this, wxID_ANY);
 
-  for (
-    map<int, string>::const_iterator iPair = gQuantizationSteps.begin();
-    iPair != gQuantizationSteps.end();
-    ++iPair)
+  for (const auto& StepNamePair : gQuantizationSteps)
   {
-    const string& String = iPair->second;
-    mpStepSizeComboBox->Append(String.c_str());
+    mpStepSizeComboBox->Append(StepNamePair.second.c_str());
   }
 
   mpNoteStartCheckBox = new wxCheckBox(this, wxID_ANY, "Note Start");
@@ -150,16 +146,13 @@ JZQuantizeDialog::JZQuantizeDialog(
 bool JZQuantizeDialog::TransferDataToWindow()
 {
   int Selection = 0;
-  for (
-    map<int, string>::const_iterator iPair = gQuantizationSteps.begin();
-    iPair != gQuantizationSteps.end();
-    ++iPair, ++Selection)
+  for (const auto& StepNamePair : gQuantizationSteps)
   {
-    const int& Value = iPair->first;
-    if (Value <= mQuantizationStep)
+    if (StepNamePair.first <= mQuantizationStep)
     {
       break;
     }
+    ++Selection;
   }
   mpStepSizeComboBox->SetSelection(Selection);
 
@@ -185,15 +178,11 @@ bool JZQuantizeDialog::TransferDataToWindow()
 bool JZQuantizeDialog::TransferDataFromWindow()
 {
   string SelectedValue = mpStepSizeComboBox->GetValue();
-  for (
-    map<int, string>::const_iterator iPair = gQuantizationSteps.begin();
-    iPair != gQuantizationSteps.end();
-    ++iPair)
+  for (const auto& StepNamePair : gQuantizationSteps)
   {
-    const string& String = iPair->second;
-    if (SelectedValue == String)
+    if (SelectedValue == StepNamePair.second)
     {
-      mQuantizationStep = iPair->first;
+      mQuantizationStep = StepNamePair.first;
       break;
     }
   }

@@ -70,13 +70,10 @@ JZMetronomeSettingsDialog::JZMetronomeSettingsDialog(
 {
   int Index = 0;
   const vector<pair<string, int> >& DrumNames = gpConfig->GetDrumNames();
-  for (
-    vector<pair<string, int> >::const_iterator iDrumName = DrumNames.begin();
-    iDrumName != DrumNames.end();
-    ++iDrumName)
+  for (const auto& NameValuePair : gpConfig->GetDrumNames())
   {
-    const string& DrumName = iDrumName->first;
-    const int& Value = iDrumName->second;
+    const string& DrumName = NameValuePair.first;
+    const int& Value = NameValuePair.second;
 
     if (!DrumName.empty())
     {
@@ -108,12 +105,8 @@ JZMetronomeSettingsDialog::JZMetronomeSettingsDialog(
 
   mpAccentedListbox = new wxListBox(this, wxID_ANY);
 
-  for (
-    vector<string>::const_iterator iName = mIndexToName.begin();
-    iName != mIndexToName.end();
-     ++iName)
+  for (const auto& DrumName : mIndexToName)
   {
-    const string& DrumName = *iName;
     mpNormalListbox->Append(DrumName.c_str());
     mpAccentedListbox->Append(DrumName.c_str());
   }
@@ -185,17 +178,14 @@ bool JZMetronomeSettingsDialog::TransferDataToWindow()
 
   Selection = 0;
   Index = 0;
-  for (
-    vector<string>::const_iterator iName = mIndexToName.begin();
-    iName != mIndexToName.end();
-    ++iName, ++Index)
+  for (const auto& DrumName : mIndexToName)
   {
-    const string& DrumName = *iName;
     if (DrumName == mKeyNormalName)
     {
       Selection = Index;
       break;
     }
+    ++Index;
   }
 
   if (Selection < mpNormalListbox->GetCount())
@@ -205,17 +195,14 @@ bool JZMetronomeSettingsDialog::TransferDataToWindow()
 
   Selection = 0;
   Index = 0;
-  for (
-    vector<string>::const_iterator iName = mIndexToName.begin();
-    iName != mIndexToName.end();
-    ++iName, ++Index)
+  for (const auto& DrumName : mIndexToName)
   {
-    const string& DrumName = *iName;
     if (DrumName == mKeyAccentedName)
     {
       Selection = Index;
       break;
     }
+    ++Index;
   }
 
   if (Selection < mpAccentedListbox->GetCount())

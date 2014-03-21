@@ -149,8 +149,6 @@ void JZArrayControl::OnPaint(wxPaintEvent& Event)
     mHeight * (mRandomArray.GetNull() - mRandomArray.GetMin()) /
     (mRandomArray.GetMax() - mRandomArray.GetMin());
 
-  int i;
-
   // surrounding rectangle
   Dc.Clear();
   if (mEnabled)
@@ -171,7 +169,7 @@ void JZArrayControl::OnPaint(wxPaintEvent& Event)
 
   // sliders
   Dc.SetBrush(*wxBLACK_BRUSH);
-  for (i = 0; i < mRandomArray.Size(); ++i)
+  for (auto i = 0; i < mRandomArray.Size(); ++i)
   {
     DrawBar(Dc, i, true);
   }
@@ -266,7 +264,7 @@ void JZArrayControl::Dragging(wxMouseEvent& MouseEvent)
 
   if (MouseEvent.ShiftDown())
   {
-    for (int k = 0; k < mRandomArray.Size(); ++k)
+    for (auto k = 0; k < mRandomArray.Size(); ++k)
     {
       DrawBar(Dc, k, 0);
       mRandomArray[k] = Value;

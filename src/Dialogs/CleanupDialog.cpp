@@ -54,12 +54,9 @@ JZCleanupDialog::JZCleanupDialog(
     mpShortenOverlappingNotesCheckBox(0)
 {
   mpShortestNoteChoice = new wxChoice(this, wxID_ANY);
-  for (
-    map<int, string>::const_iterator iLimitSteps = gLimitSteps.begin();
-    iLimitSteps != gLimitSteps.end();
-    ++iLimitSteps)
+  for (const auto& LimitStepPair : gLimitSteps)
   {
-    mpShortestNoteChoice->Append(iLimitSteps->second);
+    mpShortestNoteChoice->Append(LimitStepPair.second);
   }
 
   mpShortenOverlappingNotesCheckBox = new wxCheckBox(
@@ -107,16 +104,13 @@ JZCleanupDialog::JZCleanupDialog(
 bool JZCleanupDialog::TransferDataToWindow()
 {
   int Selection = 0;
-  for (
-    map<int, string>::const_iterator iLimitSteps = gLimitSteps.begin();
-    iLimitSteps != gLimitSteps.end();
-    ++iLimitSteps, ++Selection)
+  for (const auto& LimitStepPair : gLimitSteps)
   {
-    const int& Value = iLimitSteps->first;
-    if (Value >= mShortestNote)
+    if (LimitStepPair.first >= mShortestNote)
     {
       break;
     }
+    ++Selection;
   }
   mpShortestNoteChoice->SetSelection(Selection);
 
@@ -130,15 +124,11 @@ bool JZCleanupDialog::TransferDataToWindow()
 bool JZCleanupDialog::TransferDataFromWindow()
 {
   string SelectedValue = mpShortestNoteChoice->GetStringSelection();
-  for (
-    map<int, string>::const_iterator iLimitSteps = gLimitSteps.begin();
-    iLimitSteps != gLimitSteps.end();
-    ++iLimitSteps)
+  for (const auto& LimitStepPair : gLimitSteps)
   {
-    const string& String = iLimitSteps->second;
-    if (SelectedValue == String)
+    if (SelectedValue == LimitStepPair.second)
     {
-      mShortestNote = iLimitSteps->first;
+      mShortestNote = LimitStepPair.first;
       break;
     }
   }

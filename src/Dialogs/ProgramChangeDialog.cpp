@@ -49,12 +49,9 @@ JZProgramChangeDialog::JZProgramChangeDialog(
   mpProgramListBox = new wxListBox(this, wxID_ANY);
 
   const vector<pair<string, int> >& VoiceNames = gpConfig->GetVoiceNames();
-  for (
-    vector<pair<string, int> >::const_iterator iName = VoiceNames.begin();
-    iName != VoiceNames.end();
-    ++iName)
+  for (const auto& NameValuePair : gpConfig->GetVoiceNames())
   {
-    mpProgramListBox->Append(iName->first.c_str());
+    mpProgramListBox->Append(NameValuePair.first.c_str());
   }
 
   wxButton* pOkButton = new wxButton(this, wxID_OK, "&OK");
