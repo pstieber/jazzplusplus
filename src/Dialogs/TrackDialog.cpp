@@ -132,35 +132,21 @@ void JZTrackDialog::SetPatchListEntries()
 
   if (mTrack.IsDrumTrack())
   {
-    const vector<pair<string, int> >& DrumSets = gpConfig->GetDrumSets();
-    for (
-      vector<pair<string, int> >::const_iterator iDrumSet =
-        DrumSets.begin();
-      iDrumSet != DrumSets.end();
-      ++iDrumSet)
+    for (const auto& StringIntPair : gpConfig->GetDrumSets())
     {
-      const string& DrumSet = iDrumSet->first;
-
-      if (!DrumSet.empty())
+      if (!StringIntPair.first.empty())
       {
-        mpPatchListBox->Append(DrumSet.c_str());
+        mpPatchListBox->Append(StringIntPair.first);
       }
     }
   }
   else
   {
-    const vector<pair<string, int> >& VoiceNames = gpConfig->GetVoiceNames();
-    for (
-      vector<pair<string, int> >::const_iterator iVoiceName =
-        VoiceNames.begin();
-      iVoiceName != VoiceNames.end();
-      ++iVoiceName)
+    for (const auto& StringIntPair : gpConfig->GetVoiceNames())
     {
-      const string& VoiceName = iVoiceName->first;
-
-      if (!VoiceName.empty())
+      if (!StringIntPair.first.empty())
       {
-        mpPatchListBox->Append(VoiceName.c_str());
+        mpPatchListBox->Append(StringIntPair.first);
       }
     }
   }

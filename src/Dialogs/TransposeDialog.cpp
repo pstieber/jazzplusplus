@@ -77,13 +77,9 @@ JZTransposeDialog::JZTransposeDialog(
 
   mpScaleNamesComboBox = new wxComboBox(this, wxID_ANY);
 
-  for (
-    vector<pair<string, int> >::const_iterator iPair = gScaleNames.begin();
-    iPair != gScaleNames.end();
-    ++iPair)
+  for (const auto& StringIntPair : gScaleNames)
   {
-    const string& String = iPair->first;
-    mpScaleNamesComboBox->Append(String.c_str());
+    mpScaleNamesComboBox->Append(StringIntPair.first);
   }
 
   wxButton* pOkButton = new wxButton(this, wxID_OK, "&OK");

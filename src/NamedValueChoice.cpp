@@ -34,12 +34,9 @@ JZNamedValueChoice::JZNamedValueChoice(
   : wxChoice(pParent, wxID_ANY),
     mMap(Map)
 {
-  for (
-    map<int, string>::const_iterator iMap = mMap.begin();
-    iMap != mMap.end();
-    ++iMap)
+  for (const auto& IntStringPair : mMap)
   {
-    Append(iMap->second);
+    Append(IntStringPair.second);
   }
 }
 
@@ -51,15 +48,13 @@ int JZNamedValueChoice::GetValue()
   if (Selection >= 0)
   {
     int i = 0;
-    for (
-      map<int, string>::const_iterator iMap = mMap.begin();
-      iMap != mMap.end();
-      ++iMap, ++i)
+    for (const auto& IntStringPair : mMap)
     {
       if (i == Selection)
       {
-        return iMap->first;
+        return IntStringPair.first;
       }
+      ++i;
     }
   }
   return 16;
@@ -70,15 +65,13 @@ int JZNamedValueChoice::GetValue()
 void JZNamedValueChoice::SetValue(int Measure)
 {
   int i = 0;
-  for (
-    map<int, string>::const_iterator iMap = mMap.begin();
-    iMap != mMap.end();
-    ++iMap, ++i)
+  for (const auto& IntStringMap : mMap)
   {
-    if (iMap->first == Measure)
+    if (IntStringMap.first == Measure)
     {
       SetSelection(i);
       break;
     }
+    ++i;
   }
 }

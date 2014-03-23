@@ -60,15 +60,9 @@ JZSearchAndReplaceDialog::JZSearchAndReplaceDialog(
   mpFromListBox = new wxListBox(this, wxID_ANY);
   mpToListBox = new wxListBox(this, wxID_ANY);
 
-  const vector<pair<string, int> >& ControlNames =
-    gpConfig->GetControlNames();
-  for (
-    vector<pair<string, int> >::const_iterator iControlName =
-      ControlNames.begin();
-    iControlName != ControlNames.end();
-    ++iControlName)
+  for (const auto& NameIntPair : gpConfig->GetControlNames())
   {
-    const string& ControlName = iControlName->first;
+    const string& ControlName = NameIntPair.first;
     if (!ControlName.empty())
     {
       mpFromListBox->Append(ControlName);

@@ -1,7 +1,7 @@
 //*****************************************************************************
 // The JAZZ++ Midi Sequencer
 //
-// Copyright (C) 2010 Peter J. Stieber, all rights reserved.
+// Copyright (C) 2010-2014 Peter J. Stieber, all rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -49,12 +49,9 @@ JZControllerDialog::JZControllerDialog(
   mpControllerListBox = new wxListBox(this, wxID_ANY);
 
   const vector<pair<string, int> >& VoiceNames = gpConfig->GetControlNames();
-  for (
-    vector<pair<string, int> >::const_iterator iName = VoiceNames.begin();
-    iName != VoiceNames.end();
-    ++iName)
+  for (const auto& NameIntPair : gpConfig->GetControlNames())
   {
-    mpControllerListBox->Append(iName->first.c_str());
+    mpControllerListBox->Append(NameIntPair.first);
   }
 
   wxButton* pOkButton = new wxButton(this, wxID_OK, "&OK");

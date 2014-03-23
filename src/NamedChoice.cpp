@@ -75,15 +75,12 @@ wxFormItem *JZNamedChoice::mkFormItem(int w, int h)
 wxStringListValidator* JZNamedChoice::GetStringListValidator()
 {
   wxArrayString* StringList = new wxArrayString();
-  for (
-    vector<pair<wxString, int> >::const_iterator iPair = mPairs.begin();
-    iPair != mPairs.end();
-    ++iPair)
+  for (const auto& StringIntPair : mPairs)
   {
     // Omit empty entries.
-    if (!iPair->first.empty())
+    if (!StringIntPair.first.empty())
     {
-      StringList->Add(iPair->first);
+      StringList->Add(StringIntPair.first);
     }
   }
   return new wxStringListValidator(StringList);
@@ -91,14 +88,11 @@ wxStringListValidator* JZNamedChoice::GetStringListValidator()
 
 void JZNamedChoice::GetValue()
 {
-  for (
-    vector<pair<wxString, int> >::const_iterator iPair = mPairs.begin();
-    iPair != mPairs.end();
-    ++iPair)
+  for (const auto& StringIntPair : mPairs)
   {
-    if (iPair->first == mSelection)
+    if (StringIntPair.first == mSelection)
     {
-      *mpResult = iPair->second;
+      *mpResult = StringIntPair.second;
       break;
     }
   }
@@ -106,14 +100,11 @@ void JZNamedChoice::GetValue()
 
 void JZNamedChoice::SetValue()
 {
-  for (
-    vector<pair<wxString, int> >::const_iterator iPair = mPairs.begin();
-    iPair != mPairs.end();
-    ++iPair)
+  for (const auto& StringIntPair : mPairs)
   {
-    if (*mpResult == iPair->second)
+    if (*mpResult == StringIntPair.second)
     {
-      mSelection = iPair->first;
+      mSelection = StringIntPair.first;
       break;
     }
   }

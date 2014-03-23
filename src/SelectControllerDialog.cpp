@@ -41,17 +41,12 @@ int SelectControllerDlg()
     gpConfig->GetControlNames();
 
   int Controllers[130];
-  for (
-    vector<pair<string, int> >::const_iterator iControlName =
-      ControlNames.begin();
-    iControlName != ControlNames.end();
-    ++iControlName)
+  for (const auto& StringIntPair : ControlNames)
   {
-    const string& Name = iControlName->first;
-    if (!Name.empty())
+    if (!StringIntPair.first.empty())
     {
-      Controllers[n] = iControlName->second;
-      Names.Add(Name);
+      Controllers[n] = StringIntPair.second;
+      Names.Add(StringIntPair.first);
     }
   }
 

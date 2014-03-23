@@ -51,14 +51,9 @@ JZMidiDeviceDialog::JZMidiDeviceDialog(
 {
   mpMidiDeviceListBox = new wxListBox(this, wxID_ANY);
 
-  for (
-    vector<pair<wxString, int> >::const_iterator iMidiDevice =
-      MidiDevices.begin();
-    iMidiDevice != MidiDevices.end();
-    ++iMidiDevice)
+  for (const auto& StringIntPair : MidiDevices)
   {
-    const wxString& MidiDeviceName = iMidiDevice->first;
-    mpMidiDeviceListBox->Append(MidiDeviceName);
+    mpMidiDeviceListBox->Append(StringIntPair.first);
   }
 
   if (mDeviceIndex < static_cast<int>(mpMidiDeviceListBox->GetCount()))

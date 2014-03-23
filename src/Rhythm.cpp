@@ -474,12 +474,8 @@ void JZRhythm::GenGroup(
 
   int ClocksPerStep = GetClocksPerStep(BarInfo);
 
-  for (
-    vector<JZRhythm*>::const_iterator iRhythm = Rhythms.begin();
-    iRhythm != Rhythms.end();
-    ++iRhythm)
+  for (const auto& pRhythm : Rhythms)
   {
-    const JZRhythm* pRhythm = *iRhythm;
     int fuzz = pRhythm->GetRhythmGroup(grp).GetContrib();
     if (fuzz && pRhythm != this)
     {
@@ -978,17 +974,12 @@ void JZRhythmWindow::AddInstrumentDlg()
   InstrumentNames.Add("pianowin one");
   Keys.push_back(MODE_ONE_OF);
 
-  const vector<pair<string, int> >& DrumNames = gpConfig->GetDrumNames();
-  for (
-    vector<pair<string, int> >::const_iterator iDrumName = DrumNames.begin();
-    iDrumName != DrumNames.end();
-    ++iDrumName)
+  for (const auto& StringIntPair : gpConfig->GetDrumNames())
   {
-    const string& Name = iDrumName->first;
-    if (!Name.empty())
+    if (!StringIntPair.first.empty())
     {
-      Keys.push_back(iDrumName->second - 1);
-      InstrumentNames.Add(Name);
+      Keys.push_back(StringIntPair.second - 1);
+      InstrumentNames.Add(StringIntPair.first);
     }
   }
 
@@ -1591,17 +1582,12 @@ void JZRhythmGeneratorWindow::AddInstrument()
   InstrumentNames.Add("pianowin one");
   Keys.push_back(MODE_ONE_OF);
 
-  const vector<pair<string, int> >& DrumNames = gpConfig->GetDrumNames();
-  for (
-    vector<pair<string, int> >::const_iterator iDrumName = DrumNames.begin();
-    iDrumName != DrumNames.end();
-    ++iDrumName)
+  for (const auto& StringIntPair : gpConfig->GetDrumNames())
   {
-    const string& Name = iDrumName->first;
-    if (!Name.empty())
+    if (!StringIntPair.first.empty())
     {
-      Keys.push_back(iDrumName->second - 1);
-      InstrumentNames.Add(Name);
+      Keys.push_back(StringIntPair.second - 1);
+      InstrumentNames.Add(StringIntPair.first);
     }
   }
 
@@ -1736,13 +1722,9 @@ void JZRhythmGeneratorWindow::Write(ostream& Os)
 
   Os << 2 << endl;
   Os << mInstruments.size() << endl;
-  for (
-    vector<JZRhythm*>::const_iterator iInstrument = mInstruments.begin();
-    iInstrument != mInstruments.end();
-    ++iInstrument)
+  for (const auto& pRhythm : mInstruments)
   {
-    const JZRhythm& Instrument = **iInstrument;
-    Instrument.Write(Os);
+    pRhythm->Write(Os);
   }
 }
 
@@ -1750,12 +1732,9 @@ void JZRhythmGeneratorWindow::Write(ostream& Os)
 //-----------------------------------------------------------------------------
 void JZRhythmGeneratorWindow::ClearInstruments()
 {
-  for (
-    vector<JZRhythm*>::iterator iInstrument = mInstruments.begin();
-    iInstrument != mInstruments.end();
-    ++iInstrument)
+  for (auto& pRhythm : mInstruments)
   {
-    delete *iInstrument;
+    delete pRhythm;
   }
   mInstruments.clear();
 }
@@ -1933,13 +1912,9 @@ void JZRhythmGeneratorWindow::GenerateRhythm()
     Erase.Execute(0);
   }
 
-  for (
-    vector<JZRhythm*>::iterator iInstrument = mInstruments.begin();
-    iInstrument != mInstruments.end();
-    ++iInstrument)
+  for (auto& pRhythm : mInstruments)
   {
-    JZRhythm& Instrument = **iInstrument;
-    Instrument.GenInit(FromClock);
+    pRhythm->GenInit(FromClock);
   }
 
   JZBarInfo BarInfo(*mpSong);
@@ -1956,13 +1931,9 @@ void JZRhythmGeneratorWindow::GenerateRhythm()
 
   while (BarInfo.GetClock() < ToClock)
   {
-    for (
-      vector<JZRhythm*>::iterator iInstrument = mInstruments.begin();
-      iInstrument != mInstruments.end();
-      ++iInstrument)
+    for (auto& pRhythm : mInstruments)
     {
-      JZRhythm& Instrument = **iInstrument;
-      Instrument.Generate(pTrack, BarInfo, mInstruments);
+      pRhythm->Generate(pTrack, BarInfo, mInstruments);
     }
     BarInfo.Next();
   }

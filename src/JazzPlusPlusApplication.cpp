@@ -217,18 +217,14 @@ void JZJazzPlusPlusApplication::InsureConfigurationFileExistence() const
   ConfigurationFileNames.push_back("xgdrmset.jzi");
   ConfigurationFileNames.push_back("xgvoices.jzi");
 
-  for (
-    vector<wxString>::const_iterator iConfigurationFileName =
-      ConfigurationFileNames.begin();
-    iConfigurationFileName != ConfigurationFileNames.end();
-    ++iConfigurationFileName)
+  for (const auto& ConfigurationFileName : ConfigurationFileNames)
   {
     // Check to see if the user already has a jazz.cfg file in the
     // user configuration directory.
     wxString JazzCfgFile =
       UserConfigDir +
       wxFileName::GetPathSeparator() +
-      *iConfigurationFileName;
+      ConfigurationFileName;
 
     if (!::wxFileExists(JazzCfgFile))
     {
@@ -237,7 +233,7 @@ void JZJazzPlusPlusApplication::InsureConfigurationFileExistence() const
       wxString DefaultJazzCfgFile =
         wxStandardPaths::Get().GetDataDir() +
         wxFileName::GetPathSeparator() +
-        *iConfigurationFileName;
+        ConfigurationFileName;
 
       if (::wxFileExists(DefaultJazzCfgFile))
       {

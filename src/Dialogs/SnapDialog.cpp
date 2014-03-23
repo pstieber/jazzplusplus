@@ -48,12 +48,9 @@ JZSnapDialog::JZSnapDialog(int& SnapDenominator, wxWindow* pParent)
     mpSnapValueChoice(0)
 {
   mpSnapValueChoice = new wxChoice(this, wxID_ANY);
-  for (
-    map<int, string>::const_iterator iLimitSteps = gLimitSteps.begin();
-    iLimitSteps != gLimitSteps.end();
-    ++iLimitSteps)
+  for (const auto& IntNamePair : gLimitSteps)
   {
-    mpSnapValueChoice->Append(iLimitSteps->second);
+    mpSnapValueChoice->Append(IntNamePair.second);
   }
 
   wxButton* pOkButton = new wxButton(this, wxID_OK, "&OK");
@@ -90,16 +87,13 @@ JZSnapDialog::JZSnapDialog(int& SnapDenominator, wxWindow* pParent)
 bool JZSnapDialog::TransferDataToWindow()
 {
   int Selection = 0;
-  for (
-    map<int, string>::const_iterator iLimitSteps = gLimitSteps.begin();
-    iLimitSteps != gLimitSteps.end();
-    ++iLimitSteps, ++Selection)
+  for (const auto& IntNamePair : gLimitSteps)
   {
-    const int& Value = iLimitSteps->first;
-    if (Value >= mSnapDenominator)
+    if (IntNamePair.first >= mSnapDenominator)
     {
       break;
     }
+    ++Selection;
   }
   mpSnapValueChoice->SetSelection(Selection);
 
@@ -111,15 +105,12 @@ bool JZSnapDialog::TransferDataToWindow()
 bool JZSnapDialog::TransferDataFromWindow()
 {
   string SelectedValue = mpSnapValueChoice->GetStringSelection();
-  for (
-    map<int, string>::const_iterator iLimitSteps = gLimitSteps.begin();
-    iLimitSteps != gLimitSteps.end();
-    ++iLimitSteps)
+  for (const auto& IntNamePair : gLimitSteps)
   {
-    const string& String = iLimitSteps->second;
+    const string& String = IntNamePair.second;
     if (SelectedValue == String)
     {
-      mSnapDenominator = iLimitSteps->first;
+      mSnapDenominator = IntNamePair.first;
       break;
     }
   }

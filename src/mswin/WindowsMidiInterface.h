@@ -217,13 +217,8 @@ class JZWinSysexBufferArray
     void ReleaseAllBuffers()
     {
       mpNextFree = 0;
-      for (
-        std::vector<JZWinSysexBuffer*>::iterator iPointer =
-          mPointerArray.begin();
-        iPointer != mPointerArray.end();
-        ++iPointer)
+      for (auto& pWinSysexBuffer : mPointerArray)
       {
-        JZWinSysexBuffer* pWinSysexBuffer = *iPointer;
         pWinSysexBuffer->SetNextFree(mpNextFree);
         mpNextFree = pWinSysexBuffer;
       }

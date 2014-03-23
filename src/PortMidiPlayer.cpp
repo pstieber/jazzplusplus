@@ -481,15 +481,11 @@ void JZPortMidiPlayer::DeviceSelectionDialog()
     MidiInputDeviceDialog.ShowModal();
 
     // Set the input device based on the selected integer.
-    for (
-      vector<pair<wxString, int> >::const_iterator iDevice =
-        MidiDevices.begin();
-      iDevice != MidiDevices.end();
-      ++iDevice)
+    for (const auto& StringIntPair : MidiDevices)
     {
-      if (iDevice->second == InputDevice)
+      if (StringIntPair.second == InputDevice)
       {
-        SetOutputDevice(iDevice->first);
+        SetOutputDevice(StringIntPair.first);
         break;
       }
     }
@@ -525,15 +521,11 @@ void JZPortMidiPlayer::DeviceSelectionDialog()
     MidiOutputDeviceDialog.ShowModal();
 
     // Set the output device based on the selected integer.
-    for (
-      vector<pair<wxString, int> >::const_iterator iDevice =
-        MidiDevices.begin();
-      iDevice != MidiDevices.end();
-      ++iDevice)
+    for (const auto& StringIntPair : MidiDevices)
     {
-      if (iDevice->second == OutputDevice)
+      if (StringIntPair.second == OutputDevice)
       {
-        SetOutputDevice(iDevice->first);
+        SetOutputDevice(StringIntPair.first);
         break;
       }
     }

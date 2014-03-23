@@ -419,12 +419,8 @@ void JZSnapSelection::Snap(
 void JZSnapSelection::SetXSnap(const vector<int>& XVector, int ScrolledX)
 {
   mXCoordinates.clear();
-  for (
-    vector<int>::const_iterator iXValue = XVector.begin();
-    iXValue != XVector.end();
-    ++iXValue)
+  for (const auto& XValue : XVector)
   {
-    const int& XValue = *iXValue;
     mXCoordinates.push_back(XValue + ScrolledX);
   }
   mXStep = 0;
@@ -435,12 +431,8 @@ void JZSnapSelection::SetXSnap(const vector<int>& XVector, int ScrolledX)
 void JZSnapSelection::SetYSnap(const vector<int>& YVector, int ScrolledY)
 {
   mYCoordinates.clear();
-  for (
-    vector<int>::const_iterator iYValue = YVector.begin();
-    iYValue != YVector.end();
-    ++iYValue)
+  for (const auto& YValue : YVector)
   {
-    const int& YValue = *iYValue;
     mYCoordinates.push_back(YValue + ScrolledY);
   }
   mYStep = 0;

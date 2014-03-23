@@ -51,13 +51,9 @@ JZSynthesizerDialog::JZSynthesizerDialog(wxWindow* pParent)
 {
   mpSynthesizerListbox = new wxListBox(this, wxID_ANY);
 
-  for (
-    vector<pair<string, int> >::const_iterator iPair =
-      gSynthesizerTypes.begin();
-    iPair != gSynthesizerTypes.end();
-    ++iPair)
+  for (const auto& StringIntPair : gSynthesizerTypes)
   {
-    mpSynthesizerListbox->Append(iPair->first.c_str());
+    mpSynthesizerListbox->Append(StringIntPair.first);
   }
 
   mpStartListbox = new wxListBox(this, wxID_ANY);
@@ -115,17 +111,14 @@ JZSynthesizerDialog::JZSynthesizerDialog(wxWindow* pParent)
 bool JZSynthesizerDialog::TransferDataToWindow()
 {
   int Selection(0), Index(0);
-  for (
-    vector<pair<string, int> >::const_iterator iPair =
-      gSynthesizerTypes.begin();
-    iPair != gSynthesizerTypes.end();
-    ++iPair, ++Index)
+  for (const auto& StringIntPair : gSynthesizerTypes)
   {
-    if (iPair->first == gpConfig->GetStrValue(C_SynthType))
+    if (StringIntPair.first == gpConfig->GetStrValue(C_SynthType))
     {
-      mOldSynthTypeName = iPair->first;
+      mOldSynthTypeName = StringIntPair.first;
       Selection = Index;
     }
+    ++Index;
   }
   mpSynthesizerListbox->SetSelection(Selection);
 
