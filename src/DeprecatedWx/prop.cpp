@@ -1042,13 +1042,8 @@ wxPropertyValidator* wxPropertyView::FindPropertyValidator(
     return pProperty->GetValidator();
   }
 
-  for (
-    list<wxPropertyValidatorRegistry*>::iterator iValidator =
-      m_validatorRegistryList.begin();
-    iValidator != m_validatorRegistryList.end();
-    ++iValidator)
+  for (auto& pPropertyValidatorRegistry : m_validatorRegistryList)
   {
-    wxPropertyValidatorRegistry* pPropertyValidatorRegistry = *iValidator;
     wxPropertyValidator* pPropertyValidator =
       pPropertyValidatorRegistry->GetValidator(pProperty->GetRole());
     if (pPropertyValidator)
@@ -1095,8 +1090,7 @@ void wxPropertySheet::AddProperty(wxProperty *property)
 // Get property by name
 wxProperty *wxPropertySheet::GetProperty(const wxString& Name) const
 {
-  map<wxString, wxProperty*>::const_iterator iPropertyMap =
-    mProperties.find(Name);
+  const auto iPropertyMap = mProperties.find(Name);
   if (iPropertyMap == mProperties.end())
   {
     return 0;
@@ -1123,7 +1117,7 @@ bool wxPropertySheet::SetProperty(const wxString& Name, const wxPropertyValue& v
 
 void wxPropertySheet::RemoveProperty(const wxString& Name)
 {
-  map<wxString, wxProperty*>::iterator iPropertyMap = mProperties.find(Name);
+  auto iPropertyMap = mProperties.find(Name);
   if (iPropertyMap != mProperties.end())
   {
     delete iPropertyMap->second;
@@ -1139,13 +1133,9 @@ bool wxPropertySheet::HasProperty(const wxString& Name) const
 // Clear all properties
 void wxPropertySheet::Clear(void)
 {
-  for (
-    map<wxString, wxProperty*>::iterator iPropertyMap =
-      mProperties.begin();
-    iPropertyMap != mProperties.end();
-    ++iPropertyMap)
+  for (auto& NamePropertyPtrPair : mProperties)
   {
-    delete iPropertyMap->second;
+    delete NamePropertyPtrPair.second;
   }
   mProperties.clear();
 }
@@ -1153,12 +1143,9 @@ void wxPropertySheet::Clear(void)
 // Sets/clears the modified flag for each property value
 void wxPropertySheet::SetAllModified(bool flag)
 {
-  for (
-    map<wxString, wxProperty*>::iterator iPropertyMap = mProperties.begin();
-    iPropertyMap != mProperties.end();
-    ++iPropertyMap)
+  for (auto& NamePropertyPtrPair : mProperties)
   {
-    wxProperty* pProperty = iPropertyMap->second;
+    wxProperty* pProperty = NamePropertyPtrPair.second;
     pProperty->GetValue().SetModified(flag);
   }
 }
@@ -1188,8 +1175,7 @@ void wxPropertyValidatorRegistry::RegisterValidator(
 wxPropertyValidator *wxPropertyValidatorRegistry::GetValidator(
   const wxString& TypeName)
 {
-  map<wxString, wxPropertyValidator*>::iterator iPropertyValidator =
-      mPropertyValidatorMap.find(TypeName);
+  auto iPropertyValidator = mPropertyValidatorMap.find(TypeName);
   if (iPropertyValidator != mPropertyValidatorMap.end())
   {
     return iPropertyValidator->second;
@@ -1199,13 +1185,9 @@ wxPropertyValidator *wxPropertyValidatorRegistry::GetValidator(
 
 void wxPropertyValidatorRegistry::ClearRegistry()
 {
-  for (
-    map<wxString, wxPropertyValidator*>::iterator iPropertyValidator =
-      mPropertyValidatorMap.begin();
-    iPropertyValidator != mPropertyValidatorMap.end();
-    ++iPropertyValidator)
+  for (auto& NamePropertyValuePtrPair : mPropertyValidatorMap)
   {
-    wxPropertyValidator* pPropertyValidator = iPropertyValidator->second;
+    wxPropertyValidator* pPropertyValidator = NamePropertyValuePtrPair.second;
     delete pPropertyValidator;
   }
   mPropertyValidatorMap.clear();
