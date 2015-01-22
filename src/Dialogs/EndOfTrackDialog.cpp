@@ -1,7 +1,7 @@
 //*****************************************************************************
 // The JAZZ++ Midi Sequencer
 //
-// Copyright (C) 2010 Peter J. Stieber, all rights reserved.
+// Copyright (C) 2010-2015 Peter J. Stieber, all rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -51,7 +51,7 @@ JZEndOfTrackDialog::JZEndOfTrackDialog(
   wxWindow * pParent)
   : wxDialog(pParent, wxID_ANY, wxString("End of Track")),
     mpEndOfTrackEvent(pEndOfTrackEvent),
-    mpClockEdit(0)
+    mpClockEdit(nullptr)
 {
   mpClockEdit = new wxTextCtrl(this, wxID_ANY);
 

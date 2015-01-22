@@ -1,7 +1,7 @@
 //*****************************************************************************
 // The JAZZ++ Midi Sequencer
 //
-// Copyright (C) 2008-2013 Peter J. Stieber, all rights reserved.
+// Copyright (C) 2008-2015 Peter J. Stieber, all rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -46,8 +46,8 @@ END_EVENT_TABLE()
 //-----------------------------------------------------------------------------
 JZSynthesizerDialog::JZSynthesizerDialog(wxWindow* pParent)
   : wxDialog(pParent, wxID_ANY, wxString("Synthesizer Settings")),
-    mpSynthesizerListbox(0),
-    mpStartListbox(0)
+  mpSynthesizerListbox(nullptr),
+  mpStartListbox(nullptr)
 {
   mpSynthesizerListbox = new wxListBox(this, wxID_ANY);
 

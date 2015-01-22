@@ -1,7 +1,7 @@
 //*****************************************************************************
 // The JAZZ++ Midi Sequencer
 //
-// Copyright (C) 2009-2013 Peter J. Stieber, all rights reserved.
+// Copyright (C) 2009-2015 Peter J. Stieber, all rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -53,8 +53,8 @@ JZSysexDialog::JZSysexDialog(
   wxWindow* pParent)
   : wxDialog(pParent, wxID_ANY, wxString("System Exclusive")),
     mpSysExEvent(pSysExEvent),
-    mpSysExEdit(0),
-    mpClockEdit(0)
+    mpSysExEdit(nullptr),
+    mpClockEdit(nullptr)
 {
   mpSysExEdit = new wxTextCtrl(this, wxID_ANY);
 

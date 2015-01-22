@@ -3,7 +3,7 @@
 //
 // Copyright (C) 1994-2000 Andreas Voss and Per Sigmond, all rights reserved.
 // Modifications Copyright (C) 2004 Patrick Earl
-// Modifications Copyright (C) 2008-2013 Peter J. Stieber
+// Modifications Copyright (C) 2008-2015 Peter J. Stieber
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -56,8 +56,8 @@ END_EVENT_TABLE()
 //-----------------------------------------------------------------------------
 JZAboutDialog::JZAboutDialog(wxWindow* pParent)
   : wxDialog(pParent, wxID_ANY, wxString("About Jazz++")),
-    mpLogo(0),
-    mpBitmap(0)
+    mpLogo(nullptr),
+    mpBitmap(nullptr)
 {
   mpLogo = new wxBitmap((const char **) JazzLogo_xpm);
   mpBitmap = new wxStaticBitmap(this, wxID_ANY, *mpLogo);

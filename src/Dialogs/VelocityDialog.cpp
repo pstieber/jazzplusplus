@@ -1,7 +1,7 @@
 //*****************************************************************************
 // The JAZZ++ Midi Sequencer
 //
-// Copyright (C) 2009-2013 Peter J. Stieber, all rights reserved.
+// Copyright (C) 2009-2015 Peter J. Stieber, all rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -63,11 +63,11 @@ JZVelocityDialog::JZVelocityDialog(
     mFromValue(FromValue),
     mToValue(ToValue),
     mMode(Mode),
-    mpVelocityStartKnob(0),
-    mpVelocityStartValue(0),
-    mpVelocityStopKnob(0),
-    mpVelocityStopValue(0),
-    mpModeRadioBox(0)
+    mpVelocityStartKnob(nullptr),
+    mpVelocityStartValue(nullptr),
+    mpVelocityStopKnob(nullptr),
+    mpVelocityStopValue(nullptr),
+    mpModeRadioBox(nullptr)
 {
   mpVelocityStartKnob = new JZKnob(this, IDC_KB_VELOCITY_START, 0, 0, 127);
   mpVelocityStartValue = new wxStaticText(this, wxID_ANY, "000");

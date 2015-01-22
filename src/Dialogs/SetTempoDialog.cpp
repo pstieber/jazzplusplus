@@ -1,7 +1,7 @@
 //*****************************************************************************
 // The JAZZ++ Midi Sequencer
 //
-// Copyright (C) 2010 Peter J. Stieber, all rights reserved.
+// Copyright (C) 2010-2015 Peter J. Stieber, all rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -53,8 +53,8 @@ JZSetTempoDialog::JZSetTempoDialog(
   wxWindow * pParent)
   : wxDialog(pParent, wxID_ANY, wxString("Set Tempo (for track 0)")),
     mpSetTempoEvent(pSetTempoEvent),
-    mpTempoEdit(0),
-    mpClockEdit(0)
+    mpTempoEdit(nullptr),
+    mpClockEdit(nullptr)
 {
   mpTempoEdit = new JZIntegerEdit(this, wxID_ANY);
   mpTempoEdit->SetValueName("Tempo");

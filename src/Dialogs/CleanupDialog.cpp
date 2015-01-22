@@ -1,7 +1,7 @@
 //*****************************************************************************
 // The JAZZ++ Midi Sequencer
 //
-// Copyright (C) 2009-2013 Peter J. Stieber, all rights reserved.
+// Copyright (C) 2009-2015 Peter J. Stieber, all rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -44,14 +44,14 @@ END_EVENT_TABLE()
 //-----------------------------------------------------------------------------
 //-----------------------------------------------------------------------------
 JZCleanupDialog::JZCleanupDialog(
-    int& ShortestNote,
-    bool& ShortenOverlappingNotes,
-    wxWindow* pParent)
+  int& ShortestNote,
+  bool& ShortenOverlappingNotes,
+  wxWindow* pParent)
   : wxDialog(pParent, wxID_ANY, wxString("Cleanup")),
     mShortestNote(ShortestNote),
     mShortenOverlappingNotes(ShortenOverlappingNotes),
-    mpShortestNoteChoice(0),
-    mpShortenOverlappingNotesCheckBox(0)
+    mpShortestNoteChoice(nullptr),
+    mpShortenOverlappingNotesCheckBox(nullptr)
 {
   mpShortestNoteChoice = new wxChoice(this, wxID_ANY);
   for (const auto& LimitStepPair : gLimitSteps)

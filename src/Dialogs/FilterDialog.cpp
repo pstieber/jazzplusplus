@@ -1,7 +1,7 @@
 //*****************************************************************************
 // The JAZZ++ Midi Sequencer
 //
-// Copyright (C) 2008-2013 Peter J. Stieber, all rights reserved.
+// Copyright (C) 2008-2015 Peter J. Stieber, all rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -50,29 +50,29 @@ END_EVENT_TABLE()
 JZFilterDialog::JZFilterDialog(JZFilter& Filter, wxWindow* pParent)
   : wxDialog(pParent, wxID_ANY, wxString("Event Filter")),
     mFilter(Filter),
-    mpFromTimeEdit(0),
-    mpToTimeEdit(0),
-    mpFromTrackEdit(0),
-    mpToTrackEdit(0),
-    mpNoteCheckBox(0),
-    mpNoteMinEdit(0),
-    mpNoteMaxEdit(0),
-    mpPolyAftertouchCheckBox(0),
-    mpPolyAftertouchMinEdit(0),
-    mpPolyAftertouchMaxEdit(0),
-    mpControllerCheckBox(0),
-    mpControllerMinEdit(0),
-    mpControllerMaxEdit(0),
-    mpPatchCheckBox(0),
-    mpPatchMinEdit(0),
-    mpPatchMaxEdit(0),
-    mpPitchCheckBox(0),
-    mpPitchMinEdit(0),
-    mpPitchMaxEdit(0),
-    mpMeterCheckBox(0),
-    mpChannelAftertouchCheckBox(0),
-    mpSysExCheckBox(0),
-    mpOtherBox(0)
+    mpFromTimeEdit(nullptr),
+    mpToTimeEdit(nullptr),
+    mpFromTrackEdit(nullptr),
+    mpToTrackEdit(nullptr),
+    mpNoteCheckBox(nullptr),
+    mpNoteMinEdit(nullptr),
+    mpNoteMaxEdit(nullptr),
+    mpPolyAftertouchCheckBox(nullptr),
+    mpPolyAftertouchMinEdit(nullptr),
+    mpPolyAftertouchMaxEdit(nullptr),
+    mpControllerCheckBox(nullptr),
+    mpControllerMinEdit(nullptr),
+    mpControllerMaxEdit(nullptr),
+    mpPatchCheckBox(nullptr),
+    mpPatchMinEdit(nullptr),
+    mpPatchMaxEdit(nullptr),
+    mpPitchCheckBox(nullptr),
+    mpPitchMinEdit(nullptr),
+    mpPitchMaxEdit(nullptr),
+    mpMeterCheckBox(nullptr),
+    mpChannelAftertouchCheckBox(nullptr),
+    mpSysExCheckBox(nullptr),
+    mpOtherBox(nullptr)
 {
   mpFromTimeEdit = new wxTextCtrl(this, wxID_ANY);
   mpToTimeEdit = new wxTextCtrl(this, wxID_ANY);

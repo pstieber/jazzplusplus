@@ -1,7 +1,7 @@
 //*****************************************************************************
 // The JAZZ++ Midi Sequencer
 //
-// Copyright (C) 2008-2013 Peter J. Stieber, all rights reserved.
+// Copyright (C) 2008-2015 Peter J. Stieber, all rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -61,15 +61,15 @@ JZKeyOnDialog::JZKeyOnDialog(
   wxWindow* pParent)
   : wxDialog(pParent, wxID_ANY, wxString("Key On")),
     mpEvent(pEvent),
-    mpPitchEdit(0),
-    mpVelocityValue(0),
-    mpVelocityKnob(0),
-    mpOffVelocityValue(0),
-    mpOffVelocityKnob(0),
-    mpLengthEdit(0),
-    mpChannelValue(0),
-    mpChannelKnob(0),
-    mpClockEdit(0)
+    mpPitchEdit(nullptr),
+    mpVelocityValue(nullptr),
+    mpVelocityKnob(nullptr),
+    mpOffVelocityValue(nullptr),
+    mpOffVelocityKnob(nullptr),
+    mpLengthEdit(nullptr),
+    mpChannelValue(nullptr),
+    mpChannelKnob(nullptr),
+    mpClockEdit(nullptr)
 {
   mpPitchEdit = new wxTextCtrl(this, wxID_ANY);
 

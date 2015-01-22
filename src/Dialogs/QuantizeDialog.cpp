@@ -1,7 +1,7 @@
 //*****************************************************************************
 // The JAZZ++ Midi Sequencer
 //
-// Copyright (C) 2009-2013 Peter J. Stieber, all rights reserved.
+// Copyright (C) 2009-2015 Peter J. Stieber, all rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -68,13 +68,13 @@ JZQuantizeDialog::JZQuantizeDialog(
     mNoteLength(NoteLength),
     mGroove(Groove),
     mDelay(Delay),
-    mpStepSizeComboBox(0),
-    mpNoteStartCheckBox(0),
-    mpNoteLengthCheckBox(0),
-    mpGrooveKnob(0),
-    mpGrooveValue(0),
-    mpDelayKnob(0),
-    mpDelayValue(0)
+    mpStepSizeComboBox(nullptr),
+    mpNoteStartCheckBox(nullptr),
+    mpNoteLengthCheckBox(nullptr),
+    mpGrooveKnob(nullptr),
+    mpGrooveValue(nullptr),
+    mpDelayKnob(nullptr),
+    mpDelayValue(nullptr)
 {
   mpStepSizeComboBox = new wxComboBox(this, wxID_ANY);
 

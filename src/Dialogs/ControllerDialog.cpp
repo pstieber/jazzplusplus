@@ -1,7 +1,7 @@
 //*****************************************************************************
 // The JAZZ++ Midi Sequencer
 //
-// Copyright (C) 2010-2014 Peter J. Stieber, all rights reserved.
+// Copyright (C) 2010-2015 Peter J. Stieber, all rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -44,7 +44,7 @@ JZControllerDialog::JZControllerDialog(
   wxWindow* pParent)
   : wxDialog(pParent, wxID_ANY, wxString("Controller")),
     mpControl(pControl),
-    mpControllerListBox(0)
+    mpControllerListBox(nullptr)
 {
   mpControllerListBox = new wxListBox(this, wxID_ANY);
 

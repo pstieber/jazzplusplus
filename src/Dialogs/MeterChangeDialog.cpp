@@ -21,8 +21,8 @@ END_EVENT_TABLE()
 //-----------------------------------------------------------------------------
 JZMeterChangeDialog::JZMeterChangeDialog(wxWindow* pParent)
   : wxDialog(pParent, wxID_ANY, wxString("Meter Change")),
-    mpNumeratorComboBox(0),
-    mpDenominatorComboBox(0)
+    mpNumeratorComboBox(nullptr),
+    mpDenominatorComboBox(nullptr)
 {
   mpNumeratorComboBox = new wxComboBox(this, wxID_ANY);
   mpNumeratorComboBox->Append("1");

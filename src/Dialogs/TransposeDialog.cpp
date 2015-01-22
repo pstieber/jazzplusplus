@@ -1,7 +1,7 @@
 //*****************************************************************************
 // The JAZZ++ Midi Sequencer
 //
-// Copyright (C) 2009-2013 Peter J. Stieber, all rights reserved.
+// Copyright (C) 2009-2015 Peter J. Stieber, all rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -61,10 +61,10 @@ JZTransposeDialog::JZTransposeDialog(
     mNotes(Notes),
     mScale(Scale),
     mFitIntoScale(FitIntoScale),
-    mpAmountKnob(0),
-    mpAmountValue(0),
-    mpFitIntoScaleCheckBox(0),
-    mpScaleNamesComboBox(0)
+    mpAmountKnob(nullptr),
+    mpAmountValue(nullptr),
+    mpFitIntoScaleCheckBox(nullptr),
+    mpScaleNamesComboBox(nullptr)
 {
   wxString CurrentSelectionText;
   CurrentSelectionText

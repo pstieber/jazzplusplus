@@ -1,7 +1,7 @@
 //*****************************************************************************
 // The JAZZ++ Midi Sequencer
 //
-// Copyright (C) 2010 Peter J. Stieber, all rights reserved.
+// Copyright (C) 2010-2015 Peter J. Stieber, all rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -46,13 +46,13 @@ END_EVENT_TABLE()
 JZSamplesDialog::JZSamplesDialog(wxWindow* pParent, JZSampleSet& SampleSet)
   : wxDialog(pParent, wxID_ANY, wxString("Samples Settings")),
     mSampleSet(SampleSet),
-    mpListBox(0),
-    mpLabelEdit(0),
-    mpFileNameEdit(0),
-    mpFileNameBrowseButton(0),
-    mpVolumeSlider(0),
-    mpPanSlider(0),
-    mpPitchSlider(0)
+    mpListBox(nullptr),
+    mpLabelEdit(nullptr),
+    mpFileNameEdit(nullptr),
+    mpFileNameBrowseButton(nullptr),
+    mpVolumeSlider(nullptr),
+    mpPanSlider(nullptr),
+    mpPitchSlider(nullptr)
 {
   wxArrayString SampleNames;
   for (int Index = 0; Index < JZSampleSet::eSampleCount; ++Index)

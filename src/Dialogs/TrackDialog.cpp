@@ -1,7 +1,7 @@
 //*****************************************************************************
 // The JAZZ++ Midi Sequencer
 //
-// Copyright (C) 2008-2013 Peter J. Stieber, all rights reserved.
+// Copyright (C) 2008-2015 Peter J. Stieber, all rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -56,11 +56,11 @@ JZTrackDialog::JZTrackDialog(JZTrack& Track, wxWindow* pParent)
   : wxDialog(pParent, wxID_ANY, wxString("Track Settings")),
     mTrack(Track),
     mLastTrackChannelWasDrums(Track.IsDrumTrack()),
-    mpTrackNameEdit(0),
-    mpPatchListBox(0),
-    mpChannelValue(0),
-    mpChannelKnob(0),
-    mpAudioModeCheckBox(0)
+    mpTrackNameEdit(nullptr),
+    mpPatchListBox(nullptr),
+    mpChannelValue(nullptr),
+    mpChannelKnob(nullptr),
+    mpAudioModeCheckBox(nullptr)
 {
   mpTrackNameEdit = new wxTextCtrl(this, wxID_ANY);
 

@@ -1,7 +1,7 @@
 //*****************************************************************************
 // The JAZZ++ Midi Sequencer
 //
-// Copyright (C) 2009-2013 Peter J. Stieber, all rights reserved.
+// Copyright (C) 2009-2015 Peter J. Stieber, all rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -42,7 +42,7 @@ END_EVENT_TABLE()
 JZDeleteDialog::JZDeleteDialog(wxWindow* pParent, bool& LeaveSpace)
   : wxDialog(pParent, wxID_ANY, wxString("Delete Events")),
     mLeaveSpace(LeaveSpace),
-    mpLeaveSpaceCheckBox(0)
+    mpLeaveSpaceCheckBox(nullptr)
 {
   mpLeaveSpaceCheckBox = new wxCheckBox(this, wxID_ANY, "Leave Space");
 

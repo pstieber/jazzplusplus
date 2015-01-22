@@ -1,7 +1,7 @@
 //*****************************************************************************
 // The JAZZ++ Midi Sequencer
 //
-// Copyright (C) 2008-2013 Peter J. Stieber, all rights reserved.
+// Copyright (C) 2008-2015 Peter J. Stieber, all rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -62,11 +62,11 @@ JZMetronomeSettingsDialog::JZMetronomeSettingsDialog(
     mPitchToIndex(),
     mKeyNormalName(),
     mKeyAccentedName(),
-    mpVelocityKnob(0),
-    mpVelocityValue(0),
-    mpAccentedCheckBox(0),
-    mpNormalListbox(0),
-    mpAccentedListbox(0)
+    mpVelocityKnob(nullptr),
+    mpVelocityValue(nullptr),
+    mpAccentedCheckBox(nullptr),
+    mpNormalListbox(nullptr),
+    mpAccentedListbox(nullptr)
 {
   int Index = 0;
   const vector<pair<string, int> >& DrumNames = gpConfig->GetDrumNames();

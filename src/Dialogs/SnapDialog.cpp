@@ -1,7 +1,7 @@
 //*****************************************************************************
 // The JAZZ++ Midi Sequencer
 //
-// Copyright (C) 2009-2013 Peter J. Stieber, all rights reserved.
+// Copyright (C) 2009-2015 Peter J. Stieber, all rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -45,7 +45,7 @@ END_EVENT_TABLE()
 JZSnapDialog::JZSnapDialog(int& SnapDenominator, wxWindow* pParent)
   : wxDialog(pParent, wxID_ANY, wxString("Snap")),
     mSnapDenominator(SnapDenominator),
-    mpSnapValueChoice(0)
+    mpSnapValueChoice(nullptr)
 {
   mpSnapValueChoice = new wxChoice(this, wxID_ANY);
   for (const auto& IntNamePair : gLimitSteps)

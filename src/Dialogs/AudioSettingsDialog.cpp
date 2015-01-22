@@ -17,10 +17,10 @@ JZAudioSettingsDialog::JZAudioSettingsDialog(
   JZSampleSet& SampleSet)
   : wxDialog(pParent, wxID_ANY, wxString("Audio Settings")),
     mSampleSet(SampleSet),
-    mpEnableAudioCheckBox(0),
-    mpSamplingRateComboBox(0),
-    mpStereoCheckBox(0),
-    mpSoftwareMidiAudioSyncCheckBox(0)
+    mpEnableAudioCheckBox(nullptr),
+    mpSamplingRateComboBox(nullptr),
+    mpStereoCheckBox(nullptr),
+    mpSoftwareMidiAudioSyncCheckBox(nullptr)
 {
   mpEnableAudioCheckBox = new wxCheckBox(this, wxID_ANY, "Enable Audio");
 

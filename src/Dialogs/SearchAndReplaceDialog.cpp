@@ -1,7 +1,7 @@
 //*****************************************************************************
 // The JAZZ++ Midi Sequencer
 //
-// Copyright (C) 2009-2013 Peter J. Stieber, all rights reserved.
+// Copyright (C) 2009-2015 Peter J. Stieber, all rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -53,8 +53,8 @@ JZSearchAndReplaceDialog::JZSearchAndReplaceDialog(
       wxString("Search and replace controller types")),
     mFrom(From),
     mTo(To),
-    mpFromListBox(0),
-    mpToListBox(0)
+    mpFromListBox(nullptr),
+    mpToListBox(nullptr)
 
 {
   mpFromListBox = new wxListBox(this, wxID_ANY);

@@ -1,7 +1,7 @@
 //*****************************************************************************
 // The JAZZ++ Midi Sequencer
 //
-// Copyright (C) 2009-2013 Peter J. Stieber, all rights reserved.
+// Copyright (C) 2009-2015 Peter J. Stieber, all rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -64,11 +64,11 @@ JZLengthDialog::JZLengthDialog(
     mFromValue(FromValue),
     mToValue(ToValue),
     mMode(Mode),
-    mpLengthStartKnob(0),
-    mpLengthStartValue(0),
-    mpLengthStopKnob(0),
-    mpLengthStopValue(0),
-    mpModeRadioBox(0)
+    mpLengthStartKnob(nullptr),
+    mpLengthStartValue(nullptr),
+    mpLengthStopKnob(nullptr),
+    mpLengthStopValue(nullptr),
+    mpModeRadioBox(nullptr)
 {
   mpLengthStartKnob = new JZKnob(
     this,
