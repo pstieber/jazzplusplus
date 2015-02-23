@@ -3,7 +3,7 @@
 //
 // Copyright (C) 1994-2000 Andreas Voss and Per Sigmond, all rights reserved.
 // Modifications Copyright (C) 2004 Patrick Earl
-// Modifications Copyright (C) 2008-2013 Peter J. Stieber
+// Modifications Copyright (C) 2008-2015 Peter J. Stieber
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -30,13 +30,13 @@
 
 using namespace std;
 
-JZConfiguration* gpConfig = 0;
+JZConfiguration* gpConfig = nullptr;
 
-JZSong* gpSong = 0;
+JZSong* gpSong = nullptr;
 
-JZSynthesizer* gpSynth = 0;
+JZSynthesizer* gpSynth = nullptr;
 
-JZPlayer* gpMidiPlayer = 0;
+JZPlayer* gpMidiPlayer = nullptr;
 
 map<int, string> gLimitSteps;
 
@@ -54,15 +54,15 @@ vector<pair<string, int> > gSynthesizerTypes;
 
 vector<pair<string, int> > gSynthesierTypeFiles;
 
-JZProject* gpProject = 0;
+JZProject* gpProject = nullptr;
 
-JZTrackFrame* gpTrackFrame = 0;
+JZTrackFrame* gpTrackFrame = nullptr;
 
-JZTrackWindow* gpTrackWindow = 0;
+JZTrackWindow* gpTrackWindow = nullptr;
 
-JZHarmonyBrowserInterface* gpHarmonyBrowser = 0;
+JZHarmonyBrowserInterface* gpHarmonyBrowser = nullptr;
 
-JZRhythmGeneratorFrame* gpRhythmGeneratorFrame = 0;
+JZRhythmGeneratorFrame* gpRhythmGeneratorFrame = nullptr;
 
 const double gDegreesToRadians = 0.01745329251994330212;
 const double gRadiansToDegrees = 57.2957795130823;
