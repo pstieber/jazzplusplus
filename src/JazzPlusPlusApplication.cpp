@@ -75,8 +75,8 @@ IMPLEMENT_APP(JZJazzPlusPlusApplication)
 //-----------------------------------------------------------------------------
 JZJazzPlusPlusApplication::JZJazzPlusPlusApplication()
   : wxApp(),
-    mpProject(0),
-    mpTrackFrame(0)
+    mpProject(nullptr),
+    mpTrackFrame(nullptr)
 {
 #ifdef _MSC_VER
   // When using the Microsoft C++ compiler in debug mode, each heap allocation
@@ -252,7 +252,7 @@ int JZJazzPlusPlusApplication::OnExit()
   JZHelp::Instance().CloseHelp();
 
   // Prevent reported leaks from the configuration class.
-  delete wxConfigBase::Set(0);
+  delete wxConfigBase::Set(nullptr);
 
   JZProjectManager::Destroy();
 
