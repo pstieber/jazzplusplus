@@ -3,7 +3,7 @@
 //
 // Copyright (C) 1994-2000 Andreas Voss and Per Sigmond, all rights reserved.
 // Modifications Copyright (C) 2004 Patrick Earl
-// Modifications Copyright (C) 2008-2013 Peter J. Stieber
+// Modifications Copyright (C) 2008-2015 Peter J. Stieber
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -78,7 +78,6 @@ JZJazzPlusPlusApplication::JZJazzPlusPlusApplication()
     mpProject(nullptr),
     mpTrackFrame(nullptr)
 {
-#ifdef _MSC_VER
   // When using the Microsoft C++ compiler in debug mode, each heap allocation
   // (i.e. calling new) is counted. The following line will cause the code to
   // generate a user defined break point when the passed allocation index is
@@ -92,7 +91,6 @@ JZJazzPlusPlusApplication::JZJazzPlusPlusApplication()
   // occurs:
   //
   // _CrtSetBreakAlloc(1494);
-#endif // _MSC_VER
 
 #ifdef __LINUX__
   // This code enables floating point exceptions for
