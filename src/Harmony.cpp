@@ -3,7 +3,7 @@
 //
 // Copyright (C) 1994-2000 Andreas Voss and Per Sigmond, all rights reserved.
 // Modifications Copyright (C) 2004 Patrick Earl
-// Modifications Copyright (C) 2008-2013 Peter J. Stieber
+// Modifications Copyright (C) 2008-2015 Peter J. Stieber
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -1391,7 +1391,7 @@ void JZHarmonyBrowserCanvas::OnMouseEvent(wxMouseEvent& MouseEvent)
       if (gpTrackFrame->GetPianoWindow())
       {
         // Show in the guitar view.
-        JZProjectManager::Instance()->ShowPitch(0);
+        JZProjectManager::Instance().ShowPitch(0);
       }
     }
   }

@@ -3,7 +3,7 @@
 //
 // Copyright (C) 1994-2000 Andreas Voss and Per Sigmond, all rights reserved.
 // Modifications Copyright (C) 2004 Patrick Earl
-// Modifications Copyright (C) 2008-2013 Peter J. Stieber
+// Modifications Copyright (C) 2008-2015 Peter J. Stieber
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -152,7 +152,7 @@ void JZEventWindow::Shift(int Units)
       JZCommandShift ShiftCommand(mpFilter, Shift * Unit);
       ShiftCommand.Execute();
 
-      JZProjectManager::Instance()->UpdateAllViews();
+      JZProjectManager::Instance().UpdateAllViews();
     }
   }
 }
@@ -193,7 +193,7 @@ void JZEventWindow::Quantize()
       QuantizeCommand.Execute();
 //      QuantizeCommand.Execute(1);
 
-      JZProjectManager::Instance()->UpdateAllViews();
+      JZProjectManager::Instance().UpdateAllViews();
     }
   }
 }
@@ -209,7 +209,7 @@ void JZEventWindow::SetChannel()
   {
     JZCommandSetChannel SetMidiChannelCommand(mpFilter, NewChannel - 1);
     SetMidiChannelCommand.Execute();
-    JZProjectManager::Instance()->UpdateAllViews();
+    JZProjectManager::Instance().UpdateAllViews();
   }
 }
 
@@ -232,7 +232,7 @@ void JZEventWindow::Transpose()
     JZCommandTranspose TransposeCommand(mpFilter, Notes, Scale, FitIntoScale);
     TransposeCommand.Execute();
 
-    JZProjectManager::Instance()->UpdateAllViews();
+    JZProjectManager::Instance().UpdateAllViews();
   }
 }
 
@@ -248,7 +248,7 @@ void JZEventWindow::Delete()
   {
     JZCommandErase EraseCommand(mpFilter, LeaveSpace);
     EraseCommand.Execute();
-    JZProjectManager::Instance()->UpdateAllViews();
+    JZProjectManager::Instance().UpdateAllViews();
   }
 }
 
@@ -287,7 +287,7 @@ void JZEventWindow::Length()
     JZCommandLength LengthCommand(mpFilter, FromValue, ToValue, Mode);
     LengthCommand.Execute();
 
-    JZProjectManager::Instance()->UpdateAllViews();
+    JZProjectManager::Instance().UpdateAllViews();
   }
 }
 
@@ -320,7 +320,7 @@ void JZEventWindow::Cleanup()
 
     CleanupCommand.Execute();
 
-    JZProjectManager::Instance()->UpdateAllViews();
+    JZProjectManager::Instance().UpdateAllViews();
   }
 }
 
@@ -337,7 +337,7 @@ void JZEventWindow::SearchReplace()
 
     SearchAndReplaceCommand.Execute();
 
-    JZProjectManager::Instance()->UpdateAllViews();
+    JZProjectManager::Instance().UpdateAllViews();
   }
 }
 

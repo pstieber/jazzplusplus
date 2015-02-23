@@ -142,7 +142,7 @@ bool JZJazzPlusPlusApplication::OnInit()
   gpProject = mpProject;
 
   // Create the main application window.
-  mpTrackFrame = JZProjectManager::Instance()->CreateTrackView();
+  mpTrackFrame = JZProjectManager::Instance().CreateTrackView();
 
   gpTrackFrame = mpTrackFrame;
 
@@ -251,8 +251,6 @@ int JZJazzPlusPlusApplication::OnExit()
 
   // Prevent reported leaks from the configuration class.
   delete wxConfigBase::Set(nullptr);
-
-  JZProjectManager::Destroy();
 
   return 0;
 }

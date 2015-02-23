@@ -3,7 +3,7 @@
 //
 // Copyright (C) 1994-2000 Andreas Voss and Per Sigmond, all rights reserved.
 // Modifications Copyright (C) 2004 Patrick Earl
-// Modifications Copyright (C) 2008-2013 Peter J. Stieber
+// Modifications Copyright (C) 2008-2015 Peter J. Stieber
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -77,7 +77,7 @@ using namespace std;
 //  JZCommandShift cmd(mpFilter, mSteps * mUnit);
 //  cmd.Execute();
 //
-//  JZProjectManager::Instance()->UpdateAllViews();
+//  JZProjectManager::Instance().UpdateAllViews();
 //
 //  //  wxForm::OnOk();
 //  return false;
@@ -128,7 +128,7 @@ using namespace std;
 //  JZCommandSearchReplace sr(Filter, frCtrl - 1, toCtrl-1);
 //  sr.Execute();
 //
-//  JZProjectManager::Instance()->UpdateAllViews();
+//  JZProjectManager::Instance().UpdateAllViews();
 //
 //  return false;
 //}
@@ -172,7 +172,7 @@ bool JZSeqLengthDlg::OnClose()
   JZCommandSequenceLength cmd(Filter, scale);
   cmd.Execute();
 
-  JZProjectManager::Instance()->UpdateAllViews();
+  JZProjectManager::Instance().UpdateAllViews();
 
   //JZPropertyListDlg::OnClose();
   return false;
@@ -216,7 +216,7 @@ bool JZMidiDelayDlg::OnClose()
   JZCommandMidiDelay cmd(Filter, scale,clockDelay,repeat);
   cmd.Execute();
 
-  JZProjectManager::Instance()->UpdateAllViews();
+  JZProjectManager::Instance().UpdateAllViews();
 
   //JZPropertyListDlg::OnClose();
   return false;

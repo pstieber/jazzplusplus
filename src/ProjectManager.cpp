@@ -9,14 +9,10 @@
 //*****************************************************************************
 //-----------------------------------------------------------------------------
 //-----------------------------------------------------------------------------
-JZProjectManager* JZProjectManager::mpProjectManager = 0;
-
-//-----------------------------------------------------------------------------
-//-----------------------------------------------------------------------------
 JZProjectManager::JZProjectManager()
-  : mpTrackFrame(0),
-    mpPianoFrame(0),
-    mpGuitarFrame(0)
+  : mpTrackFrame(nullptr),
+    mpPianoFrame(nullptr),
+    mpGuitarFrame(nullptr)
 {
 }
 
@@ -24,25 +20,6 @@ JZProjectManager::JZProjectManager()
 //-----------------------------------------------------------------------------
 JZProjectManager::~JZProjectManager()
 {
-}
-
-//-----------------------------------------------------------------------------
-//-----------------------------------------------------------------------------
-JZProjectManager* JZProjectManager::Instance()
-{
-  if (!mpProjectManager)
-  {
-    mpProjectManager = new JZProjectManager;
-  }
-  return mpProjectManager;
-}
-
-//-----------------------------------------------------------------------------
-//-----------------------------------------------------------------------------
-void JZProjectManager::Destroy()
-{
-  delete mpProjectManager;
-  mpProjectManager = 0;
 }
 
 //-----------------------------------------------------------------------------
@@ -64,7 +41,7 @@ JZTrackFrame* JZProjectManager::CreateTrackView()
 
     // Create the main application window.
     mpTrackFrame = new JZTrackFrame(
-      0,
+      nullptr,
       "Jazz++",
       gpProject,
       Position,
@@ -110,7 +87,7 @@ void JZProjectManager::Detach(JZPianoFrame* pPianoFrame)
 {
   if (mpPianoFrame == pPianoFrame)
   {
-    mpPianoFrame = 0;
+    mpPianoFrame = nullptr;
   }
 }
 
@@ -134,7 +111,7 @@ void JZProjectManager::Detach(JZGuitarFrame* pGuitarFrame)
 {
   if (pGuitarFrame == mpGuitarFrame)
   {
-    mpGuitarFrame = 0;
+    mpGuitarFrame = nullptr;
   }
 }
 

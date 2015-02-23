@@ -3,7 +3,7 @@
 //
 // Copyright (C) 1994-2000 Andreas Voss and Per Sigmond, all rights reserved.
 // Modifications Copyright (C) 2004 Patrick Earl
-// Modifications Copyright (C) 2008-2013 Peter J. Stieber
+// Modifications Copyright (C) 2008-2015 Peter J. Stieber
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -572,7 +572,7 @@ void JZPlayer::StartPlay(int Clock, int LoopClock, int Continue)
 
   mOutClock = Clock + FIRST_DELTACLOCK;
 
-  JZProjectManager::Instance()->NewPlayPosition(
+  JZProjectManager::Instance().NewPlayPosition(
     mpPlayLoop->Ext2IntClock(Clock));
 
   mpPlayLoop->PrepareOutput(
@@ -638,7 +638,7 @@ void JZPlayer::StopPlay()
     }
   }
 
-  JZProjectManager::Instance()->NewPlayPosition(-1);
+  JZProjectManager::Instance().NewPlayPosition(-1);
 }
 
 //-----------------------------------------------------------------------------
@@ -1248,14 +1248,14 @@ int JZMpuPlayer::GetRealTimeClock()
       // Update screen every 4 beats (120 ticks/beat).
       if ((clock_to_host_counter % 32) == 0)
       {
-        JZProjectManager::Instance()->NewPlayPosition(
+        JZProjectManager::Instance().NewPlayPosition(
           mpPlayLoop->Ext2IntClock(playclock));
       }
 #else
       // Update screen every 8'th note (120 ticks/beat).
       if ((clock_to_host_counter % 4) == 0)
       {
-        JZProjectManager::Instance()->NewPlayPosition(
+        JZProjectManager::Instance().NewPlayPosition(
           mpPlayLoop->Ext2IntClock(playclock));
       }
 #endif
@@ -1946,7 +1946,7 @@ void JZSeq2Player::StartPlay(int Clock, int LoopClock, int Continue)
   play_clock   = Clock;
   recd_clock   = Clock;
 
-  JZProjectManager::Instance()->NewPlayPosition(
+  JZProjectManager::Instance().NewPlayPosition(
     mpPlayLoop->Ext2IntClock(Clock));
 
   // send initial program changes, controller etc
@@ -1994,7 +1994,7 @@ void JZSeq2Player::StopPlay()
   {
     through = new JZOssThru();
   }
-  JZProjectManager::Instance()->NewPlayPosition(-1);
+  JZProjectManager::Instance().NewPlayPosition(-1);
   mRecdBuffer.Keyoff2Length();
 }
 
@@ -2134,7 +2134,7 @@ int JZSeq2Player::GetRealTimeClock()
     }
   }
 
-  JZProjectManager::Instance()->NewPlayPosition(
+  JZProjectManager::Instance().NewPlayPosition(
     mpPlayLoop->Ext2IntClock(recd_clock/48 * 48));
   return recd_clock;
 }

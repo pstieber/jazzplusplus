@@ -3,7 +3,7 @@
 //
 // Copyright (C) 1994-2000 Andreas Voss and Per Sigmond, all rights reserved.
 // Modifications Copyright (C) 2004 Patrick Earl
-// Modifications Copyright (C) 2008-2013 Peter J. Stieber
+// Modifications Copyright (C) 2008-2015 Peter J. Stieber
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -1747,7 +1747,7 @@ void JZPianoWindow::OnMouseEvent(wxMouseEvent& MouseEvent)
     int fx, fy;
     MouseEvent.GetPosition(&fx, &fy);
     int Pitch = y2Pitch(fy);
-    JZProjectManager::Instance()->ShowPitch(Pitch);
+    JZProjectManager::Instance().ShowPitch(Pitch);
   }
 
   // dispatch
@@ -2989,7 +2989,7 @@ void JZPianoWindow::CutOrCopy(int Id)
 //OLD//      mpGuitarFrame->Redraw();
 //OLD    }
     // Need a guitar window hint here.
-    JZProjectManager::Instance()->UpdateAllViews();
+    JZProjectManager::Instance().UpdateAllViews();
   }
 }
 
@@ -3130,7 +3130,7 @@ void JZPianoWindow::Copy(JZTrack* pTrack, JZEvent* pEvent, int Kill)
 //OLD//    mpGuitarFrame->Redraw();
 //OLD  }
   // Need a guitar window hint here.
-  JZProjectManager::Instance()->UpdateAllViews();
+  JZProjectManager::Instance().UpdateAllViews();
 
   // Velocity or aftertouch editor update.
   if (mpCtrlEdit)

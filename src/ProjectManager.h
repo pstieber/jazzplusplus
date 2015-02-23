@@ -10,9 +10,7 @@ class JZProjectManager
 {
   public:
 
-    static JZProjectManager* Instance();
-
-    static void Destroy();
+    static JZProjectManager& Instance();
 
     JZTrackFrame* CreateTrackView();
 
@@ -38,11 +36,20 @@ class JZProjectManager
 
   private:
 
-    static JZProjectManager* mpProjectManager;
-
     JZTrackFrame* mpTrackFrame;
 
     JZPianoFrame* mpPianoFrame;
 
     JZGuitarFrame* mpGuitarFrame;
 };
+
+//*****************************************************************************
+//*****************************************************************************
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+inline
+JZProjectManager& JZProjectManager::Instance()
+{
+  static JZProjectManager ProjectManager;
+  return ProjectManager;
+}

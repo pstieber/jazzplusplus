@@ -3,7 +3,7 @@
 //
 // Copyright (C) 1994-2000 Andreas Voss and Per Sigmond, all rights reserved.
 // Modifications Copyright (C) 2004 Patrick Earl
-// Modifications Copyright (C) 2008-2013 Peter J. Stieber
+// Modifications Copyright (C) 2008-2015 Peter J. Stieber
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -677,7 +677,7 @@ void JZWindowsPlayer::StartPlay(int Clock, int LoopClock, int Continue)
 
   OutOfBandEvents.Clear();
 
-  JZProjectManager::Instance()->NewPlayPosition(
+  JZProjectManager::Instance().NewPlayPosition(
     mpPlayLoop->Ext2IntClock(Clock));
 
   mpState->playing = TRUE;  // allow for SetTempo in OutNow()
@@ -863,7 +863,7 @@ int JZWindowsIntPlayer::GetRealTimeClock()
   int clock = Time2RealTimeClock(
     (int)timeGetTime() + mpState->time_correction);
 
-  JZProjectManager::Instance()->NewPlayPosition(
+  JZProjectManager::Instance().NewPlayPosition(
     mpPlayLoop->Ext2IntClock(clock / 48 * 48));
 
   if (!OutOfBandEvents.IsEmpty())
@@ -941,7 +941,7 @@ int JZWindowsMidiPlayer::GetRealTimeClock()
     clock = mpState->virtual_clock + delta_clock;
   }
 
-  JZProjectManager::Instance()->NewPlayPosition(
+  JZProjectManager::Instance().NewPlayPosition(
     mpPlayLoop->Ext2IntClock(clock / 48 * 48));
 
   return clock;
@@ -1002,7 +1002,7 @@ int JZWindowsMtcPlayer::GetRealTimeClock()
     clock = lastValidMtcClock;
   }
 
-  JZProjectManager::Instance()->NewPlayPosition(
+  JZProjectManager::Instance().NewPlayPosition(
     mpPlayLoop->Ext2IntClock(clock / 48 * 48));
 
   if (!OutOfBandEvents.IsEmpty())
