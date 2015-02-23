@@ -37,8 +37,6 @@ class JZJazzPlusPlusApplication : public wxApp
 
     JZJazzPlusPlusApplication();
 
-    ~JZJazzPlusPlusApplication();
-
     // Override the base class virtual functions.
 
     // Description:

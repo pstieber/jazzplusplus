@@ -106,12 +106,6 @@ JZJazzPlusPlusApplication::JZJazzPlusPlusApplication()
 }
 
 //-----------------------------------------------------------------------------
-//-----------------------------------------------------------------------------
-JZJazzPlusPlusApplication::~JZJazzPlusPlusApplication()
-{
-}
-
-//-----------------------------------------------------------------------------
 // Description:
 //   This function is called on application startup and is a good place
 // for application initialization.  Initializing here and not in the
