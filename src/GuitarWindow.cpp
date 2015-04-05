@@ -106,7 +106,7 @@ JZGuitarWindow::JZGuitarWindow(
     mMargin(2),
     mActivePitch(0),
     mPlayPitch(0),
-    mpFont(0)
+    mpFont(nullptr)
 {
   mWidth = Size.GetWidth();
   mHeight = Size.GetHeight();

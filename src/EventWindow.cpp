@@ -69,12 +69,12 @@ JZEventWindow::JZEventWindow(
       Position,
       Size,
       wxHSCROLL | wxVSCROLL | wxNO_FULL_REPAINT_ON_RESIZE),
-    mpSnapSel(0),
-    mpFilter(0),
-    mpMouseAction(0),
+    mpSnapSel(nullptr),
+    mpFilter(nullptr),
+    mpMouseAction(nullptr),
     mpProject(pProject),
-    mpGreyColor(0),
-    mpGreyBrush(0),
+    mpGreyColor(nullptr),
+    mpGreyBrush(nullptr),
     mClockTicsPerPixel(36),
     mTopInfoHeight(40),
     mLeftInfoWidth(100),
@@ -590,7 +590,7 @@ void JZEventWindow::OnMouseEvent(wxMouseEvent& MouseEvent)
         delete mpMouseAction;
       }
 
-      mpMouseAction = 0;
+      mpMouseAction = nullptr;
     }
   }
 }

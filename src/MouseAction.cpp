@@ -185,7 +185,7 @@ JZSelection::JZSelection(wxWindow* pWindow)
     mSelected(false),
     mRectangle(),
     mpWindow(pWindow),
-    mpBackgroundBrush(0)
+    mpBackgroundBrush(nullptr)
 {
 //  mpBackgroundBrush = new wxBrush(wxColor(192, 192, 192), wxSOLID);
   mpBackgroundBrush = new wxBrush(wxColor(100, 100, 100), wxSOLID);

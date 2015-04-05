@@ -316,7 +316,7 @@ JZArrayEdit::JZArrayEdit(
     mMax(Array.mMax),
     mNull(Array.mNull),
     mLabel(),
-    mpDrawBars(0),
+    mpDrawBars(nullptr),
     mX(0),
     mY(0),
     mWidth(Size.GetWidth()),

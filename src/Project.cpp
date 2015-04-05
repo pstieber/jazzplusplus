@@ -71,10 +71,10 @@ wxString JZProject::mConfFileName = "jazz.cfg";
 //-----------------------------------------------------------------------------
 JZProject::JZProject()
   : JZSong(),
-    mpConfig(0),
-    mpMidiPlayer(0),
-    mpSynth(0),
-    mpRecInfo(0),
+    mpConfig(nullptr),
+    mpMidiPlayer(nullptr),
+    mpSynth(nullptr),
+    mpRecInfo(nullptr),
     mChanged(false),
     mIsPlaying(false)
 {

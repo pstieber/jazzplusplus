@@ -17,7 +17,7 @@ JZPortMidiPlayer::JZPortMidiPlayer(JZSong* pSong)
   : JZPlayer(pSong),
     mInputDevices(),
     mOutputDevices(),
-    mpStream(0),
+    mpStream(nullptr),
     mInitialized(false),
     mStartTime(0),
     mStartClock(0),

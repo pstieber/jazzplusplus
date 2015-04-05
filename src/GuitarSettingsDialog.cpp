@@ -35,10 +35,10 @@ END_EVENT_TABLE()
 //-----------------------------------------------------------------------------
 JZGuitarSettingsDialog::JZGuitarSettingsDialog(wxWindow* pParent)
   : wxDialog(pParent, wxID_ANY, wxString("Guitar Settings")),
-    mpChordModeCheckBox(0),
-    mpBassGuitarCheckBox(0),
-    mpShowOctavesCheckBox(0)//,
-//    mpFretCountEdit(0)
+    mpChordModeCheckBox(nullptr),
+    mpBassGuitarCheckBox(nullptr),
+    mpShowOctavesCheckBox(nullptr)//,
+//    mpFretCountEdit(nullptr)
 {
   mpChordModeCheckBox = new wxCheckBox(this, wxID_ANY, "Chord Mode");
 

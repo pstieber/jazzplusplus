@@ -63,7 +63,11 @@ JZAboutDialog::JZAboutDialog(wxWindow* pParent)
   mpBitmap = new wxStaticBitmap(this, wxID_ANY, *mpLogo);
 
   wxHtmlWindow* pHtmlWindow = new wxHtmlWindow(
-    this, wxID_ANY, wxDefaultPosition, wxSize(450, 150), wxSUNKEN_BORDER);
+    this,
+    wxID_ANY,
+    wxDefaultPosition,
+    wxSize(450, 150),
+    wxSUNKEN_BORDER);
 
   wxString LocaleString = wxLocale::GetSystemEncodingName();
 

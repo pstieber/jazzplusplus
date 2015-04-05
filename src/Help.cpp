@@ -42,7 +42,7 @@ wxString JZHelp::mHelpFileName = "jazz.hhp";
 //-----------------------------------------------------------------------------
 //-----------------------------------------------------------------------------
 JZHelp::JZHelp()
-  : mpHelp(0)
+  : mpHelp(nullptr)
 {
   mpHelp = new wxHtmlHelpController(wxHF_DEFAULT_STYLE | wxHF_OPEN_FILES);
 }

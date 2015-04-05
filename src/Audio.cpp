@@ -1004,7 +1004,7 @@ void JZSampleSet::AddNote(const string& FileName, long frc, long toc)
 #endif
   JZEventIterator iter(info->mpTrack);
   JZEvent* pEvent = iter.Range(frc, toc);
-  while (pEvent != 0)
+  while (pEvent != nullptr)
   {
     track->Kill(pEvent);
     pEvent = iter.Next();

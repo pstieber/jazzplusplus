@@ -219,17 +219,17 @@ JZPianoFrame::JZPianoFrame(
       Position,
       Size,
       wxDEFAULT_FRAME_STYLE | wxNO_FULL_REPAINT_ON_RESIZE),
-    mpPianoWindow(0),
-//    mpFileMenu(0),
-//    mpEditMenu(0)
+    mpPianoWindow(nullptr),
+//    mpFileMenu(nullptr),
+//    mpEditMenu(nullptr)
     mpProject(pProject),
-    mpToolBar(0)
+    mpToolBar(nullptr)
 {
   CreateToolBar();
 
 //  CreateMenu();
 
-  mpDialogBox = 0;
+  mpDialogBox = nullptr;
   MixerForm = 0;
 
   CreateMenu();
@@ -346,28 +346,28 @@ void JZPianoFrame::CreateMenu()
   wxMenu *misc_menu = new wxMenu("",wxMENU_TEAROFF);
   misc_menu->Append(wxID_UNDO, "&Undo");
   misc_menu->Append(wxID_REDO, "&Redo");
-  misc_menu->Append(MEN_CTRL_PITCH,        "Edit &Pitch");
-  misc_menu->Append(MEN_CTRL_VELOC,        "Edit &Velocity");
-  misc_menu->Append(MEN_CTRL_MODUL,        "Edit &Modulation");
+  misc_menu->Append(MEN_CTRL_PITCH, "Edit &Pitch");
+  misc_menu->Append(MEN_CTRL_VELOC, "Edit &Velocity");
+  misc_menu->Append(MEN_CTRL_MODUL, "Edit &Modulation");
 
   misc_menu->Append(MEN_CTRL_POLY_AFTER, "Edit &Key Aftertouch");
   misc_menu->Append(MEN_CTRL_CHANNEL_AFTER,  "Edit &Chn Aftertouch");
 
-  misc_menu->Append(MEN_CTRL_CONTR,        "Edit &Controller...");
-  misc_menu->Append(MEN_CTRL_TEMPO,        "Edit &Tempo");
-  misc_menu->Append(MEN_CTRL_NONE,        "Edit &None");
-  misc_menu->Append(MEN_GUITAR,                "&Guitar board");
+  misc_menu->Append(MEN_CTRL_CONTR, "Edit &Controller...");
+  misc_menu->Append(MEN_CTRL_TEMPO, "Edit &Tempo");
+  misc_menu->Append(MEN_CTRL_NONE, "Edit &None");
+  misc_menu->Append(MEN_GUITAR, "&Guitar board");
 
-  wxMenu *help_menu = new wxMenu("",wxMENU_TEAROFF);
+  wxMenu *help_menu = new wxMenu("", wxMENU_TEAROFF);
   help_menu->Append(ID_HELP_PIANO_WINDOW, "&Pianowin");
   help_menu->Append(ACT_HELP_MOUSE, "&Mouse");
 
   wxMenuBar *menu_bar = new wxMenuBar;
-  menu_bar->Append(win_menu,    "&Window");
-  menu_bar->Append(edit_menu,    "&Edit");
+  menu_bar->Append(win_menu, "&Window");
+  menu_bar->Append(edit_menu, "&Edit");
   menu_bar->Append(setting_menu, "&Settings");
-  menu_bar->Append(misc_menu,    "&Misc");
-  menu_bar->Append(help_menu,    "&Help");
+  menu_bar->Append(misc_menu, "&Misc");
+  menu_bar->Append(help_menu, "&Help");
 
   SetMenuBar(menu_bar);
 }
@@ -377,13 +377,11 @@ void JZPianoFrame::OnFilter(wxCommandEvent& Event)
   mpPianoWindow->EditFilter();
 }
 
-
 // Activate velocity edit.
 void JZPianoFrame::OnCtrlVelocity(wxCommandEvent& Event)
 {
   mpPianoWindow->CtrlVelocity();
 }
-
 
 void JZPianoFrame::CtrlChannelAftertouchEdit(wxCommandEvent& Event)
 {

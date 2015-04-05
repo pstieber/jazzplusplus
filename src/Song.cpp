@@ -50,7 +50,7 @@ JZBarInfo::JZBarInfo(const JZSong& Song)
     mTicksPerQuarter(Song.GetTicksPerQuarter()),
     mTicksPerBar(mTicksPerQuarter * 4),
     mIterator(&Song.mTracks[0]),
-    mpEvent(0)
+    mpEvent(nullptr)
 {
 }
 

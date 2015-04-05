@@ -37,8 +37,8 @@ JZHarmonyBrowserAnalyzer::JZHarmonyBrowserAnalyzer(JZHarmonyBrowserContext **s, 
     stop_clock(0),
     eighths_per_chord(1),
     mSteps(0),
-    mpFilter(0),
-    mpTrack(0),
+    mpFilter(nullptr),
+    mpTrack(nullptr),
     count(0),
     delta(0)
 {

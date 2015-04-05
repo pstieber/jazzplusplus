@@ -75,7 +75,7 @@ TTDynamicArray<TAType>::TTDynamicArray()
   : mArrayCount(0),
     mBlockSize(16),
     mInitialValue(0),
-    mppArray(0)
+    mppArray(nullptr)
 {
 }
 
@@ -86,7 +86,7 @@ TTDynamicArray<TAType>::TTDynamicArray(TAType InitialValue, int InitialSize)
   : mArrayCount(0),
     mBlockSize(16),
     mInitialValue(InitialValue),
-    mppArray(0)
+    mppArray(nullptr)
 {
   if (InitialSize)
   {
@@ -101,7 +101,7 @@ TTDynamicArray<TAType>::TTDynamicArray(const TTDynamicArray<TAType>& Other)
   : mArrayCount(0),
     mBlockSize(16),
     mInitialValue(Other.mInitialValue),
-    mppArray(0)
+    mppArray(nullptr)
 {
   for (int i = 0; i < Other.mArrayCount * mBlockSize; ++i)
   {
@@ -120,7 +120,7 @@ void TTDynamicArray<TAType>::Clear()
   }
   delete [] mppArray;
   mArrayCount = 0;
-  mppArray = 0;
+  mppArray = nullptr;
 }
 
 //-----------------------------------------------------------------------------
@@ -190,13 +190,13 @@ void TTDynamicArray<TAType>::Resize(int NewSize)
     }
     for (; i < n; ++i)
     {
-      ppTemp[i] = 0;
+      ppTemp[i] = nullptr;
     }
     delete [] mppArray;
     mppArray = ppTemp;
   }
 
-  if (mppArray[k] == 0)
+  if (mppArray[k] == nullptr)
   {
     mppArray[k] = new TAType [mBlockSize];
     for (int i = 0; i < mBlockSize; ++i)

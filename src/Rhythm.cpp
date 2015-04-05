@@ -678,34 +678,34 @@ JZRhythmWindow::JZRhythmWindow(JZEventWindow* pEventWindow, JZSong* pSong)
         gpConfig->GetValue(C_RhythmXpos),
         gpConfig->GetValue(C_RhythmYpos)),
       wxSize(640, 580)),
-    mpStepsPerCountSlider(0),
-    mpCountsPerBarSlider(0),
-    mpBarCountSlider(0),
-    mpInstrumentListBox(0),
+    mpStepsPerCountSlider(nullptr),
+    mpCountsPerBarSlider(nullptr),
+    mpBarCountSlider(nullptr),
+    mpInstrumentListBox(nullptr),
     mActiveInstrumentIndex(-1),
-    mpGroupPanel(0),
-    mpGroupContribSlider(0),
-    mpGroupListenSlider(0),
-    mpGroupListBox(0),
+    mpGroupPanel(nullptr),
+    mpGroupContribSlider(nullptr),
+    mpGroupListenSlider(nullptr),
+    mpGroupListBox(nullptr),
     mActiveGroup(0),
-    mpRandomCheckBox(0),
-    mpLengthEdit(0),
-    mpVelocityEdit(0),
-    mpRhythmEdit(0),
+    mpRandomCheckBox(nullptr),
+    mpLengthEdit(nullptr),
+    mpVelocityEdit(nullptr),
+    mpRhythmEdit(nullptr),
     mInstrumentCount(0),
     mRhythm(0),
     mpEventWindow(pEventWindow),
     mpSong(pSong),
     mDefaultFileName("noname.rhy"),
     mHasChanged(false),
-    mpToolBar(0)
+    mpToolBar(nullptr)
 {
 #ifdef OBSOLETE
 
   mStepsPerCount = 0;
-  mpCountsPerBarSlider = 0;
-  mpBarCountSlider = 0;
-  mpInstrumentListBox = 0;
+  mpCountsPerBarSlider = nullptr;
+  mpBarCountSlider = nullptr;
+  mpInstrumentListBox = nullptr;
 
   int x = 0;
   int y = 0;
@@ -1416,19 +1416,19 @@ JZRhythmGeneratorWindow::JZRhythmGeneratorWindow(
     mpEventWindow(pEventWindow),
     mpSong(pSong),
     mInstruments(),
-    mpStepsPerCountSlider(0),
-    mpCountsPerBarSlider(0),
-    mpBarCountSlider(0),
-    mpInstrumentListBox(0),
+    mpStepsPerCountSlider(nullptr),
+    mpCountsPerBarSlider(nullptr),
+    mpBarCountSlider(nullptr),
+    mpInstrumentListBox(nullptr),
     mActiveInstrumentIndex(-1),
-    mpGroupContribSlider(0),
-    mpGroupListenSlider(0),
-    mpGroupListBox(0),
+    mpGroupContribSlider(nullptr),
+    mpGroupListenSlider(nullptr),
+    mpGroupListBox(nullptr),
     mActiveGroup(0),
-    mpRandomCheckBox(0),
-    mpLengthEdit(0),
-    mpVelocityEdit(0),
-    mpRhythmEdit(0)
+    mpRandomCheckBox(nullptr),
+    mpLengthEdit(nullptr),
+    mpVelocityEdit(nullptr),
+    mpRhythmEdit(nullptr)
 {
   int Width, Height;
   GetClientSize(&Width, &Height);
@@ -2001,8 +2001,8 @@ JZRhythmGeneratorFrame::JZRhythmGeneratorFrame(
         gpConfig->GetValue(C_RhythmXpos),
         gpConfig->GetValue(C_RhythmYpos)),
       wxSize(640, 580)),
-    mpToolBar(0),
-    mpRhythmGeneratorWindow(0)
+    mpToolBar(nullptr),
+    mpRhythmGeneratorWindow(nullptr)
 {
   CreateToolBar();
 

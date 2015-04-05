@@ -991,7 +991,7 @@ class JZMetaEvent : public JZEvent
       unsigned char* pData,
       unsigned short Length)
       : JZEvent(Clock, StatusByte),
-        mpData(0),
+        mpData(nullptr),
         mLength(Length)
     {
       mpData = new unsigned char [Length + 1];

@@ -183,12 +183,12 @@ void JZPlayLoop::PrepareOutput(
 //-----------------------------------------------------------------------------
 JZPlayer::JZPlayer(JZSong* pSong)
   : mOutClock(0),
-    mpPlayLoop(0),
+    mpPlayLoop(nullptr),
     mPollMillisec(200),
-    mpRecordingInfo(0),
+    mpRecordingInfo(nullptr),
     mPlaying(false),
     mpSong(pSong),
-    mpAudioBuffer(0),
+    mpAudioBuffer(nullptr),
     mSamples(pSong->GetTicksPerQuarter() * pSong->Speed())
 {
   DummyDeviceList.Add("default");

@@ -47,7 +47,7 @@ JZMidiDeviceDialog::JZMidiDeviceDialog(
   const wxString& Title)
   : wxDialog(pParent, wxID_ANY, Title),
     mDeviceIndex(DeviceIndex),
-    mpMidiDeviceListBox(0)
+    mpMidiDeviceListBox(nullptr)
 {
   mpMidiDeviceListBox = new wxListBox(this, wxID_ANY);
 

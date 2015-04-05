@@ -52,7 +52,7 @@ using namespace std;
 //*****************************************************************************
 //-----------------------------------------------------------------------------
 //-----------------------------------------------------------------------------
-JZListen* JZListen::mpInstance = 0;
+JZListen* JZListen::mpInstance = nullptr;
 
 //-----------------------------------------------------------------------------
 //-----------------------------------------------------------------------------
@@ -70,7 +70,7 @@ JZListen* JZListen::Instance()
 void JZListen::Destroy()
 {
   delete mpInstance;
-  mpInstance = 0;
+  mpInstance = nullptr;
 }
 
 //-----------------------------------------------------------------------------
@@ -80,7 +80,7 @@ JZListen::JZListen()
     mActive(false),
     mPitch(-1),
     mChannel(-1),
-    mpTrack(0)
+    mpTrack(nullptr)
 {
 }
 
@@ -359,7 +359,7 @@ int JZKeyLengthDragger::ButtonUp(
 
   Win->ApplyToTrack(mpKeyOn, Copy);
 
-  Win->mpMouseAction = 0;
+  Win->mpMouseAction = nullptr;
 
   // Velocity or aftertouch editor update.
   Win->UpdateControl();
@@ -477,7 +477,7 @@ int JZPlayTrackLengthDragger::ButtonUp(
 
   Win->ApplyToTrack(mpKeyOn, Copy);
 
-  Win->mpMouseAction = 0;
+  Win->mpMouseAction = nullptr;
 
   // Velocity or aftertouch editor update.
   Win->UpdateControl();
@@ -542,7 +542,7 @@ int JZVelocityCounter::ProcessMouseEvent(
 
     Win->UpdateControl();
 
-    Win->mpMouseAction = 0;
+    Win->mpMouseAction = nullptr;
 
     Dc.SetFont(*(Win->GetFont()));
     delete this;
@@ -669,18 +669,18 @@ JZPianoWindow::JZPianoWindow(
     mpPianoFrame(pPianoFrame),
     mPlayClock(-1),
     mPasteBuffer(),
-    mpTrack(0),
+    mpTrack(nullptr),
     mTrackIndex(0),
-    mpCtrlEdit(0),
+    mpCtrlEdit(nullptr),
     mMousePlay(PlayAreaActions),
     mMouseEvent(EventAreaActions),
     mUseColors(true),
     mMouseLine(-1),
     mFontSize(12),
-    mpFont(0),
-    mpFixedFont(0),
+    mpFont(nullptr),
+    mpFixedFont(nullptr),
     mFixedFontHeight(0),
-    mpDrumFont(0),
+    mpDrumFont(nullptr),
     mSnapDenomiator(16),
     mVisibleKeyOn(true),
     mVisiblePitch(true),
@@ -694,7 +694,7 @@ JZPianoWindow::JZPianoWindow(
     mVisibleHBChord(true),
     mVisibleMono(true),
     mDrawing(false),
-    mpFrameBuffer(0)
+    mpFrameBuffer(nullptr)
 {
   // This is more appropriate than the value in the event window constructor.
   mClockTicsPerPixel = 4;
@@ -2171,11 +2171,11 @@ int JZPianoWindow::OnEventWinMouseEvent(wxMouseEvent& MouseEvent)
         // inefficient, invalidate rect first instead.
         Refresh();
 
-        mpMouseAction = 0;
+        mpMouseAction = nullptr;
         return 1;
       }
 
-      mpMouseAction = 0;
+      mpMouseAction = nullptr;
     }
   }
   return 0;
@@ -2364,7 +2364,7 @@ void JZPianoWindow::MousePiano(wxMouseEvent& MouseEvent)
     if (Status == 1)
     {
       delete mpMouseAction;
-      mpMouseAction = 0;
+      mpMouseAction = nullptr;
     }
   }
 }
@@ -2785,7 +2785,7 @@ void JZPianoWindow::CtrlTempo()
 //-----------------------------------------------------------------------------
 void JZPianoWindow::EditFilter()
 {
-  mpFilter->Dialog(0);
+  mpFilter->Dialog(nullptr);
 }
 
 //-----------------------------------------------------------------------------

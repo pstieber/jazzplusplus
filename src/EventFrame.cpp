@@ -77,8 +77,8 @@ JZEventFrame::JZEventFrame(
   const wxSize& Size,
   long WindowStyle)
   : wxFrame(pParent, wxID_ANY, Title, Position, Size, WindowStyle),
-    mpToolBar(0),
-    mpEventWindow(0)
+    mpToolBar(nullptr),
+    mpEventWindow(nullptr)
 {
 }
 
