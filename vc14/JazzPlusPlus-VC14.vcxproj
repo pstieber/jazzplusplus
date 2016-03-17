@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug VC14|Win32">
+      <Configuration>Debug VC14</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug VC14|x64">
+      <Configuration>Debug VC14</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release VC14|Win32">
+      <Configuration>Release VC14</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release VC14|x64">
+      <Configuration>Release VC14</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D8E39631-9143-4526-A44D-A948D65B5FF6}</ProjectGuid>
+    <RootNamespace>A JazzPlusPlus Application</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">BuildDir\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">BuildDir\$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">BuildDir\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">BuildDir\$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">BuildDir\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">BuildDir\$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">BuildDir\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">BuildDir\$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">JazzPlusPlus</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">JazzPlusPlus</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">JazzPlusPlus</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">JazzPlusPlus</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\$(OutDir)JazzPlusPlus.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(EXT_PKGS)\wxWidgets-3.0.2-VC14\lib\vc_lib\mswud;$(EXT_PKGS)\wxWidgets-3.0.2-VC14\include;..\src;..\src\mswin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;WINVER=0x0400;STRICT;NOMINMAX;__WXDEBUG__;WXDEBUG=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>.\$(OutDir)JazzPlusPlus.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>.\$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>.\$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4351;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(EXT_PKGS)\wxMSW-2.9.5-VC14\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>wxmsw30ud_xrc.lib;wxbase30ud_xml.lib;wxexpatd.lib;wxmsw30ud_core.lib;wxmsw30ud_adv.lib;wxmsw30ud_html.lib;wxbase30ud.lib;wxpngd.lib;wxzlibd.lib;wxjpegd.lib;wxtiffd.lib;odbc32.lib;odbccp32.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;winmm.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\$(OutDir)JazzPlusPlus.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(EXT_PKGS)\wxWidgets-3.0.2-VC14\lib\vc_lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\$(OutDir)JazzPlusPlus.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\$(OutDir)JazzPlusPlus.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(EXT_PKGS)\wxWidgets-3.0.2-VC14\lib\vc_x64_lib\mswud;$(EXT_PKGS)\wxWidgets-3.0.2-VC14\include;..\src;..\src\mswin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;WINVER=0x0501;STRICT;NOMINMAX;__WXDEBUG__;WXDEBUG=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>.\$(OutDir)JazzPlusPlus.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>.\$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>.\$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4351;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(EXT_PKGS)\wxMSW-2.9.5-VC14\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>wxmsw30ud_xrc.lib;wxbase30ud_xml.lib;wxexpatd.lib;wxmsw30ud_core.lib;wxmsw30ud_adv.lib;wxmsw30ud_html.lib;wxbase30ud.lib;wxpngd.lib;wxzlibd.lib;wxjpegd.lib;wxtiffd.lib;odbc32.lib;odbccp32.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;winmm.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\$(OutDir)JazzPlusPlus.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(EXT_PKGS)\wxWidgets-3.0.2-VC14\lib\vc_x64_lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\$(OutDir)JazzPlusPlus.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\$(OutDir)JazzPlusPlus.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>$(EXT_PKGS)\wxWidgets-3.0.2-VC14\lib\vc_lib\mswu;$(EXT_PKGS)\wxWidgets-3.0.2-VC14\include;..\src;..\src\mswin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;WINVER=0x0400;STRICT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>.\$(OutDir)JazzPlusPlus.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>.\$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>.\$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4351;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(EXT_PKGS)\wxMSW-2.9.5-VC14\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>wxmsw30u_xrc.lib;wxbase30u_xml.lib;wxexpat.lib;wxmsw30u_core.lib;wxmsw30u_adv.lib;wxmsw30u_html.lib;wxbase30u.lib;wxpng.lib;wxzlib.lib;wxjpeg.lib;wxtiff.lib;odbc32.lib;odbccp32.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;winmm.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\$(OutDir)JazzPlusPlus.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(EXT_PKGS)\wxWidgets-3.0.2-VC14\lib\vc_lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>.\$(OutDir)JazzPlusPlus.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\$(OutDir)JazzPlusPlus.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>$(EXT_PKGS)\wxWidgets-3.0.2-VC14\lib\vc_x64_lib\mswu;$(EXT_PKGS)\wxWidgets-3.0.2-VC14\include;..\src;..\src\mswin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;WINVER=0x0501;STRICT;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>.\$(OutDir)JazzPlusPlus.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>.\$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>.\$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>StdCall</CallingConvention>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4351;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(EXT_PKGS)\wxMSW-2.9.5-VC14\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>wxmsw30u_xrc.lib;wxbase30u_xml.lib;wxexpat.lib;wxmsw30u_core.lib;wxmsw30u_adv.lib;wxmsw30u_html.lib;wxbase30u.lib;wxpng.lib;wxzlib.lib;wxjpeg.lib;wxtiff.lib;odbc32.lib;odbccp32.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;winmm.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\$(OutDir)JazzPlusPlus.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(EXT_PKGS)\wxWidgets-3.0.2-VC14\lib\vc_x64_lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>.\$(OutDir)JazzPlusPlus.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\AboutDialog.cpp" />
+    <ClCompile Include="..\src\ArrayControl.cpp" />
+    <ClCompile Include="..\src\AsciiMidiFile.cpp" />
+    <ClCompile Include="..\src\Audio.cpp" />
+    <ClCompile Include="..\src\ClockDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src\Command.cpp" />
+    <ClCompile Include="..\src\Configuration.cpp" />
+    <ClCompile Include="..\src\ControlEdit.cpp" />
+    <ClCompile Include="..\src\Dialogs.cpp" />
+    <ClCompile Include="..\src\Dialogs\AudioSettingsDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\SamplesDialog.cpp" />
+    <ClCompile Include="..\src\DrumUtilities.cpp" />
+    <ClCompile Include="..\src\ErrorMessage.cpp" />
+    <ClCompile Include="..\src\EventFrame.cpp" />
+    <ClCompile Include="..\src\Events.cpp" />
+    <ClCompile Include="..\src\EventWindow.cpp" />
+    <ClCompile Include="..\src\FileSelector.cpp" />
+    <ClCompile Include="..\src\Filter.cpp" />
+    <ClCompile Include="..\src\FindFile.cpp" />
+    <ClCompile Include="..\src\FrequencyTable.cpp" />
+    <ClCompile Include="..\src\GetOptionIndex.cpp" />
+    <ClCompile Include="..\src\Globals.cpp" />
+    <ClCompile Include="..\src\GuitarFrame.cpp" />
+    <ClCompile Include="..\src\GuitarSettings.cpp" />
+    <ClCompile Include="..\src\GuitarSettingsDialog.cpp" />
+    <ClCompile Include="..\src\GuitarWindow.cpp" />
+    <ClCompile Include="..\src\Harmony.cpp" />
+    <ClCompile Include="..\src\HarmonyBrowserAnalyzer.cpp" />
+    <ClCompile Include="..\src\HarmonyP.cpp" />
+    <ClCompile Include="..\src\Help.cpp" />
+    <ClCompile Include="..\src\JazzPlusPlusApplication.cpp" />
+    <ClCompile Include="..\src\KeyStringConverters.cpp" />
+    <ClCompile Include="..\src\Knob.cpp" />
+    <ClCompile Include="..\src\Mapper.cpp" />
+    <ClCompile Include="..\src\MeasureChoice.cpp" />
+    <ClCompile Include="..\src\Metronome.cpp" />
+    <ClCompile Include="..\src\MidiDeviceDialog.cpp" />
+    <ClCompile Include="..\src\MouseAction.cpp" />
+    <ClCompile Include="..\src\NamedChoice.cpp" />
+    <ClCompile Include="..\src\NamedValue.cpp" />
+    <ClCompile Include="..\src\NamedValueChoice.cpp" />
+    <ClCompile Include="..\src\PianoFrame.cpp" />
+    <ClCompile Include="..\src\PianoWindow.cpp" />
+    <ClCompile Include="..\src\Player.cpp" />
+    <ClCompile Include="..\src\PortMidiPlayer.cpp" />
+    <ClCompile Include="..\src\Project.cpp" />
+    <ClCompile Include="..\src\ProjectManager.cpp" />
+    <ClCompile Include="..\src\DeprecatedWx\prop.cpp" />
+    <ClCompile Include="..\src\PropertyListDialog.cpp" />
+    <ClCompile Include="..\src\DeprecatedWx\propform.cpp" />
+    <ClCompile Include="..\src\DeprecatedWx\proplist.cpp" />
+    <ClCompile Include="..\src\Random.cpp" />
+    <ClCompile Include="..\src\RecordingInfo.cpp" />
+    <ClCompile Include="..\src\Rectangle.cpp" />
+    <ClCompile Include="..\src\Rhythm.cpp" />
+    <ClCompile Include="..\src\RhythmArrayControl.cpp" />
+    <ClCompile Include="..\src\Sample.cpp" />
+    <ClCompile Include="..\src\SampleCommand.cpp" />
+    <ClCompile Include="..\src\SampleDialog.cpp" />
+    <ClCompile Include="..\src\SampleFrame.cpp" />
+    <ClCompile Include="..\src\SampleWindow.cpp" />
+    <ClCompile Include="..\src\SelectControllerDialog.cpp" />
+    <ClCompile Include="..\src\Signal2.cpp" />
+    <ClCompile Include="..\src\SliderWindow.cpp" />
+    <ClCompile Include="..\src\Song.cpp" />
+    <ClCompile Include="..\src\StandardFile.cpp" />
+    <ClCompile Include="..\src\StringReadWrite.cpp" />
+    <ClCompile Include="..\src\StringUtilities.cpp" />
+    <ClCompile Include="..\src\Synth.cpp" />
+    <ClCompile Include="..\src\SysexChannel.cpp" />
+    <ClCompile Include="..\src\ToolBar.cpp" />
+    <ClCompile Include="..\src\Track.cpp" />
+    <ClCompile Include="..\src\TrackFrame.cpp" />
+    <ClCompile Include="..\src\TrackWindow.cpp" />
+    <ClCompile Include="..\src\mswin\WindowsAudioInterface.cpp" />
+    <ClCompile Include="..\src\mswin\WindowsConsole.cpp" />
+    <ClCompile Include="..\src\mswin\WindowsMidiInterface.cpp" />
+    <ClCompile Include="..\src\mswin\WindowsPlayer.cpp" />
+    <ClCompile Include="..\src\Dialogs\CleanupDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\ControllerDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\DeleteDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\EndOfTrackDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\FilterDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\IntegerEdit.cpp" />
+    <ClCompile Include="..\src\Dialogs\KeyOnDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\LengthDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\MeterChangeDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\MetronomeSettingsDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\MidiChannelDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\PitchWheelDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\ProgramChangeDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\QuantizeDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\SearchAndReplaceDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\SetTempoDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\ShiftDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\SnapDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\SynthesizerSettingsDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\SysexDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\TextDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\TrackDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\TransposeDialog.cpp" />
+    <ClCompile Include="..\src\Dialogs\VelocityDialog.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\AboutDialog.h" />
+    <ClInclude Include="..\src\ArrayControl.h" />
+    <ClInclude Include="..\src\AsciiMidiFile.h" />
+    <ClInclude Include="..\src\Audio.h" />
+    <CustomBuildStep Include="..\src\ClockDialog.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <ClInclude Include="..\src\Command.h" />
+    <ClInclude Include="..\src\Configuration.h" />
+    <ClInclude Include="..\src\ControlEdit.h" />
+    <ClInclude Include="..\src\Dialogs.h" />
+    <ClInclude Include="..\src\Dialogs\AudioSettingsDialog.h" />
+    <ClInclude Include="..\src\Dialogs\SamplesDialog.h" />
+    <ClInclude Include="..\src\DrumEnums.h" />
+    <ClInclude Include="..\src\DrumUtilities.h" />
+    <ClInclude Include="..\src\DynamicArray.h" />
+    <ClInclude Include="..\src\ErrorMessage.h" />
+    <ClInclude Include="..\src\EventFrame.h" />
+    <ClInclude Include="..\src\Events.h" />
+    <ClInclude Include="..\src\EventWindow.h" />
+    <ClInclude Include="..\src\FileSelector.h" />
+    <ClInclude Include="..\src\Filter.h" />
+    <ClInclude Include="..\src\FindFile.h" />
+    <ClInclude Include="..\src\FrequencyTable.h" />
+    <ClInclude Include="..\src\GetOptionIndex.h" />
+    <ClInclude Include="..\src\Globals.h" />
+    <ClInclude Include="..\src\GuitarFrame.h" />
+    <ClInclude Include="..\src\GuitarSettings.h" />
+    <ClInclude Include="..\src\GuitarSettingsDialog.h" />
+    <ClInclude Include="..\src\GuitarWindow.h" />
+    <ClInclude Include="..\src\Harmony.h" />
+    <ClInclude Include="..\src\HarmonyBrowserAnalyzer.h" />
+    <ClInclude Include="..\src\HarmonyP.h" />
+    <ClInclude Include="..\src\Help.h" />
+    <ClInclude Include="..\src\JazzPlusPlusApplication.h" />
+    <ClInclude Include="..\src\JazzPlusPlusVersion\JazzPlusPlusVersion.h" />
+    <ClInclude Include="..\src\KeyStringConverters.h" />
+    <ClInclude Include="..\src\Knob.h" />
+    <ClInclude Include="..\src\Mapper.h" />
+    <ClInclude Include="..\src\MeasureChoice.h" />
+    <ClInclude Include="..\src\Metronome.h" />
+    <ClInclude Include="..\src\MidiDeviceDialog.h" />
+    <ClInclude Include="..\src\MouseAction.h" />
+    <ClInclude Include="..\src\NamedChoice.h" />
+    <ClInclude Include="..\src\NamedValue.h" />
+    <ClInclude Include="..\src\NamedValueChoice.h" />
+    <ClInclude Include="..\src\PianoFrame.h" />
+    <ClInclude Include="..\src\PianoWindow.h" />
+    <ClInclude Include="..\src\Player.h" />
+    <ClInclude Include="..\src\PortMidiPlayer.h" />
+    <ClInclude Include="..\src\Project.h" />
+    <ClInclude Include="..\src\ProjectManager.h" />
+    <ClInclude Include="..\src\DeprecatedWx\prop.h" />
+    <ClInclude Include="..\src\PropertyListDialog.h" />
+    <ClInclude Include="..\src\DeprecatedWx\propform.h" />
+    <ClInclude Include="..\src\DeprecatedWx\proplist.h" />
+    <ClInclude Include="..\src\Random.h" />
+    <ClInclude Include="..\src\RecordingInfo.h" />
+    <ClInclude Include="..\src\Rectangle.h" />
+    <ClInclude Include="..\src\Resources.h" />
+    <ClInclude Include="..\src\Rhythm.h" />
+    <ClInclude Include="..\src\RhythmArrayControl.h" />
+    <ClInclude Include="..\src\Sample.h" />
+    <ClInclude Include="..\src\SampleCommand.h" />
+    <ClInclude Include="..\src\SampleDialog.h" />
+    <ClInclude Include="..\src\SampleFrame.h" />
+    <ClInclude Include="..\src\SampleWindow.h" />
+    <ClInclude Include="..\src\SelectControllerDialog.h" />
+    <ClInclude Include="..\src\DeprecatedWx\setup.h" />
+    <ClInclude Include="..\src\Signal2.h" />
+    <ClInclude Include="..\src\SliderWindow.h" />
+    <ClInclude Include="..\src\Song.h" />
+    <ClInclude Include="..\src\StandardFile.h" />
+    <ClInclude Include="..\src\StringReadWrite.h" />
+    <ClInclude Include="..\src\StringUtilities.h" />
+    <ClInclude Include="..\src\Synth.h" />
+    <ClInclude Include="..\src\SynthesizerTypeEnums.h" />
+    <ClInclude Include="..\src\SysexChannel.h" />
+    <ClInclude Include="..\src\ToolBar.h" />
+    <ClInclude Include="..\src\Track.h" />
+    <ClInclude Include="..\src\TrackFrame.h" />
+    <ClInclude Include="..\src\TrackWindow.h" />
+    <ClInclude Include="..\src\mswin\WindowsAudioInterface.h" />
+    <ClInclude Include="..\src\mswin\WindowsConsole.h" />
+    <ClInclude Include="..\src\mswin\WindowsMidiInterface.h" />
+    <ClInclude Include="..\src\mswin\WindowsPlayer.h" />
+    <ClInclude Include="..\src\Dialogs\CleanupDialog.h" />
+    <ClInclude Include="..\src\Dialogs\ControllerDialog.h" />
+    <ClInclude Include="..\src\Dialogs\DeleteDialog.h" />
+    <ClInclude Include="..\src\Dialogs\EndOfTrackDialog.h" />
+    <ClInclude Include="..\src\Dialogs\FilterDialog.h" />
+    <ClInclude Include="..\src\Dialogs\IntegerEdit.h" />
+    <ClInclude Include="..\src\Dialogs\KeyOnDialog.h" />
+    <ClInclude Include="..\src\Dialogs\LengthDialog.h" />
+    <ClInclude Include="..\src\Dialogs\MeterChangeDialog.h" />
+    <ClInclude Include="..\src\Dialogs\MetronomeSettingsDialog.h" />
+    <ClInclude Include="..\src\Dialogs\MidiChannelDialog.h" />
+    <ClInclude Include="..\src\Dialogs\PitchWheelDialog.h" />
+    <ClInclude Include="..\src\Dialogs\ProgramChangeDialog.h" />
+    <ClInclude Include="..\src\Dialogs\QuantizeDialog.h" />
+    <ClInclude Include="..\src\Dialogs\SearchAndReplaceDialog.h" />
+    <ClInclude Include="..\src\Dialogs\SetTempoDialog.h" />
+    <ClInclude Include="..\src\Dialogs\ShiftDialog.h" />
+    <ClInclude Include="..\src\Dialogs\SnapDialog.h" />
+    <ClInclude Include="..\src\Dialogs\SynthesizerSettingsDialog.h" />
+    <ClInclude Include="..\src\Dialogs\SysexDialog.h" />
+    <ClInclude Include="..\src\Dialogs\TextDialog.h" />
+    <ClInclude Include="..\src\Dialogs\TrackDialog.h" />
+    <ClInclude Include="..\src\Dialogs\TransposeDialog.h" />
+    <ClInclude Include="..\src\Dialogs\VelocityDialog.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\src\HelpFiles\jazz.tex">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">
+        echo cd "$(ProjectDir)..\src\HelpFiles"
+        cd "$(ProjectDir)..\src\HelpFiles"
+        echo $(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
+        $(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">
+        echo cd "$(ProjectDir)..\src\HelpFiles"
+        cd "$(ProjectDir)..\src\HelpFiles"
+        echo $(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
+        $(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">
+        echo cd "$(ProjectDir)..\src\HelpFiles"
+        cd "$(ProjectDir)..\src\HelpFiles"
+        echo $(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
+        $(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">
+        echo cd "$(ProjectDir)..\src\HelpFiles"
+        cd "$(ProjectDir)..\src\HelpFiles"
+        echo $(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
+        $(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">Building Jazz++ help</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">$(ProjectDir)..\src\HelpFiles\jazz.hhc;$(ProjectDir)..\src\HelpFiles\jazz.hhp;$(ProjectDir)..\src\HelpFiles\jazz.hhk;$(ProjectDir)..\src\HelpFiles\jazz.ref;$(ProjectDir)..\src\HelpFiles\jazz.con;$(ProjectDir)..\src\HelpFiles\jazz.htx;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">Building Jazz++ help</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">$(ProjectDir)..\src\HelpFiles\jazz.hhc;$(ProjectDir)..\src\HelpFiles\jazz.hhp;$(ProjectDir)..\src\HelpFiles\jazz.hhk;$(ProjectDir)..\src\HelpFiles\jazz.ref;$(ProjectDir)..\src\HelpFiles\jazz.con;$(ProjectDir)..\src\HelpFiles\jazz.htx;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">Building Jazz++ help</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">$(ProjectDir)..\src\HelpFiles\jazz.hhc;$(ProjectDir)..\src\HelpFiles\jazz.hhp;$(ProjectDir)..\src\HelpFiles\jazz.hhk;$(ProjectDir)..\src\HelpFiles\jazz.ref;$(ProjectDir)..\src\HelpFiles\jazz.con;$(ProjectDir)..\src\HelpFiles\jazz.htx;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">Building Jazz++ help</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">$(ProjectDir)..\src\HelpFiles\jazz.hhc;$(ProjectDir)..\src\HelpFiles\jazz.hhp;$(ProjectDir)..\src\HelpFiles\jazz.hhk;$(ProjectDir)..\src\HelpFiles\jazz.ref;$(ProjectDir)..\src\HelpFiles\jazz.con;$(ProjectDir)..\src\HelpFiles\jazz.htx;%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">false</LinkObjects>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">false</ExcludedFromBuild>
+    </CustomBuild>
+    <None Include="..\src\HelpFiles\tex2rtf.ini" />
+    <None Include="..\src\Makefile.am" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\portmidi\pm_win\portmidi-VC14.vcxproj">
+      <Project>{353e62e5-5c2a-411d-8e12-cee254fa52fb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\portmidi\porttime\porttime-VC14.vcxproj">
+      <Project>{d64e77f0-4425-4566-bf80-36435c537b8d}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

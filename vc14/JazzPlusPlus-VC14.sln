@@ -1,0 +1,49 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "A JazzPlusPlus Application", "JazzPlusPlus-VC14.vcxproj", "{D8E39631-9143-4526-A44D-A948D65B5FF6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D64E77F0-4425-4566-BF80-36435C537B8D} = {D64E77F0-4425-4566-BF80-36435C537B8D}
+		{353E62E5-5C2A-411D-8E12-CEE254FA52FB} = {353E62E5-5C2A-411D-8E12-CEE254FA52FB}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "portmidi", "..\portmidi\pm_win\portmidi-VC14.vcxproj", "{353E62E5-5C2A-411D-8E12-CEE254FA52FB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "porttime", "..\portmidi\porttime\porttime-VC14.vcxproj", "{D64E77F0-4425-4566-BF80-36435C537B8D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug VC14|Win32 = Debug VC14|Win32
+		Debug VC14|x64 = Debug VC14|x64
+		Release VC14|Win32 = Release VC14|Win32
+		Release VC14|x64 = Release VC14|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{353E62E5-5C2A-411D-8E12-CEE254FA52FB}.Debug VC14|Win32.ActiveCfg = Debug VC14|Win32
+		{353E62E5-5C2A-411D-8E12-CEE254FA52FB}.Debug VC14|Win32.Build.0 = Debug VC14|Win32
+		{353E62E5-5C2A-411D-8E12-CEE254FA52FB}.Debug VC14|x64.ActiveCfg = Debug VC14|x64
+		{353E62E5-5C2A-411D-8E12-CEE254FA52FB}.Debug VC14|x64.Build.0 = Debug VC14|x64
+		{353E62E5-5C2A-411D-8E12-CEE254FA52FB}.Release VC14|Win32.ActiveCfg = Release VC14|Win32
+		{353E62E5-5C2A-411D-8E12-CEE254FA52FB}.Release VC14|Win32.Build.0 = Release VC14|Win32
+		{353E62E5-5C2A-411D-8E12-CEE254FA52FB}.Release VC14|x64.ActiveCfg = Release VC14|x64
+		{353E62E5-5C2A-411D-8E12-CEE254FA52FB}.Release VC14|x64.Build.0 = Release VC14|x64
+		{D64E77F0-4425-4566-BF80-36435C537B8D}.Debug VC14|Win32.ActiveCfg = Debug VC14|Win32
+		{D64E77F0-4425-4566-BF80-36435C537B8D}.Debug VC14|Win32.Build.0 = Debug VC14|Win32
+		{D64E77F0-4425-4566-BF80-36435C537B8D}.Debug VC14|x64.ActiveCfg = Debug VC14|x64
+		{D64E77F0-4425-4566-BF80-36435C537B8D}.Debug VC14|x64.Build.0 = Debug VC14|x64
+		{D64E77F0-4425-4566-BF80-36435C537B8D}.Release VC14|Win32.ActiveCfg = Release VC14|Win32
+		{D64E77F0-4425-4566-BF80-36435C537B8D}.Release VC14|Win32.Build.0 = Release VC14|Win32
+		{D64E77F0-4425-4566-BF80-36435C537B8D}.Release VC14|x64.ActiveCfg = Release VC14|x64
+		{D64E77F0-4425-4566-BF80-36435C537B8D}.Release VC14|x64.Build.0 = Release VC14|x64
+		{D8E39631-9143-4526-A44D-A948D65B5FF6}.Debug VC14|Win32.ActiveCfg = Debug VC14|Win32
+		{D8E39631-9143-4526-A44D-A948D65B5FF6}.Debug VC14|Win32.Build.0 = Debug VC14|Win32
+		{D8E39631-9143-4526-A44D-A948D65B5FF6}.Debug VC14|x64.ActiveCfg = Debug VC14|x64
+		{D8E39631-9143-4526-A44D-A948D65B5FF6}.Debug VC14|x64.Build.0 = Debug VC14|x64
+		{D8E39631-9143-4526-A44D-A948D65B5FF6}.Release VC14|Win32.ActiveCfg = Release VC14|Win32
+		{D8E39631-9143-4526-A44D-A948D65B5FF6}.Release VC14|Win32.Build.0 = Release VC14|Win32
+		{D8E39631-9143-4526-A44D-A948D65B5FF6}.Release VC14|x64.ActiveCfg = Release VC14|x64
+		{D8E39631-9143-4526-A44D-A948D65B5FF6}.Release VC14|x64.Build.0 = Release VC14|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
