@@ -22,7 +22,7 @@
 
 #include "AboutDialog.h"
 
-#include "JazzPlusPlusVersion.h"
+#include "JazzPlusPlusVersion/JazzPlusPlusVersion.h"
 #include "Help.h"
 #include "Resources.h"
 
