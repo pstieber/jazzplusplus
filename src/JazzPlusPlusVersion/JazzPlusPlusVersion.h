@@ -20,6 +20,8 @@
 
 #pragma once
 
+#include <string>
+
 //*****************************************************************************
 //*****************************************************************************
 class JZJazzPlusPlusVersion
@@ -51,8 +53,16 @@ class JZJazzPlusPlusVersion
     //   int:
     //     The application's build number.
     static int GetBuildNumber();
-};
 
+    static std::string GetBranchName();
+
+    static std::string GetSha1Sum();
+
+    static std::string GetCommitCount();
+
+    static std::string GetRepositoryUrl();
+
+};
 
 //*****************************************************************************
 // Description:
@@ -65,64 +75,4 @@ const JZJazzPlusPlusVersion& JZJazzPlusPlusVersion::Instance()
 {
   static JZJazzPlusPlusVersion JazzPlusPlusVersion;
   return JazzPlusPlusVersion;
-}
-
-//-----------------------------------------------------------------------------
-// Description:
-//   This function returns the application's major version number.
-// Version 1 was the MFC version developed on the Phase II ONR SBIR.
-//
-// Ver Date       Description
-//  4  ?          Unknown for all prior versions.  Might be filled in by
-//                looking at old commit messages.
-//  5  1/21/2008  Start of the Jazz++ development revival.
-//
-// Returns:
-//   int:
-//     The application's major version number.
-//-----------------------------------------------------------------------------
-inline
-int JZJazzPlusPlusVersion::GetMajorVersion()
-{
-  return 5;
-}
-
-//-----------------------------------------------------------------------------
-// Description:
-//   This function returns the application's minor version number.
-//
-// Ver Date       Description
-//  ?  ?          Unknown for all prior versions.  Might be filled in by
-//                looking at old commit messages.
-//  3  1/21/2008  Major refactoring here to get the code compiling with
-//                wxWidgets 2.8.7 and recent compilers including Visual Studio
-//                .NET 2005 and GCC 4.
-//  4  9/1/2008   Updated to wxWidgets version 2.8.8.
-//
-// Returns:
-//   int:
-//     The application's minor version number.
-//-----------------------------------------------------------------------------
-inline
-int JZJazzPlusPlusVersion::GetMinorVersion()
-{
-  return 4;
-}
-
-//-----------------------------------------------------------------------------
-// Description:
-//   This function returns the application's build number.
-//
-// Ver Date       Description
-//  ?  ?          Unknown for all prior versions.  Might be filled in by
-//                looking at old commit messages.
-//  11 1/21/2008  See minor version 3.
-//  12 9/1/2008   See minor version 4.
-//  13 3/17/2013  Fixed closing while recording and/or playing back.
-//  14 3/17/2013  Added "Visit Web Site..." button to the about dialog.
-//-----------------------------------------------------------------------------
-inline
-int JZJazzPlusPlusVersion::GetBuildNumber()
-{
-  return 14;
 }

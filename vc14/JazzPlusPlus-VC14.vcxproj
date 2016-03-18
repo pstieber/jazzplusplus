@@ -322,6 +322,7 @@
     <ClCompile Include="..\src\HarmonyP.cpp" />
     <ClCompile Include="..\src\Help.cpp" />
     <ClCompile Include="..\src\JazzPlusPlusApplication.cpp" />
+    <ClCompile Include="..\src\JazzPlusPlusVersion\JazzPlusPlusVersion.cpp" />
     <ClCompile Include="..\src\KeyStringConverters.cpp" />
     <ClCompile Include="..\src\Knob.cpp" />
     <ClCompile Include="..\src\Mapper.cpp" />
@@ -554,7 +555,63 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">false</ExcludedFromBuild>
     </CustomBuild>
     <None Include="..\src\HelpFiles\tex2rtf.ini" />
+    <CustomBuild Include="..\src\JazzPlusPlusVersion\JazzPlusPlusVersion.tpl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">cd ../src/JazzPlusPlusVersion
+bash ../ShellScripts/CreateVersion.sh
+cd ../../vc14</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">Creating JazzPlusPlusVersion.cpp...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">cd ../src/JazzPlusPlusVersion
+bash ../ShellScripts/CreateVersion.sh
+cd ../../vc14</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">Creating JazzPlusPlusVersion.cpp...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">cd ../src/JazzPlusPlusVersion
+bash ../ShellScripts/CreateVersion.sh
+cd ../../vc14</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">Creating JazzPlusPlusVersion.cpp...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">cd ../src/JazzPlusPlusVersion
+bash ../ShellScripts/CreateVersion.sh
+cd ../../vc14</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">Creating JazzPlusPlusVersion.cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">../src/JazzPlusPlusVersion\JazzPlusPlusVersion.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">../src/JazzPlusPlusVersion\JazzPlusPlusVersion.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">../src/JazzPlusPlusVersion\JazzPlusPlusVersion.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">../src/JazzPlusPlusVersion\JazzPlusPlusVersion.cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">../src/JazzPlusPlusVersion\Versions.txt</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">../src/JazzPlusPlusVersion\Versions.txt</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">../src/JazzPlusPlusVersion\Versions.txt</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">../src/JazzPlusPlusVersion\Versions.txt</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="..\src\JazzPlusPlusResources\JazzPlusPlusResources.tpl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">cd ../src/JazzPlusPlusResources
+bash ../ShellScripts/CreateResourceFile.sh
+cd ../../vc14</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">Creating JazzPlusPlus.rc...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">cd ../src/JazzPlusPlusResources
+bash ../ShellScripts/CreateResourceFile.sh
+cd ../../vc14</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">Creating JazzPlusPlus.rc...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">cd ../src/JazzPlusPlusResources
+bash ../ShellScripts/CreateResourceFile.sh
+cd ../../vc14</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">Creating JazzPlusPlus.rc...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">cd ../src/JazzPlusPlusResources
+bash ../ShellScripts/CreateResourceFile.sh
+cd ../../vc14</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">Creating JazzPlusPlus.rc...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">..\src\JazzPlusPlusResources\JazzPlusPlus.rc</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">..\src\JazzPlusPlusResources\JazzPlusPlus.rc</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">..\src\JazzPlusPlusResources\JazzPlusPlus.rc</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">..\src\JazzPlusPlusResources\JazzPlusPlus.rc</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">..\src\JazzPlusPlusVersion\Versions.txt</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">..\src\JazzPlusPlusVersion\Versions.txt</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">..\src\JazzPlusPlusVersion\Versions.txt</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">..\src\JazzPlusPlusVersion\Versions.txt</AdditionalInputs>
+    </CustomBuild>
     <None Include="..\src\Makefile.am" />
+    <None Include="..\src\ShellScripts\CreateResourceFile.sh" />
+    <None Include="..\src\ShellScripts\CreateVersion.sh" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\portmidi\pm_win\portmidi-VC14.vcxproj">
@@ -563,6 +620,12 @@
     <ProjectReference Include="..\portmidi\porttime\porttime-VC14.vcxproj">
       <Project>{d64e77f0-4425-4566-bf80-36435c537b8d}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\src\JazzPlusPlusVersion\Versions.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\src\JazzPlusPlusResources\JazzPlusPlus.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

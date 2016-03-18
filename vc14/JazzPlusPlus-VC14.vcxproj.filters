@@ -157,6 +157,9 @@
     </ClCompile>
     <ClCompile Include="..\src\ArrayControl.cpp" />
     <ClCompile Include="..\src\RhythmArrayControl.cpp" />
+    <ClCompile Include="..\src\JazzPlusPlusVersion\JazzPlusPlusVersion.cpp">
+      <Filter>Version Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\AsciiMidiFile.h" />
@@ -328,6 +331,12 @@
     <None Include="..\src\HelpFiles\tex2rtf.ini">
       <Filter>Help Files</Filter>
     </None>
+    <None Include="..\src\ShellScripts\CreateResourceFile.sh">
+      <Filter>Shell Scripts</Filter>
+    </None>
+    <None Include="..\src\ShellScripts\CreateVersion.sh">
+      <Filter>Shell Scripts</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Help Files">
@@ -342,10 +351,35 @@
     <Filter Include="Version Source Files\Version Template Files">
       <UniqueIdentifier>{8af9b504-113e-47a0-8cd2-761df90bad16}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Shell Scripts">
+      <UniqueIdentifier>{b026a43d-be99-4c3a-8784-22e5044f17ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JazzPlusPlus Resource Files">
+      <UniqueIdentifier>{fe60ab93-ed7d-401f-b299-1513fdab675a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JazzPlusPlus Resource Files\Template Files">
+      <UniqueIdentifier>{288b44e9-bc1c-42d6-be53-fba7f38b5e1d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\src\HelpFiles\jazz.tex">
       <Filter>Help Files</Filter>
     </CustomBuild>
+    <CustomBuild Include="..\src\JazzPlusPlusVersion\JazzPlusPlusVersion.tpl">
+      <Filter>Version Source Files\Version Template Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\JazzPlusPlusResources\JazzPlusPlusResources.tpl">
+      <Filter>JazzPlusPlus Resource Files\Template Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\src\JazzPlusPlusVersion\Versions.txt">
+      <Filter>Version Source Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\src\JazzPlusPlusResources\JazzPlusPlus.rc">
+      <Filter>JazzPlusPlus Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

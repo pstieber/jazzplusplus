@@ -3,7 +3,7 @@
 //
 // Copyright (C) 1994-2000 Andreas Voss and Per Sigmond, all rights reserved.
 // Modifications Copyright (C) 2004 Patrick Earl
-// Modifications Copyright (C) 2008-2015 Peter J. Stieber
+// Modifications Copyright (C) 2008-2016 Peter J. Stieber
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -75,7 +75,12 @@ JZAboutDialog::JZAboutDialog(wxWindow* pParent)
   VersionString
     << JZJazzPlusPlusVersion::Instance().GetMajorVersion()
     << '.' << JZJazzPlusPlusVersion::Instance().GetMinorVersion()
-    << '.' << JZJazzPlusPlusVersion::Instance().GetBuildNumber();
+    << '.' << JZJazzPlusPlusVersion::Instance().GetBuildNumber()
+    << '.' << JZJazzPlusPlusVersion::Instance().GetCommitCount();
+
+  wxString Branch(JZJazzPlusPlusVersion::Instance().GetBranchName());
+
+  wxString Sha1Sum(JZJazzPlusPlusVersion::Instance().GetSha1Sum());
 
   // Indicate the wxWidgets version used in the build.
   wxString InformationString = "Jazz++ uses ";
@@ -151,6 +156,10 @@ JZAboutDialog::JZAboutDialog(wxWindow* pParent)
     "The wxWidgets Team<br>"
     "</p>"
     "</center>"
+
+    "<b>" + "Detailed Version Information" + "</b><br>"
+    "Jazz++ branch: " + Branch + "<br>"
+    "Jazz++ SHA1: " + Sha1Sum + "<br>"
 
     "</font>"
     "</body>"

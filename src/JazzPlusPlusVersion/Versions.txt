@@ -1,0 +1,15 @@
+5  // major version number
+4  // minor version number
+15 // build number
+
+//   Ver       Date     Description
+//  5.4.15   3/18/2016  Updated the version code.
+//  5.4.14   3/17/2013  Added "Visit Web Site..." button to the about dialog.
+//  5.4.13   3/17/2013  Fixed closing while recording and/or playing back.
+//  5.4.12   9/1/2008   Updated to wxWidgets version 2.8.8.
+//  5.3.11   1/21/2008  Start of the Jazz++ development revival.  Major
+//                      refactoring here to get the code compiling with
+//                      wxWidgets 2.8.7 and recent compilers including
+//                      Visual Studio .NET 2005 and GCC 4.
+// Unknown for all prior versions.  Might be filled in by looking at old
+// commit messages.

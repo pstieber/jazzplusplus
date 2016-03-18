@@ -1,0 +1,42 @@
+//AaaCove ICON "Icons/.ico"
+
+#include "winres.h"
+
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+// Version
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION MAJOR_VERSION,MINOR_VERSION,BUILD_NUMBER,COMMIT_COUNT
+PRODUCTVERSION MAJOR_VERSION,MINOR_VERSION,BUILD_NUMBER,COMMIT_COUNT
+FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+FILEFLAGS 0x1L
+#else
+FILEFLAGS 0x0L
+#endif
+FILEOS 0x4L
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
+BEGIN
+ BLOCK "StringFileInfo"
+ BEGIN
+  BLOCK "040904b0"
+  BEGIN
+   VALUE "Comments", "\0"
+   VALUE "FileDescription", "Jazz++ Application\0"
+   VALUE "FileVersion", "MAJOR_VERSION, MINOR_VERSION, BUILD_NUMBER, COMMIT_COUNT\0"
+   VALUE "InternalName", "Jazz++\0"
+   VALUE "LegalCopyright", "Copyright (C) 2014-2016\0"
+   VALUE "LegalTrademarks", "\0"
+   VALUE "OriginalFilename", "JazzPlusPlus.exe\0"
+   VALUE "PrivateBuild", "BRANCH_NAME\0"
+   VALUE "ProductName", "Jazz++ Application\0"
+   VALUE "ProductVersion", "MAJOR_VERSION, MINOR_VERSION, BUILD_NUMBER, COMMIT_COUNT\0"
+   VALUE "SpecialBuild", "\0"
+  END
+ END
+ BLOCK "VarFileInfo"
+ BEGIN
+  VALUE "Translation", 0x409, 1200
+ END
+END
