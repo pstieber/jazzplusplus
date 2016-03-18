@@ -157,6 +157,9 @@
     </ClCompile>
     <ClCompile Include="..\src\ArrayControl.cpp" />
     <ClCompile Include="..\src\RhythmArrayControl.cpp" />
+    <ClCompile Include="..\src\JazzPlusPlusVersion\JazzPlusPlusVersion.cpp">
+      <Filter>Jazz++ Version Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\AsciiMidiFile.h" />
@@ -320,7 +323,7 @@
     <ClInclude Include="..\src\ArrayControl.h" />
     <ClInclude Include="..\src\RhythmArrayControl.h" />
     <ClInclude Include="..\src\JazzPlusPlusVersion\JazzPlusPlusVersion.h">
-      <Filter>Version Source Files</Filter>
+      <Filter>Jazz++ Version Source Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -336,13 +339,38 @@
     <Filter Include="Dialog Source Files">
       <UniqueIdentifier>{7e14185d-521d-47ac-b425-dda76e9a5000}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Version Source Files">
+    <Filter Include="Jazz++ Resource Files">
+      <UniqueIdentifier>{46f2687e-b5c4-46c5-a68f-b449460c655a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Jazz++ Resource Files\Template Files">
+      <UniqueIdentifier>{54430b11-cc00-466f-8eb3-f0c9a658078b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Jazz++ Version Source Files">
       <UniqueIdentifier>{c3714cee-28a9-4cd2-9569-8d40df119cd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Jazz++ Version Source Files\Template File">
+      <UniqueIdentifier>{d1542e7a-fef7-4e6d-b3cd-0c4792da362a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\src\HelpFiles\jazz.tex">
       <Filter>Help Files</Filter>
     </CustomBuild>
+    <CustomBuild Include="..\src\JazzPlusPlusResources\JazzPlusPlusResources.tpl">
+      <Filter>Jazz++ Resource Files\Template Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\JazzPlusPlusVersion\JazzPlusPlusVersion.tpl">
+      <Filter>Jazz++ Version Source Files\Template File</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\src\JazzPlusPlusVersion\Versions.txt">
+      <Filter>Jazz++ Version Source Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\src\JazzPlusPlusResources\JazzPlusPlus.rc">
+      <Filter>Jazz++ Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
