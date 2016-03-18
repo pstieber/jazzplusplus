@@ -433,6 +433,7 @@
     <ClInclude Include="..\src\HarmonyP.h" />
     <ClInclude Include="..\src\Help.h" />
     <ClInclude Include="..\src\JazzPlusPlusApplication.h" />
+    <ClInclude Include="..\src\JazzPlusPlusVersion\JazzPlusPlusVersion.h" />
     <ClInclude Include="..\src\KeyStringConverters.h" />
     <ClInclude Include="..\src\Knob.h" />
     <ClInclude Include="..\src\Mapper.h" />
