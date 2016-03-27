@@ -573,14 +573,14 @@ cd ../../vc14</Command>
 bash ../ShellScripts/CreateVersion.sh
 cd ../../vc14</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">Creating JazzPlusPlusVersion.cpp...</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">../src/JazzPlusPlusVersion\JazzPlusPlusVersion.cpp</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">../src/JazzPlusPlusVersion\JazzPlusPlusVersion.cpp</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">../src/JazzPlusPlusVersion\JazzPlusPlusVersion.cpp</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">../src/JazzPlusPlusVersion\JazzPlusPlusVersion.cpp</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">../src/JazzPlusPlusVersion\Versions.txt</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">../src/JazzPlusPlusVersion\Versions.txt</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">../src/JazzPlusPlusVersion\Versions.txt</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">../src/JazzPlusPlusVersion\Versions.txt</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">..\src\JazzPlusPlusVersion\JazzPlusPlusVersion.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">..\src\JazzPlusPlusVersion\JazzPlusPlusVersion.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">..\src\JazzPlusPlusVersion\JazzPlusPlusVersion.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">..\src\JazzPlusPlusVersion\JazzPlusPlusVersion.cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">..\src\JazzPlusPlusVersion\Versions.txt</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">..\src\JazzPlusPlusVersion\Versions.txt</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">..\src\JazzPlusPlusVersion\Versions.txt</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">..\src\JazzPlusPlusVersion\Versions.txt</AdditionalInputs>
     </CustomBuild>
     <CustomBuild Include="..\src\JazzPlusPlusResources\JazzPlusPlusResources.tpl">
       <FileType>Document</FileType>
