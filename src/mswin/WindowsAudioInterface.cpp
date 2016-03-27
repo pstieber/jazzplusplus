@@ -174,7 +174,7 @@ JZWindowsAudioPlayer::JZWindowsAudioPlayer(JZSong* pSong)
   {
     // Check output device capabilities.
     WAVEOUTCAPS ocaps;
-    MMRESULT res = waveOutGetDevCaps((UINT)hout, &ocaps, sizeof(ocaps));
+    MMRESULT res = waveOutGetDevCaps((UINT_PTR)hout, &ocaps, sizeof(ocaps));
     if (res != MMSYSERR_NOERROR)
     {
       mErrorCode = ErrCapGet;

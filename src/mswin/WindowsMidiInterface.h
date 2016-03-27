@@ -118,7 +118,7 @@ class JZWinSysexBuffer
       mSize = Length + 2;
 
       memset(&mMidiHeader, 0, sizeof(mMidiHeader));
-      mMidiHeader.dwUser = (DWORD)this;
+      mMidiHeader.dwUser = (DWORD_PTR)this;
       mMidiHeader.lpData = (char *)mpData;
       mMidiHeader.dwBufferLength = mSize;
       OutputDebugString(L"prepare\n");

@@ -709,7 +709,7 @@ void JZWindowsPlayer::StartPlay(int Clock, int LoopClock, int Continue)
         mpState->min_timer_period,
         mpState->min_timer_period,
         (LPTIMECALLBACK) midiMidiTimerHandler,
-        (DWORD) mpState,
+        (DWORD_PTR) mpState,
         TIME_ONESHOT);
       break;
     case CsMtc:
@@ -740,7 +740,7 @@ void JZWindowsPlayer::StartPlay(int Clock, int LoopClock, int Continue)
         mpState->min_timer_period,
         mpState->min_timer_period,
         (LPTIMECALLBACK) midiMtcTimerHandler,
-        (DWORD) mpState,
+        (DWORD_PTR) mpState,
         TIME_ONESHOT);
       break;
     case CsInt:
@@ -751,7 +751,7 @@ void JZWindowsPlayer::StartPlay(int Clock, int LoopClock, int Continue)
         mpState->min_timer_period,
         mpState->min_timer_period,
         (LPTIMECALLBACK) midiIntTimerHandler,
-        (DWORD) mpState,
+        (DWORD_PTR) mpState,
         TIME_ONESHOT);
       break;
   }
