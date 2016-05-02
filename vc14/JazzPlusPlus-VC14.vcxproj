@@ -514,30 +514,26 @@
     <CustomBuild Include="..\src\HelpFiles\jazz.tex">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">false</ExcludedFromBuild>
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">
-        echo cd "$(ProjectDir)..\src\HelpFiles"
-        cd "$(ProjectDir)..\src\HelpFiles"
-        echo $(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
-        $(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
-      </Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">
-        echo cd "$(ProjectDir)..\src\HelpFiles"
-        cd "$(ProjectDir)..\src\HelpFiles"
-        echo $(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
-        $(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
-      </Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">
-        echo cd "$(ProjectDir)..\src\HelpFiles"
-        cd "$(ProjectDir)..\src\HelpFiles"
-        echo $(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
-        $(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
-      </Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">
-        echo cd "$(ProjectDir)..\src\HelpFiles"
-        cd "$(ProjectDir)..\src\HelpFiles"
-        echo $(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
-        $(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
-      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">echo cd "$(ProjectDir)..\src\HelpFiles"
+cd "$(ProjectDir)..\src\HelpFiles"
+echo $(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
+$(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
+cd "$(ProjectDir)"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">echo cd "$(ProjectDir)..\src\HelpFiles"
+cd "$(ProjectDir)..\src\HelpFiles"
+echo $(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
+$(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
+cd "$(ProjectDir)"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug VC14|x64'">echo cd "$(ProjectDir)..\src\HelpFiles"
+cd "$(ProjectDir)..\src\HelpFiles"
+echo $(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
+$(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
+cd "$(ProjectDir)"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release VC14|x64'">echo cd "$(ProjectDir)..\src\HelpFiles"
+cd "$(ProjectDir)..\src\HelpFiles"
+echo $(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
+$(EXT_PKGS)\wxWidgets-3.0.2-VC14\bin\tex2rtf jazz.tex jazz.html -html -twice
+cd "$(ProjectDir)"</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">Building Jazz++ help</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug VC14|Win32'">$(ProjectDir)..\src\HelpFiles\jazz.hhc;$(ProjectDir)..\src\HelpFiles\jazz.hhp;$(ProjectDir)..\src\HelpFiles\jazz.hhk;$(ProjectDir)..\src\HelpFiles\jazz.ref;$(ProjectDir)..\src\HelpFiles\jazz.con;$(ProjectDir)..\src\HelpFiles\jazz.htx;%(Outputs)</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release VC14|Win32'">Building Jazz++ help</Message>
