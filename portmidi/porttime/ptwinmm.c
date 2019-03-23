@@ -39,7 +39,7 @@ PtError Pt_Start(int resolution, PtCallback *callback, void *userData)
             resolution,
             1,
             winmm_time_callback,
-            (DWORD) userData,
+            (DWORD_PTR) userData,
             TIME_PERIODIC | TIME_CALLBACK_FUNCTION);
         if (!timer_id) return ptHostError;
     }
