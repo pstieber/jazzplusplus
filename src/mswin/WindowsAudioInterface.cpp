@@ -20,6 +20,7 @@
 // Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 //*****************************************************************************
 
+#define _WINSOCKAPI_    // stops windows.h including winsock.h
 #include <windows.h>
 #include <memory.h>
 
