@@ -1,0 +1,54 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JazzPlusPlus-VC16", "JazzPlusPlus-VC16.vcxproj", "{2D1CFF19-882E-441A-B610-64C19936507C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1F2203C1-BCA0-474B-BDEB-618D1D56264D} = {1F2203C1-BCA0-474B-BDEB-618D1D56264D}
+		{FC4600C5-0009-40B6-BB5E-9C6CB526B4B9} = {FC4600C5-0009-40B6-BB5E-9C6CB526B4B9}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "portmidi", "..\portmidi\pm_win\portmidi-VC16.vcxproj", "{FC4600C5-0009-40B6-BB5E-9C6CB526B4B9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "porttime", "..\portmidi\porttime\porttime-VC16.vcxproj", "{1F2203C1-BCA0-474B-BDEB-618D1D56264D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug-VC16|Win32 = Debug-VC16|Win32
+		Debug-VC16|x64 = Debug-VC16|x64
+		Release-VC16|Win32 = Release-VC16|Win32
+		Release-VC16|x64 = Release-VC16|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D1CFF19-882E-441A-B610-64C19936507C}.Debug-VC16|Win32.ActiveCfg = Debug-VC16|Win32
+		{2D1CFF19-882E-441A-B610-64C19936507C}.Debug-VC16|Win32.Build.0 = Debug-VC16|Win32
+		{2D1CFF19-882E-441A-B610-64C19936507C}.Debug-VC16|x64.ActiveCfg = Debug-VC16|x64
+		{2D1CFF19-882E-441A-B610-64C19936507C}.Debug-VC16|x64.Build.0 = Debug-VC16|x64
+		{2D1CFF19-882E-441A-B610-64C19936507C}.Release-VC16|Win32.ActiveCfg = Release-VC16|Win32
+		{2D1CFF19-882E-441A-B610-64C19936507C}.Release-VC16|Win32.Build.0 = Release-VC16|Win32
+		{2D1CFF19-882E-441A-B610-64C19936507C}.Release-VC16|x64.ActiveCfg = Release-VC16|x64
+		{2D1CFF19-882E-441A-B610-64C19936507C}.Release-VC16|x64.Build.0 = Release-VC16|x64
+		{FC4600C5-0009-40B6-BB5E-9C6CB526B4B9}.Debug-VC16|Win32.ActiveCfg = Debug-VC16|Win32
+		{FC4600C5-0009-40B6-BB5E-9C6CB526B4B9}.Debug-VC16|Win32.Build.0 = Debug-VC16|Win32
+		{FC4600C5-0009-40B6-BB5E-9C6CB526B4B9}.Debug-VC16|x64.ActiveCfg = Debug-VC16|x64
+		{FC4600C5-0009-40B6-BB5E-9C6CB526B4B9}.Debug-VC16|x64.Build.0 = Debug-VC16|x64
+		{FC4600C5-0009-40B6-BB5E-9C6CB526B4B9}.Release-VC16|Win32.ActiveCfg = Release-VC16|Win32
+		{FC4600C5-0009-40B6-BB5E-9C6CB526B4B9}.Release-VC16|Win32.Build.0 = Release-VC16|Win32
+		{FC4600C5-0009-40B6-BB5E-9C6CB526B4B9}.Release-VC16|x64.ActiveCfg = Release-VC16|x64
+		{FC4600C5-0009-40B6-BB5E-9C6CB526B4B9}.Release-VC16|x64.Build.0 = Release-VC16|x64
+		{1F2203C1-BCA0-474B-BDEB-618D1D56264D}.Debug-VC16|Win32.ActiveCfg = Debug-VC16|Win32
+		{1F2203C1-BCA0-474B-BDEB-618D1D56264D}.Debug-VC16|Win32.Build.0 = Debug-VC16|Win32
+		{1F2203C1-BCA0-474B-BDEB-618D1D56264D}.Debug-VC16|x64.ActiveCfg = Debug-VC16|x64
+		{1F2203C1-BCA0-474B-BDEB-618D1D56264D}.Debug-VC16|x64.Build.0 = Debug-VC16|x64
+		{1F2203C1-BCA0-474B-BDEB-618D1D56264D}.Release-VC16|Win32.ActiveCfg = Release-VC16|Win32
+		{1F2203C1-BCA0-474B-BDEB-618D1D56264D}.Release-VC16|Win32.Build.0 = Release-VC16|Win32
+		{1F2203C1-BCA0-474B-BDEB-618D1D56264D}.Release-VC16|x64.ActiveCfg = Release-VC16|x64
+		{1F2203C1-BCA0-474B-BDEB-618D1D56264D}.Release-VC16|x64.Build.0 = Release-VC16|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD5F82CB-DEB0-499C-AE9E-DCFA4D2EBE66}
+	EndGlobalSection
+EndGlobal
