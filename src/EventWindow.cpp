@@ -103,7 +103,7 @@ JZEventWindow::JZEventWindow(
   mpGreyColor = new wxColor(220, 220, 220);
 #endif
 
-  mpGreyBrush = new wxBrush(*mpGreyColor, wxSOLID);
+  mpGreyBrush = new wxBrush(*mpGreyColor, wxBRUSHSTYLE_SOLID);
 }
 
 //-----------------------------------------------------------------------------

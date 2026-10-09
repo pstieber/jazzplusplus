@@ -88,7 +88,7 @@ unsigned char *SysExDT1(
   }
   mess[length - 2] = (0x80 - (sum & 0x7f)) & 0x7f;
   mess[length - 1] = 0xf7;
-  return mess;
+  return [] mess;
 }
 */
 
@@ -194,7 +194,7 @@ JZMtcOffsetEvent* JZMtcTime::ToOffset()
   mess[3] = (unsigned char) fm;
   mess[4] = 0x00;
   JZMtcOffsetEvent* s = new JZMtcOffsetEvent(0, mess, 5);
-  delete mess;
+  delete [] mess;
   return s;
 }
 

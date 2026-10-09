@@ -818,7 +818,7 @@ void JZAlsaPlayer::StopPlay()
   flush_output();
   stop_queue_timer();
   clear_input_queue();
-  JZProjectManager::Instance()->NewPlayPosition(-1);
+  JZProjectManager::Instance().NewPlayPosition(-1);
   mRecdBuffer.Keyoff2Length();
 }
 
@@ -960,7 +960,7 @@ int JZAlsaPlayer::GetRealTimeClock()
   }
   if (recd_clock != old_recd_clock)
   {
-    JZProjectManager::Instance()->NewPlayPosition(
+    JZProjectManager::Instance().NewPlayPosition(
       mpPlayLoop->Ext2IntClock(recd_clock / 48 * 48));
   }
   return recd_clock;

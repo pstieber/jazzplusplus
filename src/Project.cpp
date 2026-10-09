@@ -37,7 +37,9 @@
 #include "WindowsPlayer.h"
 #include "WindowsAudioInterface.h"
 #elif __WXGTK__
+#ifdef DEV_SEQUENCER2
 #include "AudioDriver.h"
+#endif
 #elif __WXMAC__
 #include "PortMidiPlayer.h"
 #endif

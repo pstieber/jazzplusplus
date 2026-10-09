@@ -292,7 +292,7 @@ void JZKnob::OnPaint(wxPaintEvent& Event)
   int InnerRadius = static_cast<int>(OuterRadius * 0.6 + 0.5);
 
   wxColour Color(120, 100, 100);
-  wxBrush Brush(Color, wxSOLID);
+  wxBrush Brush(Color, wxBRUSHSTYLE_SOLID);
   wxPen Pen(Color);
   int KnobRadius = OuterRadius;
   for (unsigned char Red = 120; KnobRadius > 0 && Red < 250; Red += 5)

@@ -921,7 +921,7 @@ JZSysExEvent* JZSynthesizerSysex::operator()(
       pSysEx = new JZSysExEvent(clk, sx, len);
    }
 
-   delete sx;
+   delete [] sx;
    return pSysEx;
 }
 

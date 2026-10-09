@@ -55,6 +55,8 @@ add_library(
     ${PORTTIME_SOURCES}
 )
 
+target_compile_definitions(portmidi PRIVATE NEWBUFFER)
+
 target_include_directories(
   portmidi
   PUBLIC

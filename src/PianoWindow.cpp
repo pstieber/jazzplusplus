@@ -742,7 +742,7 @@ void JZPianoWindow::InitColors()
   {
     c = 256 * i / NUM_COLORS;
     mpColorBrush[i].SetColour(c, 0, 127 - c / 2);
-    mpColorBrush[i].SetStyle(wxSOLID);
+    mpColorBrush[i].SetStyle(wxBRUSHSTYLE_SOLID);
   }
 }
 
@@ -755,14 +755,22 @@ void JZPianoWindow::Setup()
   Dc.SetFont(wxNullFont);
 
   delete mpFixedFont;
-  mpFixedFont = new wxFont(12, wxSWISS, wxNORMAL, wxNORMAL);
+  mpFixedFont = new wxFont(
+    12,
+    wxFONTFAMILY_SWISS,
+    wxFONTSTYLE_NORMAL,
+    wxFONTWEIGHT_NORMAL);
   Dc.SetFont(*mpFixedFont);
 
   int Width, Height;
   Dc.GetTextExtent("M", &Width, &mFixedFontHeight);
 
   delete mpFont;
-  mpFont = new wxFont(mFontSize, wxSWISS, wxNORMAL, wxNORMAL);
+  mpFont = new wxFont(
+    mFontSize,
+    wxFONTFAMILY_SWISS,
+    wxFONTSTYLE_NORMAL,
+    wxFONTWEIGHT_NORMAL);
   Dc.SetFont(*mpFont);
 
   Dc.GetTextExtent("M", &Width, &Height);
@@ -774,7 +782,11 @@ void JZPianoWindow::Setup()
   mTrackHeight = Height + 2 * mLittleBit;
 
   delete mpDrumFont;
-  mpDrumFont = new wxFont(mFontSize + 3, wxSWISS, wxNORMAL, wxNORMAL);
+  mpDrumFont = new wxFont(
+    mFontSize + 3,
+    wxFONTFAMILY_SWISS,
+    wxFONTSTYLE_NORMAL,
+    wxFONTWEIGHT_NORMAL);
 
   Dc.SetFont(*mpDrumFont);
 
@@ -878,7 +890,7 @@ void JZPianoWindow::Draw(wxDC& Dc)
 //  }
 
   LocalDc.SetPen(*wxGREY_PEN);
-  wxBrush blackKeysBrush = wxBrush(wxColor(250, 240, 240), wxSOLID);
+  wxBrush blackKeysBrush = wxBrush(wxColor(250, 240, 240), wxBRUSHSTYLE_SOLID);
   int Pitch = 127 - mFromLine;
   int y = TrackIndex2y(mFromLine);
   while (Pitch >= 0 && y < mEventsY + mEventsHeight)
@@ -2866,7 +2878,7 @@ void JZPianoWindow::Redo()
 {
   mpProject->Redo();
   Refresh();
-  if (mpCtrlEdit && mpTrack >= 0)
+  if (mpCtrlEdit && mpTrack != nullptr)
   {
     mpCtrlEdit->ReInit(mpTrack, mFromClock, mClockTicsPerPixel);
   }
@@ -2880,7 +2892,7 @@ void JZPianoWindow::Undo()
 {
   mpProject->Undo();
   Refresh();
-  if (mpCtrlEdit && mpTrack >= 0)
+  if (mpCtrlEdit && mpTrack != nullptr)
   {
     mpCtrlEdit->ReInit(mpTrack, mFromClock, mClockTicsPerPixel);
   }

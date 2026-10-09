@@ -2,6 +2,41 @@
 # Jazz++ main application sources
 # ---------------------------------------------------------------------------
 
+include(CheckCXXSourceCompiles)
+
+check_cxx_source_compiles("
+  #include <iostream>
+  int main()
+  {
+    std::_Ios_Openmode mode = std::ios::in;
+    (void)mode;
+    return 0;
+  }
+" HAVE_IOS_OPENMODE)
+
+configure_file(
+  "${CMAKE_CURRENT_SOURCE_DIR}/config.h.cmake"
+  "${CMAKE_CURRENT_BINARY_DIR}/config.h"
+  @ONLY
+)
+
+add_custom_command(
+  OUTPUT
+    ${CMAKE_CURRENT_SOURCE_DIR}/JazzPlusPlusVersion/JazzPlusPlusVersion.cpp
+  COMMAND bash ${CMAKE_CURRENT_SOURCE_DIR}/ShellScripts/CreateVersion.sh
+  DEPENDS
+    ${CMAKE_CURRENT_SOURCE_DIR}/JazzPlusPlusVersion/JazzPlusPlusVersion.tpl
+    ${CMAKE_CURRENT_SOURCE_DIR}/JazzPlusPlusVersion/Versions.txt
+    ${CMAKE_CURRENT_SOURCE_DIR}/ShellScripts/CreateVersion.sh
+  COMMENT "Creating JazzPlusPlusVersion.cpp from template"
+  WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/JazzPlusPlusVersion
+  VERBATIM)
+
+set_source_files_properties(
+  ${CMAKE_CURRENT_SOURCE_DIR}/JazzPlusPlusVersion/JazzPlusPlusVersion.cpp
+  PROPERTIES
+    GENERATED TRUE)
+
 set(
   JAZZ_SOURCES
     AboutDialog.cpp
@@ -61,6 +96,7 @@ set(
     HarmonyP.cpp
     Help.cpp
     JazzPlusPlusApplication.cpp
+    JazzPlusPlusVersion/JazzPlusPlusVersion.cpp
     KeyStringConverters.cpp
     Knob.cpp
     Mapper.cpp
@@ -187,7 +223,7 @@ set(
     HarmonyP.h
     Help.h
     JazzPlusPlusApplication.h
-    JazzPlusPlusVersion.h
+    JazzPlusPlusVersion/JazzPlusPlusVersion.h
     KeyStringConverters.h
     Mapper.h
     MeasureChoice.h
@@ -257,6 +293,10 @@ add_definitions(-DJAZZ_DATADIR="${CMAKE_INSTALL_PREFIX}/share/Jazz++")
 # Build the executable
 # ---------------------------------------------------------------------------
 add_executable(jazz ${JAZZ_SOURCES} ${JAZZ_HEADERS})
+
+target_include_directories(
+  jazz PRIVATE "${CMAKE_CURRENT_BINARY_DIR}"
+)
 
 # ---------------------------------------------------------------------------
 # Link libraries

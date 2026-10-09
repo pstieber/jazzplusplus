@@ -42,7 +42,7 @@ add_compile_options(-Wall -Wno-unknown-pragmas)
 # ---------------------------------------------------------------------------
 # wxWidgets
 # ---------------------------------------------------------------------------
-find_package(wxWidgets 2.9.4 REQUIRED COMPONENTS core base adv)
+find_package(wxWidgets 2.9.4 REQUIRED COMPONENTS core base adv html)
 if(NOT wxWidgets_FOUND)
   message(FATAL_ERROR "wxWidgets not found. Please install wxWidgets >= 2.9.4")
 endif()

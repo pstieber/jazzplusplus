@@ -125,7 +125,11 @@ JZGuitarWindow::JZGuitarWindow(
   mStringHeight = mHeight / (mStringCount + 1);
   mFretWidth = mWidth / mFretCount;
 
-  mpFont = new wxFont(12, wxSWISS, wxNORMAL, wxNORMAL);
+  mpFont = new wxFont(
+    12,
+    wxFONTFAMILY_SWISS,
+    wxFONTSTYLE_NORMAL,
+    wxFONTWEIGHT_NORMAL);
 }
 
 //-----------------------------------------------------------------------------

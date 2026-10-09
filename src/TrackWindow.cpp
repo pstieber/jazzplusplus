@@ -117,14 +117,22 @@ void JZTrackWindow::Create()
   Dc.SetFont(wxNullFont);
 
   delete mpFixedFont;
-  mpFixedFont = new wxFont(12, wxSWISS, wxNORMAL, wxNORMAL);
+  mpFixedFont = new wxFont(
+    12,
+    wxFONTFAMILY_SWISS,
+    wxFONTSTYLE_NORMAL,
+    wxFONTWEIGHT_NORMAL);
   Dc.SetFont(*mpFixedFont);
 
   int Width, Height;
   Dc.GetTextExtent("M", &Width, &mFixedFontHeight);
 
   delete mpFont;
-  mpFont = new wxFont(mFontSize, wxSWISS, wxNORMAL, wxNORMAL);
+  mpFont = new wxFont(
+    mFontSize,
+    wxFONTFAMILY_SWISS,
+    wxFONTSTYLE_NORMAL,
+    wxFONTWEIGHT_NORMAL);
   Dc.SetFont(*mpFont);
 
   Dc.GetTextExtent("M", &Width, &Height);

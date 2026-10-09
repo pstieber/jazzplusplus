@@ -363,45 +363,42 @@ __error:
 
 void JZAlsaAudioPlayer::CloseDsp(bool Reset)
 {
-  if (pcm)
+  if (Reset)
   {
-    if (Reset)
-    {
-      if (pcm[PLAYBACK])
-      {
-        if (snd_pcm_drop(pcm[PLAYBACK]) < 0)
-        {
-          perror("playback drop");
-        }
-      }
-    }
-    else
-    {
-      if (pcm[PLAYBACK])
-      {
-        if (snd_pcm_drain(pcm[PLAYBACK]) < 0)
-        {
-          perror("playback drain");
-        }
-      }
-      if (pcm[CAPTURE])
-      {
-        if (snd_pcm_drain(pcm[CAPTURE]) < 0)
-        {
-          perror("capture drain");
-        }
-      }
-    }
     if (pcm[PLAYBACK])
     {
-      snd_pcm_close(pcm[PLAYBACK]);
-      pcm[PLAYBACK] = NULL;
+      if (snd_pcm_drop(pcm[PLAYBACK]) < 0)
+      {
+        perror("playback drop");
+      }
+    }
+  }
+  else
+  {
+    if (pcm[PLAYBACK])
+    {
+      if (snd_pcm_drain(pcm[PLAYBACK]) < 0)
+      {
+        perror("playback drain");
+      }
     }
     if (pcm[CAPTURE])
     {
-      snd_pcm_close(pcm[CAPTURE]);
-      pcm[CAPTURE] = NULL;
+      if (snd_pcm_drain(pcm[CAPTURE]) < 0)
+      {
+        perror("capture drain");
+      }
     }
+  }
+  if (pcm[PLAYBACK])
+  {
+    snd_pcm_close(pcm[PLAYBACK]);
+    pcm[PLAYBACK] = NULL;
+  }
+  if (pcm[CAPTURE])
+  {
+    snd_pcm_close(pcm[CAPTURE]);
+    pcm[CAPTURE] = NULL;
   }
 }
 
