@@ -20,17 +20,24 @@ configure_file(
   @ONLY
 )
 
+set(JAZZ_VERSION_SOURCE
+  "${CMAKE_CURRENT_BINARY_DIR}/JazzPlusPlusVersion.cpp"
+)
+
 add_custom_command(
-  OUTPUT
-    ${CMAKE_CURRENT_SOURCE_DIR}/JazzPlusPlusVersion/JazzPlusPlusVersion.cpp
-  COMMAND bash ${CMAKE_CURRENT_SOURCE_DIR}/ShellScripts/CreateVersion.sh
+  OUTPUT "${JAZZ_VERSION_SOURCE}"
+  COMMAND bash
+    "${CMAKE_CURRENT_SOURCE_DIR}/ShellScripts/CreateVersion.sh"
+    "${JAZZ_VERSION_SOURCE}"
   DEPENDS
-    ${CMAKE_CURRENT_SOURCE_DIR}/JazzPlusPlusVersion/JazzPlusPlusVersion.tpl
-    ${CMAKE_CURRENT_SOURCE_DIR}/JazzPlusPlusVersion/Versions.txt
-    ${CMAKE_CURRENT_SOURCE_DIR}/ShellScripts/CreateVersion.sh
+    "${CMAKE_CURRENT_SOURCE_DIR}/JazzPlusPlusVersion/JazzPlusPlusVersion.tpl"
+    "${CMAKE_CURRENT_SOURCE_DIR}/JazzPlusPlusVersion/Versions.txt"
+    "${CMAKE_CURRENT_SOURCE_DIR}/ShellScripts/CreateVersion.sh"
+  WORKING_DIRECTORY
+    "${CMAKE_CURRENT_SOURCE_DIR}/JazzPlusPlusVersion"
   COMMENT "Creating JazzPlusPlusVersion.cpp from template"
-  WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/JazzPlusPlusVersion
-  VERBATIM)
+  VERBATIM
+)
 
 set_source_files_properties(
   ${CMAKE_CURRENT_SOURCE_DIR}/JazzPlusPlusVersion/JazzPlusPlusVersion.cpp
@@ -96,7 +103,7 @@ set(
     HarmonyP.cpp
     Help.cpp
     JazzPlusPlusApplication.cpp
-    JazzPlusPlusVersion/JazzPlusPlusVersion.cpp
+    "${JAZZ_VERSION_SOURCE}"
     KeyStringConverters.cpp
     Knob.cpp
     Mapper.cpp
@@ -295,7 +302,10 @@ add_definitions(-DJAZZ_DATADIR="${CMAKE_INSTALL_PREFIX}/share/Jazz++")
 add_executable(jazz ${JAZZ_SOURCES} ${JAZZ_HEADERS})
 
 target_include_directories(
-  jazz PRIVATE "${CMAKE_CURRENT_BINARY_DIR}"
+  jazz
+  PRIVATE
+    "${CMAKE_CURRENT_BINARY_DIR}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/JazzPlusPlusVersion"
 )
 
 # ---------------------------------------------------------------------------

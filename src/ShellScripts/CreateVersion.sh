@@ -64,4 +64,4 @@ sed 's/BRANCH_NAME/'$(echo ${ESCAPED_BRANCH_NAME})'/' | \
 sed 's/MAJOR_VERSION/'$(echo ${MAJOR_VERSION})'/' | \
 sed 's/MINOR_VERSION/'$(echo ${MINOR_VERSION})'/' | \
 sed 's/BUILD_NUMBER/'$(echo ${BUILD_NUMBER})'/' \
-> JazzPlusPlusVersion.cpp
+> "${1:-JazzPlusPlusVersion.cpp}"
