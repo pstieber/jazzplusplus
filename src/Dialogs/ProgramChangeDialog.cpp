@@ -48,7 +48,6 @@ JZProgramChangeDialog::JZProgramChangeDialog(
 {
   mpProgramListBox = new wxListBox(this, wxID_ANY);
 
-  const vector<pair<string, int> >& VoiceNames = gpConfig->GetVoiceNames();
   for (const auto& NameValuePair : gpConfig->GetVoiceNames())
   {
     mpProgramListBox->Append(NameValuePair.first.c_str());
