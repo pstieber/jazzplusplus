@@ -48,7 +48,6 @@ JZControllerDialog::JZControllerDialog(
 {
   mpControllerListBox = new wxListBox(this, wxID_ANY);
 
-  const vector<pair<string, int> >& VoiceNames = gpConfig->GetControlNames();
   for (const auto& NameIntPair : gpConfig->GetControlNames())
   {
     mpControllerListBox->Append(NameIntPair.first);

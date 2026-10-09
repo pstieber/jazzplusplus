@@ -69,7 +69,6 @@ JZMetronomeSettingsDialog::JZMetronomeSettingsDialog(
     mpAccentedListbox(nullptr)
 {
   int Index = 0;
-  const vector<pair<string, int> >& DrumNames = gpConfig->GetDrumNames();
   for (const auto& NameValuePair : gpConfig->GetDrumNames())
   {
     const string& DrumName = NameValuePair.first;
