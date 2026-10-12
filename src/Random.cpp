@@ -105,7 +105,7 @@ double JZRndArray::operator[](double f)
   {
     i = 0;
   }
-  else if (i >= mArray.size() - 2)
+  else if (mArray.size() >= 2 && i >= static_cast<int>(mArray.size() - 2))
   {
     i = mArray.size() - 2;
   }

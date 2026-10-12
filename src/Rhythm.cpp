@@ -1097,7 +1097,8 @@ void JZRhythmWindow::UpInstrument()
   if (mActiveInstrumentIndex >= 1)
   {
     JZRhythm *tmp = mpInstruments[mActiveInstrumentIndex];
-    mpInstruments[mActiveInstrumentIndex] = mpInstruments[mActiveInstrumentIndex-1];
+    mpInstruments[mActiveInstrumentIndex] =
+      mpInstruments[mActiveInstrumentIndex - 1];
     mpInstruments[mActiveInstrumentIndex - 1] = tmp;
     --mActiveInstrumentIndex;
     InitInstrumentList();
@@ -1466,11 +1467,12 @@ JZRhythmGeneratorWindow::JZRhythmGeneratorWindow(
     wxSize(Width / 3, -1),
     wxSL_LABELS);
 
-  wxStaticText* pStaticText = new wxStaticText(
-    pInstrumentPanel,
-    wxID_ANY,
-    "Instrument",
-    wxPoint(10, 3 * Height / 12));
+  // TODO: What was the purpose of the following unused variable?
+//  wxStaticText* pStaticText = new wxStaticText(
+//    pInstrumentPanel,
+//    wxID_ANY,
+//    "Instrument",
+//    wxPoint(10, 3 * Height / 12));
 
   mpInstrumentListBox = new wxListBox(
     pInstrumentPanel,
@@ -1801,7 +1803,7 @@ void JZRhythmGeneratorWindow::Instrument2Win()
 {
   if (
     mActiveInstrumentIndex < 0 ||
-    mActiveInstrumentIndex >= mInstruments.size())
+    mActiveInstrumentIndex >= static_cast<int>(mInstruments.size()))
   {
     return;
   }
@@ -1843,7 +1845,7 @@ void JZRhythmGeneratorWindow::Win2Instrument()
 {
   if (
     mActiveInstrumentIndex < 0 ||
-    mActiveInstrumentIndex >= mInstruments.size())
+    mActiveInstrumentIndex >= static_cast<int>(mInstruments.size()))
   {
     return;
   }
