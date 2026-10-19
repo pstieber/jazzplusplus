@@ -352,7 +352,7 @@ void JZEventWindow::EditMeter()
 //-----------------------------------------------------------------------------
 // Description:
 //   Only consider the event portion of the window when computing the virtual
-// size.  Do not consider the static information of the left or top portion of
+// size.  Do not consider the static information on the left or top portion of
 // the screen.
 //-----------------------------------------------------------------------------
 void JZEventWindow::GetVirtualEventSize(
